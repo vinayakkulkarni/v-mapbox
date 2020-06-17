@@ -43,7 +43,7 @@ import {
   MglMap,
   MglMarker,
   MglGeojsonLayer
-} from 'vue-mapbox'
+} from 'v-mapbox'
 
 export default {
   name: 'App',

@@ -18,7 +18,7 @@ For example, adding map controls:
 </template>
 
 <script>
-import { MglMap, MglNavigationControl, MglGeolocateControl } from "vue-mapbox";
+import { MglMap, MglNavigationControl, MglGeolocateControl } from "v-mapbox";
 
 export default {
   components: {
@@ -57,7 +57,7 @@ import {
   MglNavigationControl,
   MglGeolocateControl,
   MglPopup
-} from "vue-mapbox";
+} from "v-mapbox";
 
 export default {
   components: {
@@ -77,7 +77,7 @@ export default {
 </script>
 ```
 
-Vue-mapbox component will work even if it wrapped in another component as long as they in components sub-tree of base map component.
+v-mapbox component will work even if it wrapped in another component as long as they in components sub-tree of base map component.
 
 For example:
 
@@ -93,7 +93,7 @@ For example:
 </template>
 
 <script>
-import { MglPopup } from 'vue-mapbox';
+import { MglPopup } from 'v-mapbox';
 
 export default {
   name: 'PopupWrapper'
@@ -124,7 +124,7 @@ export default {
 </template>
 
 <script>
-import { MglMap } from "vue-mapbox";
+import { MglMap } from "v-mapbox";
 import PopupWrapper from "PopupWrapper"; // wrapper for popup
 
 export default {
