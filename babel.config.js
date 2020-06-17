@@ -1,3 +1,20 @@
 module.exports = {
-  presets: ["@vue/app"]
+  presets: ['@babel/preset-env'],
+  env: {
+    test: {
+      plugins: [
+        [
+          'module-resolver',
+          {
+            root: ['./'],
+            alias: {
+              '@': './',
+              '~': './',
+            },
+          },
+        ],
+      ],
+      ignore: ['ava.config.cjs'],
+    },
+  },
 };
