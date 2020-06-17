@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/vinayakkulkarni/v-mapbox/compare/0.4.1...1.0.2) (2020-06-17)
+
+
+### Bug Fixes
+
+* update pkg registry ([7273257](https://github.com/vinayakkulkarni/v-mapbox/commit/7273257))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/vinayakkulkarni/v-mapbox/compare/0.4.1...1.0.1) (2020-06-17)
 
