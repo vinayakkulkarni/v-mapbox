@@ -1,18 +1,22 @@
-# VueMapbox [![Build Status](https://travis-ci.org/soal/vue-mapbox.svg?branch=master)](https://travis-ci.org/soal/vue-mapbox) [![npm version](https://badge.fury.io/js/vue-mapbox.svg)](https://badge.fury.io/js/vue-mapbox)
+# V-Mapbox 🗺 
 
-> Combine powers of [Vue.js](https://vuejs.org/) and [Mapbox Gl JS](https://mapbox.com/mapbox-gl-js)
+<a title="deploy" href="https://github.com/algolia/shipjs" rel="nofollow">
+  <img src="https://img.shields.io/badge/deploy-🛳%20Ship.js-blue?style=flat" />
+</a>
+<a title="npm" href="https://www.npmjs.com/package/v-mapbox" rel="nofollow">
+  <img alt="npm" src="https://img.shields.io/npm/v/v-mapbox?label=npm%40latest&logo=npm">
+</a>
+<a title="maintenance" href="" rel="nofollow">
+  <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020">
+</a>
 
-Vue-mapbox is wrapper around Mapbox GL JS library that provides vueish-way to interact with the map.
+> Combine powers of [Vue.js](https://vuejs.org/) and [Mapbox GL JS](https://mapbox.com/mapbox-gl-js)
 
-[Description and documentation](https://soal.github.io/vue-mapbox)
+_NOTE_: This is a maintained version of [vue-mapbox](https://github.com/soal/vue-mapbox)
 
-## Size
+V-Mapbox is wrapper around Mapbox GL JS library that provides vueish-way to interact with the map.
 
-~ 15 kB minified and gzipped
-
-## Browser compatibility
-
-_Coming soon_
+[Description and documentation](https://v-mapbox.netlify.app/)
 
 ## Development
 
@@ -36,17 +40,12 @@ npm run build
 
 ### Documentation
 
-Documentation use [VuePress 1.0](https://vuepress.vuejs.org).
-Documentations source palced in `docs_source` directory and builds into `docs` directory
-
 Start documentation site in development mode:
-
 ```sh
-npm run docs:serve
+npm run docs:dev
 ```
 
 Build documentation:
-
 ```sh
 npm run docs:build
 ```
@@ -54,9 +53,7 @@ npm run docs:build
 Inspired by KoRiGaN's [Vue2Leaflet](https://github.com/KoRiGaN/Vue2Leaflet).
 
 ## License
-
 MIT
 
 ## Contributing
-
-Just fork `development` branch and create PR when your work is done. Please ensure you are not added dist files.
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/vinayakkulkarni/v-mapbox/compare)
