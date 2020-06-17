@@ -15,7 +15,7 @@
 <a href="https://lgtm.com/projects/g/vinayakkulkarni/v-mapbox/context:javascript">
   <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/vinayakkulkarni/v-mapbox.svg?logo=lgtm&logoWidth=18"/>
 </a>
-<a title="downloads" href="https://www.npmjs.com/package/v-mapbox" rel="nofollow">
+<a title="downloads" href="http://npm-stat.com/charts.html?package=v-mapbox" rel="nofollow">
   <img alt="npm" src="https://img.shields.io/npm/dm/v-mapbox">
 </a>
 <a title="deploy" href="https://github.com/algolia/shipjs" rel="nofollow">
