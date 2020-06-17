@@ -71,6 +71,3 @@ export default {
 ~ 15 kB minified and gzipped
 :::
 
-::: warning Browser compatibility
-_Coming soon_
-:::
