@@ -27,10 +27,10 @@
     "lint:eslint:fix": "eslint --fix 'src/**/*.{js,vue}'",
     "lint:prettier": "prettier --check \"{,!(node_modules|dist)/**/}*.{js,vue}\"",
     "lint:prettier:fix": "prettier --write \"{,!(node_modules|dist)/**/}*.{js,vue}\"",
-    "release:prepare": "shipjs prepare",
-    "release:trigger": "shipjs trigger",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "release:prepare": "shipjs prepare",
+    "release:trigger": "shipjs trigger"
   },
   "dependencies": {
     "map-promisified": "^0.4.0"
@@ -72,6 +72,7 @@
     "rollup-plugin-css-only": "^2.1.0",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-vue": "^5.1.9",
+    "shipjs": "^0.20.0",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.5.2"
