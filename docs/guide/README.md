@@ -4,10 +4,10 @@
 
 ### Installation
 
-You can install vue-mapbox via npm. Take note that you need to install mapbox-gl as peer dependency:
+You can install v-mapbox via npm. Take note that you need to install mapbox-gl as peer dependency:
 
 ```bash
-npm install --save vue-mapbox mapbox-gl
+npm install --save v-mapbox mapbox-gl
 ```
 
 Add mapbox CSS file to `<head></head>` block of your HTML file (e.g. `index.html`)
@@ -23,7 +23,7 @@ Add mapbox CSS file to `<head></head>` block of your HTML file (e.g. `index.html
 
 ### Installation
 
-Add Vue, MapboxGL and Vue-mapbox scripts on your page:
+Add Vue, MapboxGL and v-mapbox scripts on your page:
 
 ```html
 <!DOCTYPE html>
@@ -32,22 +32,22 @@ Add Vue, MapboxGL and Vue-mapbox scripts on your page:
     <!-- ... -->
     <!-- Mapbox GL CSS -->
     <link
-      href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css"
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
       rel="stylesheet"
     />
-    <!-- Vue-mapbox CSS -->
+    <!-- v-mapbox CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/vue-mapbox@latest/dist/vue-mapbox.css"
+      href="https://cdn.jsdelivr.net/npm/v-mapbox@latest/dist/v-mapbox.css"
       rel="stylesheet"
     />
     <!-- Mapbox GL JS -->
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
     <!-- VueJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.min.js"></script>
-    <!-- Vue-mapbox -->
+    <!-- v-mapbox -->
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/vue-mapbox@latest/dist/vue-mapbox.min.js"
+      src="https://cdn.jsdelivr.net/npm/v-mapbox@latest/dist/v-mapbox.min.js"
     ></script>
     <!-- ... -->
   </head>
@@ -63,7 +63,7 @@ In version `0.2` you don't need to register VueMapbox as Vue plugin.
 So you don't need this code anymore:
 
 ```js
-import VueMapbox from "vue-mapbox";
+import VueMapbox from "v-mapbox";
 import Mapbox from "mapbox-gl";
 
 Vue.use(VueMapbox, { mapboxgl: Mapbox });

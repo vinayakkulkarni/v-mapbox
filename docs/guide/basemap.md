@@ -13,7 +13,7 @@ If you using self-hosting maps on your own server you can omit this parameter.
 
 <script>
 import Mapbox from "mapbox-gl";
-import { MglMap } from "vue-mapbox";
+import { MglMap } from "v-mapbox";
 
 export default {
   components: {
@@ -41,9 +41,9 @@ Example:
 ```vue
 <template>
   <MglMap
-    :mapboxGl="mapbox-gl"
-    :accessToken="accessToken"
-    :mapStyle.sync="mapStyle"
+    :mapbox-gl="mapbox-gl"
+    :access-token="accessToken"
+    :map-style.sync="mapStyle"
     @load="onMapLoaded"
   />
 </template>
@@ -72,8 +72,8 @@ If you want to store map object, store it as non-reactive property like in examp
 ```vue
 <template>
   <MglMap
-    :accessToken="accessToken"
-    :mapStyle.sync="mapStyle"
+    :access-token="accessToken"
+    :map-style.sync="mapStyle"
     @load="onMapLoaded"
   />
 </template>
