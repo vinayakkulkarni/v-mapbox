@@ -25,7 +25,7 @@ The basic idea is to keep the declarative style of Vue, so it's good to add for 
 
 <script>
 import Mapbox from "mapbox-gl";
-import { MglMap } from "vue-mapbox";
+import { MglMap } from "v-mapbox";
 
 export default {
   components: {
@@ -88,30 +88,30 @@ Beside providing base objects, VueMapbox give some useful helper mixins, that ca
 You can access to them via `$helpers` named export:
 
 ```js
-import { $helpers } from "vue-mapbox";
+import { $helpers } from "v-mapbox";
 
 const { withEvents, withSelfEvents, asControl, asLayer } = $helpers;
 ```
 
 ### `withEvents`
 
-[Source](https://github.com/soal/vue-mapbox/blob/master/src/lib/withEvents.js).  
+[Source](https://github.com/vinayakkulkarni/v-mapbox/blob/master/src/lib/withEvents.js).  
 Provides `$_emitEvent` and `$_emitMapEvent` methods to emit events in VueMapbox style.
 
 ### `withSelfEvents`
 
-[Source](https://github.com/soal/vue-mapbox/blob/master/src/components/UI/withSelfEvents.js)  
+[Source](https://github.com/vinayakkulkarni/v-mapbox/blob/master/src/components/UI/withSelfEvents.js)  
 Provides `$_bindSelfEvents`, `$_unbindSelfEvents` and `$_emitSelfEvent`.
 They can be used to bind events to Mapbox GL JS objects that emit self events instead of `Map` object like controls, markers and popups.
 
 ### `asControl`
 
-[Source](https://github.com/soal/vue-mapbox/blob/master/src/components/UI/controls/controlMixin.js).  
+[Source](https://github.com/vinayakkulkarni/v-mapbox/blob/master/src/components/UI/controls/controlMixin.js).  
 Provides backbone for Map controls (like )
 
 ### `asLayer`
 
-[Source](https://github.com/soal/vue-mapbox/blob/master/src/components/layer/layerMixin.js).  
+[Source](https://github.com/vinayakkulkarni/v-mapbox/blob/master/src/components/layer/layerMixin.js).  
 Provides backbone for Map layer.  
 See also [layers API doc](/api/layers)
 
@@ -119,7 +119,7 @@ See also [layers API doc](/api/layers)
 
 Example below can give you an idea how to create component for Mapbox GL JS plugin.
 
-**[VueMaboxGeocoder](https://github.com/soal/vue-mapbox-geocoder) — wrapper for [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder)**:
+**[VueMaboxGeocoder](https://github.com/vinayakkulkarni/v-mapbox-geocoder) — wrapper for [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder)**:
 
 ```js
 // First, there is no separate HTML to render, so we don't need template and SFC, so it's just JS file

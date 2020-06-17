@@ -21,8 +21,8 @@ V-Mapbox is wrapper around Mapbox GL JS library that provides vueish-way to inte
 ## Development
 
 ```sh
-git clone git@github.com:soal/vue-mapbox.git
-cd vue-mapbox
+git clone git@github.com:vinayakkulkarni/v-mapbox.git
+cd v-mapbox
 npm install
 ```
 
