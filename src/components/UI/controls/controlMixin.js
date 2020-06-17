@@ -1,17 +1,17 @@
 // import withRegistration from "../../../lib/withRegistration";
-import withEvents from "../../../lib/withEvents";
-import withSelfEvents from "../withSelfEvents";
+import withEvents from '../../../lib/withEvents';
+import withSelfEvents from '../withSelfEvents';
 
 export default {
   mixins: [withEvents, withSelfEvents],
 
-  inject: ["mapbox", "map", "actions"],
+  inject: ['mapbox', 'map', 'actions'],
 
   props: {
     position: {
       type: String,
-      default: "top-right"
-    }
+      default: 'top-right',
+    },
   },
 
   beforeDestroy() {
@@ -25,12 +25,12 @@ export default {
       try {
         this.map.addControl(this.control, this.position);
       } catch (err) {
-        this.$_emitEvent("error", { error: err });
+        this.$_emitEvent('error', { error: err });
         return;
       }
-      this.$_emitEvent("added", { control: this.control });
-    }
+      this.$_emitEvent('added', { control: this.control });
+    },
   },
 
-  render() {}
+  render() {},
 };

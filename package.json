@@ -1,56 +1,111 @@
 {
-  "name": "vue-mapbox",
-  "version": "0.4.1",
-  "author": {
-    "name": "soal",
-    "email": "sorrrow.about.alice@gmail.com",
-    "url": "https://github.com/soal"
-  },
-  "homepage": "https://soal.github.io/vue-mapbox",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/soal/vue-mapbox.git"
-  },
+  "name": "v-mapbox",
+  "version": "1.0.0",
   "private": false,
-  "main": "dist/vue-mapbox.umd.js",
-  "module": "src/main.js",
+  "sideEffects": false,
+  "main": "dist/v-mapbox.umd.js",
+  "module": "dist/v-mapbox.esm.js",
+  "unpkg": "dist/v-mapbox.min.js",
+  "jsdelivr": "dist/v-mapbox.min.js",
+  "cdn": "dist/v-mapbox.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
-    "build": "vue-cli-service build --target lib --name vue-mapbox src/main.js",
-    "serve": "vue-cli-service build --target lib --name vue-mapbox src/main.js --watch",
-    "lint": "vue-cli-service lint",
-    "docs:serve": "vuepress dev docs_source",
-    "docs:build": "vuepress build docs_source"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --write",
-      "git add"
-    ]
+    "test": "ava",
+    "test:snapshot": "ava --update-snapshots",
+    "build": "npm run bundle && npm run bundle:min",
+    "bundle": "rollup -c build/rollup.config.js",
+    "bundle:min": "rollup -c build/rollup.config.min.js",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lintfix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
+    "lint:eslint": "eslint 'src/**/*.{js,vue}'",
+    "lint:eslint:fix": "eslint --fix 'src/**/*.{js,vue}'",
+    "lint:prettier": "prettier --check \"{,!(node_modules|dist)/**/}*.{js,vue}\"",
+    "lint:prettier:fix": "prettier --write \"{,!(node_modules|dist)/**/}*.{js,vue}\"",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "release:prepare": "shipjs prepare",
+    "release:trigger": "shipjs trigger"
   },
   "dependencies": {
-    "map-promisified": "latest"
+    "map-promisified": "^0.4.0"
   },
   "peerDependencies": {
-    "mapbox-gl": "^0.53.0",
-    "vue": "^2.6.6"
+    "mapbox-gl": "^1.11.0",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-eslint": "^3.2.1",
-    "@vue/cli-service": "^3.2.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.10.0",
-    "eslint-loader": "2.1.1",
-    "husky": "^1.2.0",
-    "lint-staged": "^8.1.0",
-    "vue": "^2.6.6",
-    "vue-template-compiler": "^2.6.6",
-    "vuepress": "^1.0.0-alpha.37"
-  }
+    "@ava/babel": "^1.0.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@vue/test-utils": "^1.0.3",
+    "ava": "^3.9.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-preset-vue": "^2.0.2",
+    "browser-env": "^3.3.0",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.5",
+    "jsdom-global": "^3.0.2",
+    "lint-staged": "^10.2.11",
+    "mapbox-gl": "^1.11.0",
+    "prettier": "^2.0.5",
+    "require-extension-hooks": "^0.3.3",
+    "require-extension-hooks-babel": "^1.0.0",
+    "require-extension-hooks-vue": "^3.0.0",
+    "rollup": "^2.16.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-css-only": "^2.1.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "shipjs": "^0.20.0",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.5.2"
+  },
+  "engines": {
+    "node": ">=10.20.0"
+  },
+  "author": {
+    "name": "Vinayak Kulkarni",
+    "email": "inbox.vinayak@gmail.com",
+    "url": "https://github.com/vinayakkulkarni"
+  },
+  "contributors": [
+    {
+      "name": "soal",
+      "email": "sorrrow.about.alice@gmail.com",
+      "url": "https://github.com/soal"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vinayakkulkarni/v-mapbox.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "mapbox",
+    "mapbox-gl-js",
+    "mapbox-gl",
+    "mapbox-gl-geocoder"
+  ],
+  "bugs": {
+    "url": "https://github.com/vinayakkulkarni/v-mapbox/issues"
+  },
+  "homepage": "https://soal.github.io/vue-mapbox"
 }

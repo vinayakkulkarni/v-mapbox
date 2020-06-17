@@ -2,3 +2,4 @@ node_modules/**/*.js
 node_modules/**/*.ts
 node_modules/**/*.js
 docs/**/*.js
+dist
