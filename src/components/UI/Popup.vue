@@ -102,6 +102,13 @@
         type: Boolean,
         default: false,
       },
+      /**
+       * https://docs.mapbox.com/mapbox-gl-js/api/markers/#popup#setmaxwidth
+       */
+      maxWidth: {
+        type: String,
+        default: '240px',
+      },
     },
 
     data() {
