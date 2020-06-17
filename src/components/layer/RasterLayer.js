@@ -1,8 +1,8 @@
-import layerEvents from "../../lib/layerEvents";
-import mixin from "./layerMixin";
+import layerEvents from '../../lib/layerEvents';
+import mixin from './layerMixin';
 
 export default {
-  name: "RasterLayer",
+  name: 'RasterLayer',
   mixins: [mixin],
 
   created() {
@@ -12,11 +12,11 @@ export default {
   methods: {
     $_deferredMount() {
       let source = {
-        type: "raster",
-        ...this.source
+        type: 'raster',
+        ...this.source,
       };
 
-      this.map.on("dataloading", this.$_watchSourceLoading);
+      this.map.on('dataloading', this.$_watchSourceLoading);
       try {
         this.map.addSource(this.sourceId, source);
       } catch (err) {
@@ -27,7 +27,7 @@ export default {
       }
       this.$_addLayer();
       this.$_bindLayerEvents(layerEvents);
-      this.map.off("dataloading", this.$_watchSourceLoading);
+      this.map.off('dataloading', this.$_watchSourceLoading);
       this.initial = false;
     },
 
@@ -37,19 +37,19 @@ export default {
         if (this.replace) {
           this.map.removeLayer(this.layerId);
         } else {
-          this.$_emitEvent("layer-exists", { layerId: this.layerId });
+          this.$_emitEvent('layer-exists', { layerId: this.layerId });
           return existed;
         }
       }
       let layer = {
         id: this.layerId,
-        type: "raster",
+        type: 'raster',
         source: this.sourceId,
-        ...this.layer
+        ...this.layer,
       };
 
       this.map.addLayer(layer, this.before);
-      this.$_emitEvent("added", { layerId: this.layerId });
-    }
-  }
+      this.$_emitEvent('added', { layerId: this.layerId });
+    },
+  },
 };

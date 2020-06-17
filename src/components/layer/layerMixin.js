@@ -1,45 +1,45 @@
 // import withRegistration from "../../lib/withRegistration";
-import withEvents from "../../lib/withEvents";
+import withEvents from '../../lib/withEvents';
 
 const mapboxSourceProps = {
   sourceId: {
     type: String,
-    required: true
+    required: true,
   },
   source: {
     type: [Object, String],
-    default: undefined
-  }
+    default: undefined,
+  },
 };
 
 const mapboxLayerStyleProps = {
   layerId: {
     type: String,
-    required: true
+    required: true,
   },
   layer: {
     type: Object,
-    required: true
+    required: true,
   },
   before: {
     type: String,
-    default: undefined
-  }
+    default: undefined,
+  },
 };
 
 const componentProps = {
   clearSource: {
     type: Boolean,
-    default: true
+    default: true,
   },
   replaceSource: {
     type: Boolean,
-    default: false
+    default: false,
   },
   replace: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 };
 
 export default {
@@ -47,14 +47,14 @@ export default {
   props: {
     ...mapboxSourceProps,
     ...mapboxLayerStyleProps,
-    ...componentProps
+    ...componentProps,
   },
 
-  inject: ["mapbox", "map"],
+  inject: ['mapbox', 'map'],
 
   data() {
     return {
-      initial: true
+      initial: true,
     };
   },
 
@@ -67,19 +67,19 @@ export default {
     },
     mapSource() {
       return this.map ? this.map.getSource(this.sourceId) : null;
-    }
+    },
   },
 
   created() {
     if (this.layer.minzoom) {
-      this.$watch("layer.minzoom", function(next) {
+      this.$watch('layer.minzoom', function (next) {
         if (this.initial) return;
         this.map.setLayerZoomRange(this.layerId, next, this.layer.maxzoom);
       });
     }
 
     if (this.layer.maxzoom) {
-      this.$watch("layer.maxzoom", function(next) {
+      this.$watch('layer.maxzoom', function (next) {
         if (this.initial) return;
         this.map.setLayerZoomRange(this.layerId, this.layer.minzoom, next);
       });
@@ -87,8 +87,8 @@ export default {
 
     if (this.layer.paint) {
       this.$watch(
-        "layer.paint",
-        function(next) {
+        'layer.paint',
+        function (next) {
           if (this.initial) return;
           if (next) {
             for (let prop of Object.keys(next)) {
@@ -96,14 +96,14 @@ export default {
             }
           }
         },
-        { deep: true }
+        { deep: true },
       );
     }
 
     if (this.layer.layout) {
       this.$watch(
-        "layer.layout",
-        function(next) {
+        'layer.layout',
+        function (next) {
           if (this.initial) return;
           if (next) {
             for (let prop of Object.keys(next)) {
@@ -111,18 +111,18 @@ export default {
             }
           }
         },
-        { deep: true }
+        { deep: true },
       );
     }
 
     if (this.layer.filter) {
       this.$watch(
-        "layer.filter",
-        function(next) {
+        'layer.filter',
+        function (next) {
           if (this.initial) return;
           this.map.setFilter(this.layerId, next);
         },
-        { deep: true }
+        { deep: true },
       );
     }
   },
@@ -132,18 +132,18 @@ export default {
       try {
         this.map.removeLayer(this.layerId);
       } catch (err) {
-        this.$_emitEvent("layer-does-not-exist", {
+        this.$_emitEvent('layer-does-not-exist', {
           layerId: this.sourceId,
-          error: err
+          error: err,
         });
       }
       if (this.clearSource) {
         try {
           this.map.removeSource(this.sourceId);
         } catch (err) {
-          this.$_emitEvent("source-does-not-exist", {
+          this.$_emitEvent('source-does-not-exist', {
             sourceId: this.sourceId,
-            error: err
+            error: err,
           });
         }
       }
@@ -156,7 +156,7 @@ export default {
     },
 
     $_bindLayerEvents(events) {
-      Object.keys(this.$listeners).forEach(eventName => {
+      Object.keys(this.$listeners).forEach((eventName) => {
         if (events.includes(eventName)) {
           this.map.on(eventName, this.layerId, this.$_emitLayerMapEvent);
         }
@@ -165,34 +165,34 @@ export default {
 
     $_unbindEvents(events) {
       if (this.map) {
-        events.forEach(eventName => {
+        events.forEach((eventName) => {
           this.map.off(eventName, this.layerId, this.$_emitLayerMapEvent);
         });
       }
     },
 
     $_watchSourceLoading(data) {
-      if (data.dataType === "source" && data.sourceId === this.sourceId) {
-        this.$_emitEvent("layer-source-loading", { sourceId: this.sourceId });
-        this.map.off("dataloading", this.$_watchSourceLoading);
+      if (data.dataType === 'source' && data.sourceId === this.sourceId) {
+        this.$_emitEvent('layer-source-loading', { sourceId: this.sourceId });
+        this.map.off('dataloading', this.$_watchSourceLoading);
       }
     },
 
     move(beforeId) {
       this.map.moveLayer(this.layerId, beforeId);
-      this.$_emitEvent("layer-moved", {
+      this.$_emitEvent('layer-moved', {
         layerId: this.layerId,
-        beforeId: beforeId
+        beforeId: beforeId,
       });
     },
 
     remove() {
       this.map.removeLayer(this.layerId);
       this.map.removeSource(this.sourceId);
-      this.$_emitEvent("layer-removed", { layerId: this.layerId });
+      this.$_emitEvent('layer-removed', { layerId: this.layerId });
       this.$destroy();
-    }
+    },
   },
 
-  render() {}
+  render() {},
 };

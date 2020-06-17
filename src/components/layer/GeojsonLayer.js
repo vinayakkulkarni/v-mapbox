@@ -1,13 +1,13 @@
-import layerEvents from "../../lib/layerEvents";
-import mixin from "./layerMixin";
+import layerEvents from '../../lib/layerEvents';
+import mixin from './layerMixin';
 
 export default {
-  name: "GeojsonLayer",
+  name: 'GeojsonLayer',
   mixins: [mixin],
 
   computed: {
     getSourceFeatures() {
-      return filter => {
+      return (filter) => {
         if (this.map) {
           return this.map.querySourceFeatures(this.sourceId, { filter });
         }
@@ -20,7 +20,7 @@ export default {
         if (this.map) {
           return this.map.queryRenderedFeatures(geometry, {
             layers: [this.layerId],
-            filter
+            filter,
           });
         }
         return null;
@@ -28,7 +28,7 @@ export default {
     },
 
     getClusterExpansionZoom() {
-      return clusterId => {
+      return (clusterId) => {
         return new Promise((resolve, reject) => {
           if (this.mapSource) {
             this.mapSource.getClusterExpansionZoom(clusterId, (err, zoom) => {
@@ -39,7 +39,7 @@ export default {
             });
           } else {
             return reject(
-              new Error(`Map source with id ${this.sourceId} not found.`)
+              new Error(`Map source with id ${this.sourceId} not found.`),
             );
           }
         });
@@ -47,7 +47,7 @@ export default {
     },
 
     getClusterChildren() {
-      return clusterId => {
+      return (clusterId) => {
         return new Promise((resolve, reject) => {
           const source = this.mapSource;
           if (source) {
@@ -59,7 +59,7 @@ export default {
             });
           } else {
             return reject(
-              new Error(`Map source with id ${this.sourceId} not found.`)
+              new Error(`Map source with id ${this.sourceId} not found.`),
             );
           }
         });
@@ -78,23 +78,23 @@ export default {
             });
           } else {
             return reject(
-              new Error(`Map source with id ${this.sourceId} not found.`)
+              new Error(`Map source with id ${this.sourceId} not found.`),
             );
           }
         });
       };
-    }
+    },
   },
 
   created() {
     if (this.source) {
       this.$watch(
-        "source.data",
-        function(next) {
+        'source.data',
+        function (next) {
           if (this.initial) return;
           this.mapSource.setData(next);
         },
-        { deep: true }
+        { deep: true },
       );
     }
     this.$_deferredMount();
@@ -103,11 +103,11 @@ export default {
   methods: {
     $_deferredMount() {
       // this.map = payload.map;
-      this.map.on("dataloading", this.$_watchSourceLoading);
+      this.map.on('dataloading', this.$_watchSourceLoading);
       if (this.source) {
         const source = {
-          type: "geojson",
-          ...this.source
+          type: 'geojson',
+          ...this.source,
         };
         try {
           this.map.addSource(this.sourceId, source);
@@ -120,7 +120,7 @@ export default {
       }
       this.$_addLayer();
       this.$_bindLayerEvents(layerEvents);
-      this.map.off("dataloading", this.$_watchSourceLoading);
+      this.map.off('dataloading', this.$_watchSourceLoading);
       this.initial = false;
     },
 
@@ -130,17 +130,17 @@ export default {
         if (this.replace) {
           this.map.removeLayer(this.layerId);
         } else {
-          this.$_emitEvent("layer-exists", { layerId: this.layerId });
+          this.$_emitEvent('layer-exists', { layerId: this.layerId });
           return existed;
         }
       }
       const layer = {
         id: this.layerId,
         source: this.sourceId,
-        ...this.layer
+        ...this.layer,
       };
       this.map.addLayer(layer, this.before);
-      this.$_emitEvent("added", { layerId: this.layerId });
+      this.$_emitEvent('added', { layerId: this.layerId });
     },
 
     setFeatureState(featureId, state) {
@@ -162,10 +162,10 @@ export default {
         const params = {
           id: featureId,
           source: this.source,
-          sourceLayer
+          sourceLayer,
         };
         return this.map.removeFeatureState(params, key);
       }
-    }
-  }
+    },
+  },
 };

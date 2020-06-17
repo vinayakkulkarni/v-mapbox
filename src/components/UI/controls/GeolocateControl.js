@@ -1,16 +1,16 @@
-import controlMixin from "./controlMixin";
-import withEvents from "../../../lib/withEvents";
-import withSelfEvents from "../withSelfEvents";
+import controlMixin from './controlMixin';
+import withEvents from '../../../lib/withEvents';
+import withSelfEvents from '../withSelfEvents';
 
 const geolocationEvents = {
-  trackuserlocationstart: "trackuserlocationstart",
-  trackuserlocationend: "trackuserlocationend",
-  geolocate: "geolocate",
-  error: "error"
+  trackuserlocationstart: 'trackuserlocationstart',
+  trackuserlocationend: 'trackuserlocationend',
+  geolocate: 'geolocate',
+  error: 'error',
 };
 
 export default {
-  name: "GeolocateControl",
+  name: 'GeolocateControl',
   mixins: [withEvents, withSelfEvents, controlMixin],
 
   props: {
@@ -19,22 +19,22 @@ export default {
       default() {
         return {
           enableHighAccuracy: false,
-          timeout: 6000
+          timeout: 6000,
         };
-      }
+      },
     },
     fitBoundsOptions: {
       type: Object,
-      default: () => ({ maxZoom: 15 })
+      default: () => ({ maxZoom: 15 }),
     },
     trackUserLocation: {
       type: Boolean,
-      default: false
+      default: false,
     },
     showUserLocation: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
 
   created() {
@@ -49,6 +49,6 @@ export default {
       if (this.control) {
         return this.control.trigger();
       }
-    }
-  }
+    },
+  },
 };

@@ -1,4 +1,4 @@
-import promisify from "map-promisified";
+import promisify from 'map-promisified';
 
 export default {
   created() {
@@ -15,15 +15,15 @@ export default {
             pitch: this.map.getPitch(),
             zoom: this.map.getZoom(),
             bearing: this.map.getBearing(),
-            center: this.map.getCenter()
+            center: this.map.getCenter(),
           };
-          Object.entries(updatedProps).forEach(prop => {
+          Object.entries(updatedProps).forEach((prop) => {
             this.$_updateSyncedPropsFabric(prop[0], prop[1])();
           });
 
           return Promise.resolve(updatedProps);
-        }
+        },
       };
-    }
-  }
+    },
+  },
 };

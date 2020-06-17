@@ -36,7 +36,7 @@ const watchers = {
   },
   light(next) {
     this.map.setLigh(next);
-  }
+  },
 };
 
 function watcher(prop, callback, next, prev) {
@@ -59,8 +59,8 @@ function watcher(prop, callback, next, prev) {
 
 function makeWatchers() {
   const wrappers = {};
-  Object.entries(watchers).forEach(prop => {
-    wrappers[prop[0]] = function(next, prev) {
+  Object.entries(watchers).forEach((prop) => {
+    wrappers[prop[0]] = function (next, prev) {
       return watcher.call(this, prop[0], prop[1].bind(this), next, prev);
     };
   });
@@ -68,5 +68,5 @@ function makeWatchers() {
 }
 
 export default {
-  watch: makeWatchers()
+  watch: makeWatchers(),
 };

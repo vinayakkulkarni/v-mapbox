@@ -2,44 +2,44 @@ export default {
   container: {
     type: [String, HTMLElement],
     default() {
-      return `map-${("" + Math.random()).split(".")[1]}`;
-    }
+      return `map-${('' + Math.random()).split('.')[1]}`;
+    },
   },
   accessToken: {
     type: String,
-    default: undefined
+    default: undefined,
   },
   minZoom: {
     type: Number,
-    default: 0
+    default: 0,
   },
   maxZoom: {
     type: Number,
-    default: 22
+    default: 22,
   },
   mapStyle: {
     type: [String, Object],
-    required: true
+    required: true,
   },
   hash: {
     type: Boolean,
-    default: false
+    default: false,
   },
   interactive: {
     type: Boolean,
-    default: true
+    default: true,
   },
   bearingSnap: {
     type: Number,
-    default: 7
+    default: 7,
   },
   pitchWithRotate: {
     type: Boolean,
-    default: true
+    default: true,
   },
   clickTolerance: {
     type: Number,
-    default: 3
+    default: 3,
   },
   // classes: {
   //   type: Array,
@@ -49,138 +49,142 @@ export default {
   // },
   attributionControl: {
     type: Boolean,
-    default: true
+    default: true,
   },
   customAttribution: {
     type: [String, Array],
-    default: null
+    default: null,
   },
   logoPosition: {
     type: String,
-    default: "bottom-left",
-    validator: val =>
-      ["top-left", "top-right", "bottom-left", "bottom-right"].includes(val)
+    default: 'bottom-left',
+    validator: (val) =>
+      ['top-left', 'top-right', 'bottom-left', 'bottom-right'].includes(val),
   },
   failIfMajorPerformanceCaveat: {
     type: Boolean,
-    default: false
+    default: false,
   },
   preserveDrawingBuffer: {
     type: Boolean,
-    default: false
+    default: false,
   },
   refreshExpiredTiles: {
     type: Boolean,
-    default: true
+    default: true,
   },
   maxBounds: {
     type: Array,
     default() {
       return undefined;
-    }
+    },
   },
   scrollZoom: {
     type: [Boolean, Object],
     default() {
       return true;
-    }
+    },
   },
   boxZoom: {
     type: Boolean,
-    default: true
+    default: true,
   },
   dragRotate: {
     type: Boolean,
-    default: true
+    default: true,
   },
   dragPan: {
     type: Boolean,
-    default: true
+    default: true,
   },
   keyboard: {
     type: Boolean,
-    default: true
+    default: true,
   },
   doubleClickZoom: {
     type: Boolean,
-    default: true
+    default: true,
   },
   touchZoomRotate: {
     type: [Boolean, Object],
     default() {
       return true;
-    }
+    },
   },
   trackResize: {
     type: Boolean,
-    default: true
+    default: true,
   },
   center: {
     type: [Object, Array],
-    default: undefined
+    default: undefined,
   },
   zoom: {
     type: Number,
-    default: 0
+    default: 0,
   },
   bearing: {
     type: Number,
-    default: 0
+    default: 0,
   },
   pitch: {
     type: Number,
-    default: 0
+    default: 0,
   },
-  initialBounds: {
+  bounds: {
     type: [Object, Array],
-    default: undefined
+    default: undefined,
+  },
+  fitBoundsOptions: {
+    type: Object,
+    default: undefined,
   },
   renderWorldCopies: {
     type: Boolean,
-    default: true
+    default: true,
   },
   RTLTextPluginUrl: {
     type: String,
-    default: undefined
+    default: undefined,
   },
   light: {
     type: Object,
-    default: undefined
+    default: undefined,
   },
   tileBoundaries: {
     type: Boolean,
-    default: false
+    default: false,
   },
   collisionBoxes: {
     type: Boolean,
-    default: false
+    default: false,
   },
   repaint: {
     type: Boolean,
-    default: false
+    default: false,
   },
   transformRequest: {
     type: Function,
-    default: null
+    default: null,
   },
   maxTileCacheSize: {
     type: Number,
-    default: null
+    default: null,
   },
   localIdeographFontFamily: {
     type: String,
-    default: null
+    default: null,
   },
   collectResourceTiming: {
     type: Boolean,
-    default: false
+    default: false,
   },
   fadeDuration: {
     type: Number,
-    default: 300
+    default: 300,
   },
   crossSourceCollisions: {
     type: Boolean,
-    default: true
-  }
+    default: true,
+  },
 };

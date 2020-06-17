@@ -1,34 +1,34 @@
-import layerEvents from "../../lib/layerEvents";
-import mixin from "./layerMixin";
+import layerEvents from '../../lib/layerEvents';
+import mixin from './layerMixin';
 
 export default {
-  name: "CanvasLayer",
+  name: 'CanvasLayer',
   mixins: [mixin],
 
-  inject: ["mapbox", "map"],
+  inject: ['mapbox', 'map'],
 
   props: {
     source: {
       type: Object,
-      required: true
+      required: true,
     },
     layer: {
       type: Object,
-      default: null
-    }
+      default: null,
+    },
   },
 
   computed: {
     canvasElement() {
       return this.mapSource ? this.mapSource.getCanvas() : null;
-    }
+    },
   },
 
   watch: {
     coordinates(val) {
       if (this.initial) return;
       this.mapSource.setCoordinates(val);
-    }
+    },
   },
 
   created() {
@@ -38,11 +38,11 @@ export default {
   methods: {
     $_deferredMount() {
       const source = {
-        type: "canvas",
-        ...this.source
+        type: 'canvas',
+        ...this.source,
       };
 
-      this.map.on("dataloading", this.$_watchSourceLoading);
+      this.map.on('dataloading', this.$_watchSourceLoading);
       try {
         this.map.addSource(this.sourceId, source);
       } catch (err) {
@@ -62,21 +62,21 @@ export default {
         if (this.replace) {
           this.map.removeLayer(this.layerId);
         } else {
-          this.$_emitEvent("layer-exists", { layerId: this.layerId });
+          this.$_emitEvent('layer-exists', { layerId: this.layerId });
           return existed;
         }
       }
       let layer = {
         id: this.layerId,
         source: this.sourceId,
-        type: "raster",
-        ...this.layer
+        type: 'raster',
+        ...this.layer,
       };
       this.map.addLayer(layer, this.before);
-      this.$_emitEvent("added", {
+      this.$_emitEvent('added', {
         layerId: this.layerId,
-        canvas: this.canvasElement
+        canvas: this.canvasElement,
       });
-    }
-  }
+    },
+  },
 };

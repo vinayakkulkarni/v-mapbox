@@ -1,18 +1,18 @@
-import controlMixin from "./controlMixin";
+import controlMixin from './controlMixin';
 
 export default {
-  name: "FullscreenControl",
+  name: 'FullscreenControl',
   mixins: [controlMixin],
 
   props: {
     container: {
       type: HTMLElement,
-      default: undefined
-    }
+      default: undefined,
+    },
   },
 
   created() {
     this.control = new this.mapbox.FullscreenControl(this.$props);
     this.$_addControl();
-  }
+  },
 };
