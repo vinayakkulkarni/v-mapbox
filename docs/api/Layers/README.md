@@ -49,7 +49,7 @@
 - **Description:** The ID of an existing layer to insert the new layer before.
 - **See:** `metadata` in [Mapbox Layer Style Spec](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layer-metadata)
 
-#### Props for Vue-Mapbox component
+#### Props for V-Mapbox component
 
 ### `clearSource`
 

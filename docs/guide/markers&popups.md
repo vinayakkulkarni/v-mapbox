@@ -16,7 +16,7 @@ The Marker component is a wrapper around the [Mapbox GL Marker API](https://docs
 </template>
 
 <script>
-import { MglMap, MglMarker } from "vue-mapbox";
+import { MglMap, MglMarker } from "v-mapbox";
 
 export default {
   components: {
@@ -63,7 +63,7 @@ The `marker` slot allows you to customize the look of the marker. Here is an exa
 </template>
 
 <script>
-import { MglMap, MglMarker } from "vue-mapbox";
+import { MglMap, MglMarker } from "v-mapbox";
 
 export default {
   components: {
@@ -106,7 +106,7 @@ In this example [Vuetify card component](https://vuetifyjs.com/en/components/car
 </template>
 
 <script>
-import { MglMap, MglPopup } from "vue-mapbox";
+import { MglMap, MglPopup } from "v-mapbox";
 
 export default {
   components: {
@@ -163,7 +163,7 @@ Popup often used inside of map markers. You can achive this by passing Popup ins
 </template>
 
 <script>
-import { MglMap, MglPopup, MglMarker } from "vue-mapbox";
+import { MglMap, MglPopup, MglMarker } from "v-mapbox";
 
 export default {
   components: {

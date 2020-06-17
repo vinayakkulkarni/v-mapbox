@@ -51,7 +51,7 @@ export default {
 
 <script>
 import Mapbox from "mapbox-gl";
-import { MglMap } from "vue-mapbox";
+import { MglMap } from "v-mapbox";
 
 export default {
   name: "MyPluginComponent"
@@ -125,7 +125,7 @@ Example below can give you an idea how to create component for Mapbox GL JS plug
 // First, there is no separate HTML to render, so we don't need template and SFC, so it's just JS file
 
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
-import { $helpers } from "vue-mapbox"; // Get $helpers from VueMapbox
+import { $helpers } from "v-mapbox"; // Get $helpers from VueMapbox
 
 // Define list of mapbox-gl-geocoder events
 const geocoderEvents = {

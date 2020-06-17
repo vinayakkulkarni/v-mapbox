@@ -21,8 +21,8 @@ Below is example for using [VueMapbox Geocoder](https://github.com/soal/vue-mapb
 </template>
 
 <script>
-import { MglMap } from "vue-mapbox";
-import MglGeocoderControl from "vue-mapbox-geocoder";
+import { MglMap } from "v-mapbox";
+import MglGeocoderControl from "v-mapbox-geocoder";
 
 export default {
   name: "App",

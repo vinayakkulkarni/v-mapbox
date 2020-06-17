@@ -6,7 +6,7 @@ Geographic features on the map draws as layers.
 Layer use `source` object that contains data for layer (for example, GeoJSON object). Source must be added to map and several layers can use common `source` and draw it's data differently.
 Also, layer has own configuration object that declares how layer draws on the map. You can read more about it in Mapbox GL JS docs for [sources](https://docs.mapbox.com/mapbox-gl-js/api/#sources) and [layers](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers).
 
-Vue-mapbox exposes layers as Vue components.
+v-mapbox exposes layers as Vue components.
 `source` and `layer` configuration object passed to layer component as props. There is several layers types for drawing different types of sources.
 For example adding a layer with GeoJSON data:
 
@@ -26,7 +26,7 @@ For example adding a layer with GeoJSON data:
 </template>
 
 <script>
-import { MglMap, MglNavigationControl, MglGeojsonLayer } from "vue-mapbox";
+import { MglMap, MglNavigationControl, MglGeojsonLayer } from "v-mapbox";
 
 export default {
   components: {
