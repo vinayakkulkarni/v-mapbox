@@ -42,6 +42,7 @@
 <a title="maintenance" href="https://github.com/vinayakkulkarni/v-mapbox/commits/master" rel="nofollow">
   <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020">
 </a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-mapbox?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-mapbox.svg?type=shield"/></a>
 
 > Combine powers of [Vue.js](https://vuejs.org/) and [Mapbox GL JS](https://mapbox.com/mapbox-gl-js)
 
@@ -87,6 +88,9 @@ Inspired by KoRiGaN's [Vue2Leaflet](https://github.com/KoRiGaN/Vue2Leaflet).
 
 ## License
 MIT
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-mapbox.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-mapbox?ref=badge_large)
 
 ## Contributing
 Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/vinayakkulkarni/v-mapbox/compare)
