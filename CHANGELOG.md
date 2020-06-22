@@ -1,3 +1,21 @@
+## [1.3.1](https://github.com/vinayakkulkarni/v-mapbox/compare/v1.2.0...v1.3.1) (2020-06-22)
+
+
+### Bug Fixes
+
+* **deps:** clean lockfile ([85a7217](https://github.com/vinayakkulkarni/v-mapbox/commit/85a7217b6f93614c7e4642c41c3051f724bf9c22))
+* add deepscan badge ([731ef73](https://github.com/vinayakkulkarni/v-mapbox/commit/731ef7302d3fa4b5e65219b119542e31acd695f7))
+* update docs for Popup open & close events ([08e1502](https://github.com/vinayakkulkarni/v-mapbox/commit/08e15025c38f4222fef8fd8f893f9bdcabe81d72))
+* update README for Layers ([0c4bb4d](https://github.com/vinayakkulkarni/v-mapbox/commit/0c4bb4d6691e3b0d8f97212d15e4442c055899e3))
+
+
+### Features
+
+* add Code Of Conduct ([ea9bfae](https://github.com/vinayakkulkarni/v-mapbox/commit/ea9bfaeb4d370e2f801f736469935c39505cdf67))
+* allow the hash param to be a string or a boolean ([361e7f5](https://github.com/vinayakkulkarni/v-mapbox/commit/361e7f5b581bea2e15326180b40f8748b6b5dbac))
+
+
+
 # [1.3.0](https://github.com/vinayakkulkarni/v-mapbox/compare/v1.2.0...v1.3.0) (2020-06-22)
 
 
