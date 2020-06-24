@@ -1,3 +1,12 @@
+## [1.3.2](https://github.com/vinayakkulkarni/v-mapbox/compare/v1.3.1...v1.3.2) (2020-06-24)
+
+
+### Features
+
+* add styleimagemissing event ([ade797b](https://github.com/vinayakkulkarni/v-mapbox/commit/ade797b27a5582cf6591c676ac97c731b04d3745))
+
+
+
 ## [1.3.1](https://github.com/vinayakkulkarni/v-mapbox/compare/v1.2.0...v1.3.1) (2020-06-22)
 
 
