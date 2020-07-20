@@ -68,7 +68,7 @@
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^1.0.0",
     "require-extension-hooks-vue": "^3.0.0",
-    "rollup": "^2.21.0",
+    "rollup": "^2.22.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-css-only": "^2.1.0",
     "rollup-plugin-terser": "^6.1.0",
