@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'VueMapbox',
+  title: 'VMapbox',
   description: 'Combine powers of Mapbox GL JS and Vue.js',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
@@ -65,10 +65,10 @@ module.exports = {
     // Smooth Scrolling
     smoothScroll: true,
     // Assumes GitHub. Can also be a full GitLab url.
-    repo: 'vinayakkulkarni/v-mapbox',
+    repo: 'geospoc/v-mapbox',
     // Optional options for generating "Edit this page" link
     // if your docs are in a different repo from your main project:
-    docsRepo: 'vinayakkulkarni/v-mapbox',
+    docsRepo: 'geospoc/v-mapbox',
     // if your docs are not at the root of the repo:
     docsDir: 'docs',
     // if your docs are in a specific branch (defaults to 'master'):
