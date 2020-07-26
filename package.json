@@ -1,6 +1,6 @@
 {
   "name": "v-mapbox",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "private": false,
   "sideEffects": false,
   "main": "dist/v-mapbox.umd.js",

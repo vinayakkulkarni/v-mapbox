@@ -1,3 +1,21 @@
+## [1.3.3](https://github.com/geospoc/v-mapbox/compare/v1.3.2...v1.3.3) (2020-07-26)
+
+
+### Bug Fixes
+
+* update CI workflow ([3267f48](https://github.com/geospoc/v-mapbox/commit/3267f480d6a1f9a38919443f46388870052805a8))
+* **docs:** update mapbox-gl version ([861690a](https://github.com/geospoc/v-mapbox/commit/861690a9de712aaad54dc3fe9dbe786bc5f9e9fb))
+* update rollup plugin babel ([4c77dff](https://github.com/geospoc/v-mapbox/commit/4c77dff0e541aef21a604d199da1ca02cd5b31f9))
+* **ci:** update ship.js trigger to trigger on `main` branch ([62e88f3](https://github.com/geospoc/v-mapbox/commit/62e88f328750e0ca9857c9fd9c61b9256b5637c0))
+* correct `setLigh` event name typo. ([42bdcd1](https://github.com/geospoc/v-mapbox/commit/42bdcd1aa547e7b946b21549d6101ca7429ca7a8))
+
+
+### Features
+
+* enable jsconfig for better VSCode Intellisense ([54a055d](https://github.com/geospoc/v-mapbox/commit/54a055d621bcd7627798b6c38d3e33acdaf2cdbb))
+
+
+
 ## [1.3.2](https://github.com/vinayakkulkarni/v-mapbox/compare/v1.3.1...v1.3.2) (2020-06-24)
 
 
