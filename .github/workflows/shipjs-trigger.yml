@@ -2,25 +2,28 @@ name: Ship js trigger
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout latest code
+        uses: actions/checkout@v2
         with:
-          ref: master
-      - uses: actions/setup-node@v1
+          fetch-depth: 0
+          ref: main
+
+      - name: Setup node environment
+        uses: actions/setup-node@v1
         with:
           registry-url: "https://registry.npmjs.org"
-      - run: |
-          if [ -f "yarn.lock" ]; then
-            yarn install
-          else
-            npm install
-          fi
-      - run: npx shipjs trigger
+      
+      - name: Install required dependencies
+        run: npm install
+
+      - name: Run ship.js trigger to build new version
+        run: npx shipjs trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
