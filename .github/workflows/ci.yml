@@ -3,10 +3,12 @@ name: ci
 on:
   push:
     branches:
-      - master
+      - main
+      - dev
   pull_request:
     branches:
-      - master
+      - main
+      - dev
 
 jobs:
   ci:
@@ -18,21 +20,28 @@ jobs:
         node: [14]
 
     steps:
-      - uses: actions/setup-node@v1
+      - name: Setup node environment
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
 
-      - name: checkout
+      - name: Checkout latest code
         uses: actions/checkout@master
 
-      - name: cache node_modules
-        uses: actions/cache@v1
+      - name: Get npm cache directory
+        id: npm-cache
+        run: echo "::set-output name=dir::$(npm config get cache)"
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
         with:
-          path: node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
 
-      - name: install
-        run: npm ci
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm i
 
-      - name: lint
+      - name: Run lint script to check for Lint errors
         run: npm run lint
