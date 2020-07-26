@@ -73,20 +73,25 @@
     "rollup-plugin-css-only": "^2.1.0",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-vue": "^5.1.9",
-    "shipjs": "^0.20.0",
+    "shipjs": "^0.20.1",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.5.2"
   },
   "engines": {
-    "node": ">=10.20.0"
+    "node": ">=12.18.3"
   },
   "author": {
-    "name": "Vinayak Kulkarni",
-    "email": "inbox.vinayak@gmail.com",
-    "url": "https://github.com/vinayakkulkarni"
+    "email": "developers@geospoc.com",
+    "name": "GeoSpoc Dev Team",
+    "url": "https://geospoc.com"
   },
   "contributors": [
+    {
+      "name": "Vinayak Kulkarni",
+      "email": "inbox.vinayak@gmail.com",
+      "url": "https://vinayakkulkarni.dev"
+    },
     {
       "name": "soal",
       "email": "sorrrow.about.alice@gmail.com",
@@ -95,7 +100,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:vinayakkulkarni/v-mapbox.git"
+    "url": "git@github.com:geospoc/v-mapbox.git"
   },
   "keywords": [
     "vue",
@@ -106,7 +111,7 @@
     "mapbox-gl-geocoder"
   ],
   "bugs": {
-    "url": "https://github.com/vinayakkulkarni/v-mapbox/issues"
+    "url": "https://github.com/geospoc/v-mapbox/issues"
   },
   "homepage": "https://v-mapbox.netlify.app/"
 }
