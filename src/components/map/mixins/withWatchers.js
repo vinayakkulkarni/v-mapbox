@@ -8,6 +8,12 @@ const watchers = {
   maxZoom(next) {
     this.map.setMaxZoom(next);
   },
+  minPitch(next) {
+    this.map.setMinPitch(next);
+  },
+  maxPitch(next) {
+    this.map.setMaxPitch(next);
+  },
   mapStyle(next) {
     this.map.setStyle(next);
   },
