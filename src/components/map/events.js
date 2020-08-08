@@ -1,5 +1,3 @@
-/* eslint-disable key-spacing */
-
 export default {
   resize: { name: 'resize' },
   webglcontextlost: { name: 'webglcontextlost' },
