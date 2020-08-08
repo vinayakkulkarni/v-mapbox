@@ -27,6 +27,7 @@ export default {
   },
   mapStyle: {
     type: [String, Object],
+    default: undefined,
     required: true,
   },
   hash: {
@@ -183,7 +184,7 @@ export default {
   },
   localIdeographFontFamily: {
     type: String,
-    default: null,
+    default: 'sans-serif',
     required: false,
   },
   transformRequest: {
@@ -223,6 +224,7 @@ export default {
   RTLTextPluginUrl: {
     type: String,
     default: undefined,
+    required: false,
   },
   /**
    * Reference(mapbox): https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setlight
@@ -231,6 +233,7 @@ export default {
   light: {
     type: Object,
     default: undefined,
+    required: false,
   },
   /**
    * Reference(mapbox): https://docs.mapbox.com/mapbox-gl-js/api/map/#map#showtileboundaries
@@ -239,6 +242,7 @@ export default {
   tileBoundaries: {
     type: Boolean,
     default: false,
+    required: false,
   },
   /**
    * Reference(mapbox): https://docs.mapbox.com/mapbox-gl-js/api/map/#map#showcollisionboxes
@@ -247,6 +251,7 @@ export default {
   collisionBoxes: {
     type: Boolean,
     default: false,
+    required: false,
   },
   /**
    * Reference(mapbox): https://docs.mapbox.com/mapbox-gl-js/api/map/#map#repaint
@@ -255,5 +260,6 @@ export default {
   repaint: {
     type: Boolean,
     default: false,
+    required: false,
   },
 };
