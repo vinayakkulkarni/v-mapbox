@@ -77,7 +77,7 @@ export default {
 </script>
 ```
 
-v-mapbox component will work even if it wrapped in another component as long as they in components sub-tree of base map component.
+v-mapbox components will work even if wrapped in another component as long as they are in the components sub-tree of the base map component.
 
 For example:
 
