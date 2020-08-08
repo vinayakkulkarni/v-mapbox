@@ -1,3 +1,21 @@
+# [1.4.0](https://github.com/geospoc/v-mapbox/compare/v1.3.3...v1.4.0) (2020-08-08)
+
+
+### Bug Fixes
+
+* **docs:** update default mapbox-gl version in docs ([d1ddc11](https://github.com/geospoc/v-mapbox/commit/d1ddc111fba917e8cebbae3a298460d95a4f0def))
+* **props:** update required values for synced props ([0a516c6](https://github.com/geospoc/v-mapbox/commit/0a516c6d255d961705950fb08fa5e7a594c63189))
+* remove eslint overrides ([197717a](https://github.com/geospoc/v-mapbox/commit/197717a958eb7063aece80269f06b390f5f360f7))
+
+
+### Features
+
+* **docs:** update gl-map api docs ([29579a2](https://github.com/geospoc/v-mapbox/commit/29579a2a8aca875a0899e20b3b3233b9fc3a4ea7))
+* add minPitch() & maxPitch() options ([97118e0](https://github.com/geospoc/v-mapbox/commit/97118e01035d668996d5951d850355af780be1d2))
+* update map options as per mapbox-gl api ([2f9e6c6](https://github.com/geospoc/v-mapbox/commit/2f9e6c673dab9561160e8f0d8539e97636ec38e9))
+
+
+
 ## [1.3.3](https://github.com/geospoc/v-mapbox/compare/v1.3.2...v1.3.3) (2020-07-26)
 
 
