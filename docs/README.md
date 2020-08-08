@@ -66,8 +66,8 @@ export default {
 ```
 
 ::: tip Dependencies
-[Vue.js 2.5+](https://github.com/vuejs/vue)  
-[Mapbox GL JS 0.51+](https://github.com/mapbox/mapbox-gl-js)  
+[Vue.js 2.6+](https://github.com/vuejs/vue)  
+[Mapbox GL JS 1.1+](https://github.com/mapbox/mapbox-gl-js)  
 [map-promisified](https://github.com/soal/map-promisified)
 :::
 
