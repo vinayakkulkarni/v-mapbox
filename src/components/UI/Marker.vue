@@ -1,5 +1,5 @@
 <template>
-  <div style="display: none;">
+  <div style="display: none">
     <!-- slot for custom marker -->
     <slot name="marker" />
     <!-- slot for popup -->
