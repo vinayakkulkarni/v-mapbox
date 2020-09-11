@@ -36,6 +36,14 @@
 
     props: {
       /**
+       * Mapbox GL popup option.
+       * Space-separated CSS class names to add to popup container
+       */
+      className: {
+        type: String,
+        default: undefined,
+      },
+      /**
        * If `true`, a close button will appear in the top right corner of the popup.
        * Mapbox GL popup option.
        */
