@@ -55,6 +55,12 @@
 - **Description:** A string representing the value for the maximum width. (ex: '400px')
 - **See:** `maxWidth` in [Popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup#setmaxwidth)
 
+### `className`
+
+- **Type**: `String`
+- **Description:** Space-separated CSS class names to add to popup container
+- **See:** `className` in [Popup](https://docs.mapbox.com/mapbox-gl-js/api/markers/#popup#addclassname)
+
 ## Slots
 
 ### `default`
