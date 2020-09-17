@@ -1,7 +1,7 @@
 <template>
   <div style="display: none">
     <!-- @slot Slot for popup content -->
-    <slot />
+    <slot :class="[className]" />
   </div>
 </template>
 
