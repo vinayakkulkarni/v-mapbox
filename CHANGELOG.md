@@ -1,3 +1,20 @@
+# [1.5.0](https://github.com/geospoc/v-mapbox/compare/v1.4.0...v1.5.0) (2020-09-17)
+
+
+### Bug Fixes
+
+* add classes for popup ([a7d486b](https://github.com/geospoc/v-mapbox/commit/a7d486be3317f87319124e65bee522b56b108b31))
+* update dependencies ([cdebed1](https://github.com/geospoc/v-mapbox/commit/cdebed19115bfd149fbc0923b8441933d59c9a27))
+* **docs:** update grammar of composition ([7b080c7](https://github.com/geospoc/v-mapbox/commit/7b080c7b2bdeb83cdf69af6c2e449151b15b5f05))
+
+
+### Features
+
+* add `/rebase` workflow ([b0a3140](https://github.com/geospoc/v-mapbox/commit/b0a314030cf5705365fdfe47ae7b88a7c4dc155f))
+* add className option to popup ([bb9abf0](https://github.com/geospoc/v-mapbox/commit/bb9abf021f0e2f9e2fc418f19d1f5855d4b8be21))
+
+
+
 # [1.4.0](https://github.com/geospoc/v-mapbox/compare/v1.3.3...v1.4.0) (2020-08-08)
 
 
