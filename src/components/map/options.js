@@ -93,7 +93,7 @@ export default {
     required: false,
   },
   maxBounds: {
-    type: Array,
+    type: [Array, Object],
     default: () => undefined,
     required: false,
   },
