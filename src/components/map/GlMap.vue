@@ -18,14 +18,6 @@
 
     mixins: [withWatchers, withAsyncActions, withPrivateMethods, withEvents],
 
-    props: {
-      mapboxGl: {
-        type: Object,
-        default: null,
-      },
-      ...options,
-    },
-
     provide() {
       const self = this;
       return {
@@ -39,6 +31,14 @@
           return self.actions;
         },
       };
+    },
+
+    props: {
+      mapboxGl: {
+        type: Object,
+        default: null,
+      },
+      ...options,
     },
 
     data() {
