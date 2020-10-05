@@ -1,3 +1,21 @@
+# [1.6.0](https://github.com/geospoc/v-mapbox/compare/v1.5.0...v1.6.0) (2020-10-05)
+
+
+### Bug Fixes
+
+* **ci:** update workflows ([7f3b4d5](https://github.com/geospoc/v-mapbox/commit/7f3b4d51e9352c833410cc7231f8582177d7dc35))
+* add babelHelpers option in babel rollup plugin ([66d1519](https://github.com/geospoc/v-mapbox/commit/66d151995f32e6ae6db208f233055e4c12e907b3))
+* added type `object` for maxBounds validation ([4e2802d](https://github.com/geospoc/v-mapbox/commit/4e2802d0cb2b3cd2aa5269512eecafb7340467e2))
+* lint:prettier ([9ab883f](https://github.com/geospoc/v-mapbox/commit/9ab883f3e5165ff99e6a078a538cacb6083351a2))
+* rtl issue ([0eefb33](https://github.com/geospoc/v-mapbox/commit/0eefb33eb3b4c9c6955041282615e2216aa3d2d3))
+
+
+### Features
+
+* make 'bounds' synced prop ([5834608](https://github.com/geospoc/v-mapbox/commit/5834608a7b228fb074b6ef0a42f08aa598ad02b9))
+
+
+
 # [1.5.0](https://github.com/geospoc/v-mapbox/compare/v1.4.0...v1.5.0) (2020-09-17)
 
 
