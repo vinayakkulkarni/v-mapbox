@@ -30,8 +30,17 @@ export default {
           prop: 'pitch',
           getter: this.map.getPitch.bind(this.map),
         },
-        // TODO: make 'bounds' synced prop
-        // { events: ['moveend', 'zoomend', 'rotate', 'pitch'], prop: 'bounds', getter: this.map.getBounds.bind(this.map) }
+        {
+          events: ["moveend", "zoomend", "rotate", "pitch"],
+          prop: "bounds",
+          getter: () => {
+            let newBounds = this.map.getBounds();
+            if (this.$props.bounds instanceof Array) {
+              newBounds = newBounds.toArray();
+            }
+            return newBounds;
+          }
+        }
       ];
       syncedProps.forEach(({ events, prop, getter }) => {
         events.forEach((event) => {
