@@ -1,3 +1,19 @@
+# [1.6.0](https://github.com/geospoc/v-mapbox/compare/v1.5.0...v1.6.0) (2020-10-05)
+
+
+### Bug Fixes
+
+* added type `object` for maxBounds validation ([4e2802d](https://github.com/geospoc/v-mapbox/commit/4e2802d0cb2b3cd2aa5269512eecafb7340467e2))
+* lint:prettier ([9ab883f](https://github.com/geospoc/v-mapbox/commit/9ab883f3e5165ff99e6a078a538cacb6083351a2))
+* rtl issue ([0eefb33](https://github.com/geospoc/v-mapbox/commit/0eefb33eb3b4c9c6955041282615e2216aa3d2d3))
+
+
+### Features
+
+* make 'bounds' synced prop ([5834608](https://github.com/geospoc/v-mapbox/commit/5834608a7b228fb074b6ef0a42f08aa598ad02b9))
+
+
+
 # [1.5.0](https://github.com/geospoc/v-mapbox/compare/v1.4.0...v1.5.0) (2020-09-17)
 
 
