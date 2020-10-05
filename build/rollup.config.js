@@ -14,6 +14,7 @@ export default [
     },
     plugins: [
       babel({
+        babelHelpers: 'bundled',
         exclude: 'node_modules/**',
       }),
       commonjs(),
@@ -38,6 +39,7 @@ export default [
     },
     plugins: [
       babel({
+        babelHelpers: 'bundled',
         exclude: 'node_modules/**',
       }),
       commonjs(),
@@ -56,6 +58,7 @@ export default [
     },
     plugins: [
       babel({
+        babelHelpers: 'bundled',
         exclude: 'node_modules/**',
       }),
       commonjs(),
