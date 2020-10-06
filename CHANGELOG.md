@@ -1,3 +1,14 @@
+## [1.6.1](https://github.com/geospoc/v-mapbox/compare/v1.5.0...v1.6.1) (2020-10-06)
+
+
+### Bug Fixes
+
+* failing `npm run build` in shipjs trigger ([8caee76](https://github.com/geospoc/v-mapbox/commit/8caee76f7a8dfb5b681a4b0f098acb7cfca8e870))
+* **ci:** update workflows ([7f3b4d5](https://github.com/geospoc/v-mapbox/commit/7f3b4d51e9352c833410cc7231f8582177d7dc35))
+* add babelHelpers option in babel rollup plugin ([66d1519](https://github.com/geospoc/v-mapbox/commit/66d151995f32e6ae6db208f233055e4c12e907b3))
+
+
+
 # [1.6.0](https://github.com/geospoc/v-mapbox/compare/v1.5.0...v1.6.0) (2020-10-05)
 
 
