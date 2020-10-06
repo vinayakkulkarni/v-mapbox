@@ -19,6 +19,9 @@ jobs:
         with:
           registry-url: "https://registry.npmjs.org"
       
+      - name: Install required dependencies
+        run: npm install
+
       - name: Run ship.js trigger to build new version
         run: npx shipjs trigger
         env:
