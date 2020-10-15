@@ -76,7 +76,7 @@
     "shipjs": "^0.22.0",
     "vue": "^2.6.12",
     "vue-template-compiler": "^2.6.12",
-    "vuepress": "^1.7.0"
+    "vuepress": "^1.7.1"
   },
   "engines": {
     "node": ">=12.18.3"
