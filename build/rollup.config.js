@@ -2,6 +2,32 @@ import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import vue from 'rollup-plugin-vue';
 import scss from 'rollup-plugin-scss';
+import typescript from 'rollup-plugin-typescript2';
+import alias from '@rollup/plugin-alias';
+import resolve from '@rollup/plugin-node-resolve';
+
+const extensions = ['.js', '.ts', '.vue'];
+const plugins = [
+  alias({
+    entries: {
+      vue: 'vue/dist/vue.runtime.esm-browser.prod.js',
+    },
+  }),
+  resolve({ extensions, browser: true }),
+  babel({
+    babelHelpers: 'bundled',
+    exclude: 'node_modules/**',
+  }),
+  commonjs(),
+  vue({ css: false }),
+  scss({
+    output: 'dist/v-mapbox.css',
+  }),
+  typescript({
+    include: [/\.tsx?$/, /\.vue\?.*?lang=ts/],
+    useTsconfigDeclarationDir: true,
+  }),
+];
 
 export default [
   // ESM build to be used with webpack/rollup.
@@ -12,15 +38,7 @@ export default [
       name: 'VMapbox',
       file: 'dist/v-mapbox.esm.js',
     },
-    plugins: [
-      babel({
-        babelHelpers: 'bundled',
-        exclude: 'node_modules/**',
-      }),
-      commonjs(),
-      vue({ css: false }),
-      scss({ output: 'dist/v-mapbox.css' }),
-    ],
+    plugins,
     external: ['vue', 'mapbox-gl', 'map-promisified'],
   },
   // UMD build.
@@ -37,14 +55,7 @@ export default [
         'map-promisified': 'mapPromisified',
       },
     },
-    plugins: [
-      babel({
-        babelHelpers: 'bundled',
-        exclude: 'node_modules/**',
-      }),
-      commonjs(),
-      vue(),
-    ],
+    plugins,
     external: ['vue', 'mapbox-gl', 'map-promisified'],
   },
   // CommonJS build
@@ -56,14 +67,7 @@ export default [
       file: 'dist/v-mapbox.cjs.js',
       exports: 'named',
     },
-    plugins: [
-      babel({
-        babelHelpers: 'bundled',
-        exclude: 'node_modules/**',
-      }),
-      commonjs(),
-      vue(),
-    ],
+    plugins,
     external: ['vue', 'mapbox-gl', 'map-promisified'],
   },
 ];
