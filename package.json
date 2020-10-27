@@ -38,7 +38,7 @@
   },
   "peerDependencies": {
     "mapbox-gl": "^1.12.0",
-    "vue": "^2.6.12"
+    "vue": "^3.0.2"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
@@ -46,9 +46,12 @@
     "@babel/preset-env": "^7.12.1",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-babel": "^5.2.1",
-    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
+    "@vue/compiler-sfc": "^3.0.2",
     "@vue/test-utils": "^1.1.1",
     "ava": "^3.13.0",
     "babel-eslint": "^10.1.0",
@@ -73,10 +76,11 @@
     "rollup": "^2.33.1",
     "rollup-plugin-scss": "^2.6.1",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-vue": "^5.1.9",
+    "rollup-plugin-typescript2": "^0.28.0",
+    "rollup-plugin-vue": "^6.0.0-beta.10",
     "shipjs": "^0.22.0",
-    "vue": "^2.6.12",
-    "vue-template-compiler": "^2.6.12",
+    "typescript": "^4.0.5",
+    "vue": "^3.0.2",
     "vuepress": "^1.7.1"
   },
   "engines": {
