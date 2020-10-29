@@ -3,7 +3,7 @@
   "version": "1.6.2",
   "private": false,
   "sideEffects": false,
-  "main": "dist/v-mapbox.umd.js",
+  "main": "dist/v-mapbox.js",
   "module": "dist/v-mapbox.esm.js",
   "unpkg": "dist/v-mapbox.min.js",
   "jsdelivr": "dist/v-mapbox.min.js",
