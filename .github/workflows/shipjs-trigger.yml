@@ -1,28 +1,29 @@
 name: Ship js trigger
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types:
+      - closed
 jobs:
   build:
     name: Release
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'releases/v')
     steps:
-      - name: Checkout latest code
+      - name: Checkout code 🛎
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           ref: main
 
-      - name: Setup node environment
+      - name: Setup node env 🏗
         uses: actions/setup-node@v1
         with:
           registry-url: "https://registry.npmjs.org"
 
-      - name: Install required dependencies
+      - name: Install dependencies 👨🏻‍💻
         run: npm install
-
-      - name: Run ship.js trigger to build new version
+        
+      - name: Release new version to registry 🎉
         run: npx shipjs trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
