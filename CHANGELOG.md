@@ -1,3 +1,14 @@
+## [1.6.2](https://github.com/geospoc/v-mapbox/compare/v1.6.1...v1.6.2) (2020-10-29)
+
+
+### Bug Fixes
+
+* update `ship.js` workflow ([7379c54](https://github.com/geospoc/v-mapbox/commit/7379c54020ce0472a281af6f619992fc31021ab3))
+* **deps:** bump dependencies ([23d8253](https://github.com/geospoc/v-mapbox/commit/23d825336fec178f9e9435f8f9f239f0851ffde6))
+* update dependabot config to support github-actions ecosystem ([b2b999e](https://github.com/geospoc/v-mapbox/commit/b2b999e204392dbd9b6090d3369d62e77c71ffe2))
+
+
+
 ## [1.6.1](https://github.com/geospoc/v-mapbox/compare/v1.5.0...v1.6.1) (2020-10-06)
 
 
