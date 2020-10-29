@@ -1,3 +1,13 @@
+## [1.6.3](https://github.com/geospoc/v-mapbox/compare/v1.6.2...v1.6.3) (2020-10-29)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from v1 to v2.1.2 ([38a4cfa](https://github.com/geospoc/v-mapbox/commit/38a4cfa5735dabeaec34647cdeea6f880d1810b9))
+* the `main` entry file was 404 ([e2450e7](https://github.com/geospoc/v-mapbox/commit/e2450e7c3bdc83d965e7a9eacceae07dded7c7fe)), closes [#174](https://github.com/geospoc/v-mapbox/issues/174)
+
+
+
 ## [1.6.2](https://github.com/geospoc/v-mapbox/compare/v1.6.1...v1.6.2) (2020-10-29)
 
 
