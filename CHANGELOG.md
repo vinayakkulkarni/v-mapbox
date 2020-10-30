@@ -1,3 +1,13 @@
+## [1.6.4](https://github.com/geospoc/v-mapbox/compare/v1.6.3...v1.6.4) (2020-10-30)
+
+
+### Bug Fixes
+
+* set css as sideEffect ([9257843](https://github.com/geospoc/v-mapbox/commit/9257843a76b61bdb7da1ae29e1bb7ffa0af0b291))
+* specify lang attribute to style ([ea10ed3](https://github.com/geospoc/v-mapbox/commit/ea10ed3d42b6fbb4d7585f44552286c342a664a5))
+
+
+
 ## [1.6.3](https://github.com/geospoc/v-mapbox/compare/v1.6.2...v1.6.3) (2020-10-29)
 
 
