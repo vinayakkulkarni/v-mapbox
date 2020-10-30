@@ -1,7 +1,7 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import vue from 'rollup-plugin-vue';
-import css from 'rollup-plugin-css-only';
+import scss from 'rollup-plugin-scss';
 
 export default [
   // ESM build to be used with webpack/rollup.
@@ -19,7 +19,7 @@ export default [
       }),
       commonjs(),
       vue({ css: false }),
-      css({ output: 'dist/v-mapbox.css' }),
+      scss({ output: 'dist/v-mapbox.css' }),
     ],
     external: ['vue', 'mapbox-gl', 'map-promisified'],
   },

@@ -113,7 +113,7 @@
   };
 </script>
 
-<style>
+<style lang="scss">
   .mgl-map-wrapper {
     height: 100%;
     position: relative;
