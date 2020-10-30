@@ -1,6 +1,6 @@
 {
   "name": "v-mapbox",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "private": false,
   "sideEffects": [
     "*.css"
