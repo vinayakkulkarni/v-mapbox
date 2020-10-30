@@ -2,7 +2,9 @@
   "name": "v-mapbox",
   "version": "1.6.3",
   "private": false,
-  "sideEffects": false,
+  "sideEffects": [
+    "*.css"
+  ],
   "main": "dist/v-mapbox.js",
   "module": "dist/v-mapbox.esm.js",
   "unpkg": "dist/v-mapbox.min.js",
