@@ -70,6 +70,12 @@ export default {
     },
   },
 
+  watch: {
+    before(next) {
+      this.move(next);
+    },
+  },
+
   created() {
     if (this.layer.minzoom) {
       this.$watch('layer.minzoom', function (next) {
