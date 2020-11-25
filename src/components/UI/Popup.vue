@@ -155,9 +155,6 @@
       showed(next, prev) {
         if (next !== prev) {
           this.open = next;
-          if (this.marker) {
-            this.marker.togglePopup();
-          }
         }
       },
     },
@@ -207,10 +204,6 @@
         }
         if (this.showed) {
           this.open = true;
-
-          if (this.marker) {
-            this.marker.togglePopup();
-          }
         }
       },
 
