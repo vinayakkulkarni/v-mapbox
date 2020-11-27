@@ -52,7 +52,7 @@
     "@vue/test-utils": "^1.1.1",
     "ava": "^3.13.0",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.1",
+    "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-preset-vue": "^2.0.2",
     "browser-env": "^3.3.0",
