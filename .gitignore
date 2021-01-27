@@ -80,7 +80,8 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+# Removed it from .gitignore to use it in other prjoject's package.json
+# dist
 
 # Gatsby files
 .cache/
