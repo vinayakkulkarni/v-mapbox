@@ -1,3 +1,19 @@
+# [1.7.0](https://github.com/geospoc/v-mapbox/compare/v1.6.4...v1.7.0) (2021-01-29)
+
+
+### Bug Fixes
+
+* prop "showed" in popup caused cyclic issue ([0854318](https://github.com/geospoc/v-mapbox/commit/0854318422339a6cd34c5a7c1d144f400c76beab)), closes [#203](https://github.com/geospoc/v-mapbox/issues/203)
+* **deps:** bump actions/setup-node from v2.1.2 to v2.1.3 ([659971d](https://github.com/geospoc/v-mapbox/commit/659971d1489724bc5e599d1118a3a09c165009ba))
+* **deps:** bump actions/setup-node from v2.1.3 to v2.1.4 ([b4728c5](https://github.com/geospoc/v-mapbox/commit/b4728c555c38c3acd3588bcbc9750030ab8b08e2))
+
+
+### Features
+
+* add `closeOnMove` & `focusAfterOpen` props ([f77a4b5](https://github.com/geospoc/v-mapbox/commit/f77a4b5648f03c52c01a134bdf2adbf4010ac747))
+
+
+
 ## [1.6.4](https://github.com/geospoc/v-mapbox/compare/v1.6.3...v1.6.4) (2020-10-30)
 
 
