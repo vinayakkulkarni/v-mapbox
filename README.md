@@ -40,7 +40,7 @@
   <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/geospoc/v-mapbox">
 </a>
 <a title="maintenance" href="https://github.com/geospoc/v-mapbox/commits/master" rel="nofollow">
-  <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020">
+  <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2021">
 </a>
 <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fgeospoc%2Fv-mapbox?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgeospoc%2Fv-mapbox.svg?type=shield"/></a>
 
