@@ -61,6 +61,22 @@
       },
       /**
        * Mapbox GL popup option.
+       * If `true`, the popup will closed when the map moves.
+       */
+      closeOnMove: {
+        type: Boolean,
+        default: false,
+      },
+      /**
+       * Mapbox GL popup option.
+       * If `true`, the popup will try to focus the first focusable element inside the popup.
+       */
+      focusAfterOpen: {
+        type: Boolean,
+        default: true,
+      },
+      /**
+       * Mapbox GL popup option.
        * A string indicating the popup's location relative to the coordinate set.
        * If unset the anchor will be dynamically set to ensure the popup falls within the map container with a preference for 'bottom' .
        *  'top', 'bottom', 'left', 'right', 'top-left', 'top-right', 'bottom-left', 'bottom-right'
