@@ -135,6 +135,10 @@ Popups added to the map is hidden by default. If you want to show the popup imme
 
 - `closeOnClick {Boolean}` If true, the popup will closed when the map is clicked.
 
+- `closeOnMove {Boolean}` If true, the popup will closed when the map moves.
+
+- `focusAfterOpen {Boolean}` If true, the popup will try to focus the first focusable element inside the popup.
+
 - `coordinates {Array}` The GeoJSON coordinates for popup placement on the map. If popup used inside marker this prop will be ignored.
 
 - `anchor {string}` prop specifies the part of the Popup that should be positioned closest to the coordinates point.
