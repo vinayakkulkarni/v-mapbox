@@ -127,7 +127,7 @@ export default {
     }
   },
 
-  beforeDestroy() {
+  beforeUnmount() {
     if (this.map && this.map.loaded()) {
       try {
         this.map.removeLayer(this.layerId);
