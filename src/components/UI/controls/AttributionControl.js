@@ -15,7 +15,9 @@ export default {
   },
 
   created() {
-    this.control = new this.mapbox.AttributionControl(this.$props);
+    const { mapbox } = this.mapboxCtx;
+
+    this.control = new mapbox.AttributionControl(this.$props);
     this.$_addControl();
   },
 };

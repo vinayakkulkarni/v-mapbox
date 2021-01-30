@@ -22,17 +22,7 @@
     name: 'Popup',
     mixins: [withEvents, withSelfEvents],
 
-    inject: {
-      mapbox: {
-        default: null,
-      },
-      map: {
-        default: null,
-      },
-      marker: {
-        default: null,
-      },
-    },
+    inject: ['mapboxCtx'],
 
     props: {
       /**
@@ -135,11 +125,11 @@
           return false;
         },
         set(value) {
-          if (this.map && this.popup) {
+          if (this.mapboxCtx.map && this.popup) {
             if (!value) {
               this.popup.remove();
             } else {
-              this.popup.addTo(this.map);
+              this.popup.addTo(this.mapboxCtx.map);
             }
           }
         },
@@ -163,7 +153,8 @@
     },
 
     created() {
-      this.popup = new this.mapbox.Popup(this.$props);
+      const { mapbox } = this.mapboxCtx;
+      this.popup = new mapbox.Popup(this.$props);
     },
 
     mounted() {
@@ -172,7 +163,7 @@
     },
 
     beforeUnmount() {
-      if (this.map) {
+      if (this.mapboxCtx.map) {
         this.popup.remove();
         this.$_emitEvent('removed');
       }
@@ -180,7 +171,8 @@
 
     methods: {
       $_addPopup() {
-        this.popup = new this.mapbox.Popup(this.$props);
+        const { mapbox } = this.mapboxCtx;
+        this.popup = new mapbox.Popup(this.$props);
         if (this.coordinates !== undefined) {
           this.popup.setLngLat(this.coordinates);
         }

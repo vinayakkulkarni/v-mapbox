@@ -21,15 +21,17 @@
     provide() {
       const self = this;
       return {
-        get mapbox() {
-          return self.mapbox;
-        },
-        get map() {
-          return self.map;
-        },
-        get actions() {
-          return self.actions;
-        },
+        mapboxCtx: {
+          get mapbox() {
+            return self.mapbox;
+          },
+          get map() {
+            return self.map;
+          },
+          get actions() {
+            return self.actions;
+          },
+        }
       };
     },
 

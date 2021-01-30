@@ -41,18 +41,19 @@ export default {
 
   methods: {
     $_deferredMount() {
+      const { map } = this.mapboxCtx;
       const source = {
         type: 'image',
         ...this.source,
       };
 
-      this.map.on('dataloading', this.$_watchSourceLoading);
+      map.on('dataloading', this.$_watchSourceLoading);
       try {
-        this.map.addSource(this.sourceId, source);
+        map.addSource(this.sourceId, source);
       } catch (err) {
         if (this.replaceSource) {
-          this.map.removeSource(this.sourceId);
-          this.map.addSource(this.sourceId, source);
+          map.removeSource(this.sourceId);
+          map.addSource(this.sourceId, source);
         }
       }
       this.$_addLayer();
@@ -61,10 +62,11 @@ export default {
     },
 
     $_addLayer() {
-      let existed = this.map.getLayer(this.layerId);
+      const { map } = this.mapboxCtx;
+      let existed = map.getLayer(this.layerId);
       if (existed) {
         if (this.replace) {
-          this.map.removeLayer(this.layerId);
+          map.removeLayer(this.layerId);
         } else {
           this.$_emitEvent('layer-exists', { layerId: this.layerId });
           return existed;
@@ -77,7 +79,7 @@ export default {
         ...this.layer,
       };
 
-      this.map.addLayer(layer, this.before);
+      map.addLayer(layer, this.before);
       this.$_emitEvent('added', { layerId: this.layerId });
     },
   },

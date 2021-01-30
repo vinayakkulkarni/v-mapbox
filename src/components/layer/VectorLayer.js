@@ -7,9 +7,10 @@ export default {
 
   computed: {
     getSourceFeatures() {
+      const { map } = this.mapboxCtx;
       return (filter) => {
-        if (this.map) {
-          return this.map.querySourceFeatures(this.sourceId, {
+        if (map) {
+          return map.querySourceFeatures(this.sourceId, {
             sourceLayer: this.layer['source-layer'],
             filter,
           });
@@ -19,9 +20,10 @@ export default {
     },
 
     getRenderedFeatures() {
+      const { map } = this.mapboxCtx;
       return (geometry, filter) => {
-        if (this.map) {
-          return this.map.queryRenderedFeatures(geometry, {
+        if (map) {
+          return map.queryRenderedFeatures(geometry, {
             layers: [this.layerId],
             filter,
           });
@@ -34,7 +36,8 @@ export default {
   watch: {
     filter(filter) {
       if (this.initial) return;
-      this.map.setFilter(this.layerId, filter);
+      const { map } = this.mapboxCtx;
+      map.setFilter(this.layerId, filter);
     },
   },
 
@@ -44,31 +47,33 @@ export default {
 
   methods: {
     $_deferredMount() {
+      const { map } = this.mapboxCtx;
       let source = {
         type: 'vector',
         ...this.source,
       };
 
-      this.map.on('dataloading', this.$_watchSourceLoading);
+      map.on('dataloading', this.$_watchSourceLoading);
       try {
-        this.map.addSource(this.sourceId, source);
+        map.addSource(this.sourceId, source);
       } catch (err) {
         if (this.replaceSource) {
-          this.map.removeSource(this.sourceId);
-          this.map.addSource(this.sourceId, source);
+          map.removeSource(this.sourceId);
+          map.addSource(this.sourceId, source);
         }
       }
       this.$_addLayer();
       this.$_bindLayerEvents(layerEvents);
-      this.map.off('dataloading', this.$_watchSourceLoading);
+      map.off('dataloading', this.$_watchSourceLoading);
       this.initial = false;
     },
 
     $_addLayer() {
-      let existed = this.map.getLayer(this.layerId);
+      const { map } = this.mapboxCtx;
+      let existed = map.getLayer(this.layerId);
       if (existed) {
         if (this.replace) {
-          this.map.removeLayer(this.layerId);
+          map.removeLayer(this.layerId);
         } else {
           this.$_emitEvent('layer-exists', { layerId: this.layerId });
           return existed;
@@ -80,29 +85,31 @@ export default {
         ...this.layer,
       };
 
-      this.map.addLayer(layer, this.before);
+      map.addLayer(layer, this.before);
       this.$_emitEvent('added', { layerId: this.layerId });
     },
 
     setFeatureState(featureId, state) {
-      if (this.map) {
+      const { map } = this.mapboxCtx;
+      if (map) {
         const params = {
           id: featureId,
           source: this.sourceId,
           'source-layer': this.layer['source-layer'],
         };
-        return this.map.setFeatureState(params, state);
+        return map.setFeatureState(params, state);
       }
     },
 
     getFeatureState(featureId) {
-      if (this.map) {
+      const { map } = this.mapboxCtx;
+      if (map) {
         const params = {
           id: featureId,
           source: this.source,
           'source-layer': this.layer['source-layer'],
         };
-        return this.map.getFeatureState(params);
+        return map.getFeatureState(params);
       }
     },
   },

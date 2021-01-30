@@ -27,7 +27,7 @@
     name: 'MapMarker',
     mixins: [withEvents, withSelfEvents],
 
-    inject: ['mapbox', 'map'],
+    inject: ['mapboxCtx'],
 
     provide() {
       const self = this;
@@ -81,13 +81,15 @@
     },
 
     mounted() {
+      const { mapbox } = this.mapboxCtx;
+
       const markerOptions = {
         ...this.$props,
       };
       if (this.$slots.marker) {
         markerOptions.element = this.$slots.marker[0].elm;
       }
-      this.marker = new this.mapbox.Marker(markerOptions);
+      this.marker = new mapbox.Marker(markerOptions);
 
       if (this.$listeners['update:coordinates']) {
         this.marker.on('dragend', (event) => {
@@ -112,14 +114,14 @@
     },
 
     beforeUnmount() {
-      if (this.map !== undefined && this.marker !== undefined) {
+      if (this.mapboxCtx.map !== undefined && this.marker !== undefined) {
         this.marker.remove();
       }
     },
 
     methods: {
       $_addMarker() {
-        this.marker.setLngLat(this.coordinates).addTo(this.map);
+        this.marker.setLngLat(this.coordinates).addTo(this.mapboxCtx.map);
         this.$_bindMarkerDOMEvents();
         this.$_emitEvent('added', { marker: this.marker });
       },

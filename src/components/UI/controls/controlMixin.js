@@ -5,7 +5,7 @@ import withSelfEvents from '../withSelfEvents';
 export default {
   mixins: [withEvents, withSelfEvents],
 
-  inject: ['mapbox', 'map', 'actions'],
+  inject: ['mapboxCtx'],
 
   props: {
     position: {
@@ -15,15 +15,15 @@ export default {
   },
 
   beforeUnmount() {
-    if (this.map && this.control) {
-      this.map.removeControl(this.control);
+    if (this.mapboxCtx.map && this.control) {
+      this.mapboxCtx.map.removeControl(this.control);
     }
   },
 
   methods: {
     $_addControl() {
       try {
-        this.map.addControl(this.control, this.position);
+        this.mapboxCtx.map.addControl(this.control, this.position);
       } catch (err) {
         this.$_emitEvent('error', { error: err });
         return;

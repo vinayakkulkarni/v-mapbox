@@ -8,7 +8,7 @@ export default {
      */
     $_emitEvent(name, data = {}) {
       this.$emit(name, {
-        map: this.map,
+        map: this.mapboxCtx ? this.mapboxCtx.map : this.map,
         component: this,
         ...data,
       });

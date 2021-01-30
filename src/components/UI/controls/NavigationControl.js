@@ -16,7 +16,9 @@ export default {
   },
 
   created() {
-    this.control = new this.mapbox.NavigationControl(this.$props);
+    const { mapbox } = this.mapboxCtx;
+
+    this.control = new mapbox.NavigationControl(this.$props);
     this.$_addControl();
   },
 };
