@@ -43,6 +43,11 @@
       ...options,
     },
 
+    emits: [
+      'load',
+      ...Object.keys(mapEvents),
+    ],
+
     data() {
       return {
         initial: true,

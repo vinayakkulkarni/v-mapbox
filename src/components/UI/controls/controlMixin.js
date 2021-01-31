@@ -14,6 +14,8 @@ export default {
     },
   },
 
+  emits: [ 'added', 'error' ],
+
   beforeUnmount() {
     if (this.mapboxCtx.map && this.control) {
       this.mapboxCtx.map.removeControl(this.control);

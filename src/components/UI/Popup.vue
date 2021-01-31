@@ -9,10 +9,10 @@
   import withEvents from '../../lib/withEvents';
   import withSelfEvents from './withSelfEvents';
 
-  const popupEvents = {
-    open: 'open',
-    close: 'close',
-  };
+  const popupEvents = [
+    'open',
+    'close',
+  ];
 
   /**
    * Popup component.
@@ -109,6 +109,13 @@
       },
     },
 
+    emits: [
+      'remove',
+      'added',
+      'removed',
+      ...popupEvents,
+    ],
+
     data() {
       return {
         initial: true,
@@ -190,7 +197,7 @@
           }
         }
 
-        this.$_bindSelfEvents(Object.keys(popupEvents), this.popup);
+        this.$_bindSelfEvents(popupEvents, this.popup);
 
         this.$_emitEvent('added', { popup: this.popup });
 

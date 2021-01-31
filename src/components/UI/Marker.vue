@@ -11,17 +11,17 @@
   import withEvents from '../../lib/withEvents';
   import withSelfEvents from './withSelfEvents';
 
-  const markerEvents = {
-    drag: 'drag',
-    dragstart: 'dragstart',
-    dragend: 'dragend',
-  };
+  const markerEvents = [
+    'drag',
+    'dragstart',
+    'dragend',
+  ];
 
-  const markerDOMEvents = {
-    click: 'click',
-    mouseenter: 'mouseenter',
-    mouseleave: 'mouseleave',
-  };
+  const markerDOMEvents = [
+    'click',
+    'mouseenter',
+    'mouseleave',
+  ];
 
   export default {
     name: 'MapMarker',
@@ -62,6 +62,14 @@
       },
     },
 
+    emits: [
+      'added',
+      'removed',
+      'update:coordinates',
+      ...markerEvents,
+      ...markerDOMEvents,
+    ],
+
     data() {
       return {
         initial: true,
@@ -91,7 +99,7 @@
       }
       this.marker = new mapbox.Marker(markerOptions);
 
-      if (this.$listeners['update:coordinates']) {
+      if (this.$props['onUpdate:coordinates']) {
         this.marker.on('dragend', (event) => {
           let newCoordinates;
           if (this.coordinates instanceof Array) {
@@ -106,8 +114,7 @@
         });
       }
 
-      const eventNames = Object.keys(markerEvents);
-      this.$_bindSelfEvents(eventNames, this.marker);
+      this.$_bindSelfEvents(markerEvents, this.marker);
 
       this.initial = false;
       this.$_addMarker();
@@ -131,12 +138,10 @@
       },
 
       $_bindMarkerDOMEvents() {
-        Object.keys(this.$listeners).forEach((key) => {
-          if (Object.values(markerDOMEvents).includes(key)) {
-            this.marker._element.addEventListener(key, (event) => {
-              this.$_emitSelfEvent(event);
-            });
-          }
+        markerDOMEvents.forEach(eventName => {
+          this.marker._element.addEventListener(eventName, (event) => {
+            this.$_emitSelfEvent(event);
+          });
         });
       },
 

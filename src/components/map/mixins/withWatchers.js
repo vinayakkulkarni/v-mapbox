@@ -47,7 +47,7 @@ const watchers = {
 
 function watcher(prop, callback, next, prev) {
   if (this.initial) return;
-  if (this.$listeners[`update:${prop}`]) {
+  if (this.$props[`onUpdate:${prop}`]) {
     if (this.propsIsUpdating[prop]) {
       this._watcher.active = false;
       this.$nextTick(() => {

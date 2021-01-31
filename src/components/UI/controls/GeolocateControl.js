@@ -2,12 +2,12 @@ import controlMixin from './controlMixin';
 import withEvents from '../../../lib/withEvents';
 import withSelfEvents from '../withSelfEvents';
 
-const geolocationEvents = {
-  trackuserlocationstart: 'trackuserlocationstart',
-  trackuserlocationend: 'trackuserlocationend',
-  geolocate: 'geolocate',
-  error: 'error',
-};
+const geolocationEvents = [
+  'trackuserlocationstart',
+  'trackuserlocationend',
+  'geolocate',
+  'error',
+];
 
 export default {
   name: 'GeolocateControl',
@@ -36,6 +36,8 @@ export default {
       default: true,
     },
   },
+
+  emits: geolocationEvents,
 
   created() {
     const { mapbox } = this.mapboxCtx;

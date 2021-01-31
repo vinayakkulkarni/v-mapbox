@@ -52,6 +52,16 @@ export default {
 
   inject: ['mapboxCtx'],
 
+  emits: [
+    'added',
+    'layer-exists',
+    'layer-does-not-exist',
+    'source-does-not-exist',
+    'layer-source-loading',
+    'layer-moved',
+    'layer-removed',
+  ],
+
   data() {
     return {
       initial: true,
@@ -162,10 +172,9 @@ export default {
 
     $_bindLayerEvents(events) {
       const { map } = this.mapboxCtx;
-      Object.keys(this.$listeners).forEach((eventName) => {
-        if (events.includes(eventName)) {
-          map.on(eventName, this.layerId, this.$_emitLayerMapEvent);
-        }
+
+      events.forEach(eventName => {
+        map.on(eventName, this.layerId, this.$_emitLayerMapEvent);
       });
     },
 
