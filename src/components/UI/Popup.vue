@@ -115,7 +115,7 @@
 
       /**
        * Component option.
-       * If `true`, popup treats data in deafult slot as plain text
+       * If `true`, popup treats data in default slot as plain text
        */
       onlyText: {
         type: Boolean,
