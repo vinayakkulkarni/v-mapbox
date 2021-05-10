@@ -21,6 +21,7 @@
     "test": "ava",
     "test:snapshot": "ava --update-snapshots",
     "build": "npm run bundle && npm run bundle:min",
+    "watch": "rollup -c build/rollup.config.js --watch",
     "bundle": "rollup -c build/rollup.config.js",
     "bundle:min": "rollup -c build/rollup.config.min.js",
     "lint": "npm run lint:eslint && npm run lint:prettier",

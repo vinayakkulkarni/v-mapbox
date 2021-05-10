@@ -1,5 +1,14 @@
 # Map control components
 
+### Common Props
+
+### `position`
+
+- **Type:** `String`
+- **Default:** `'top-right'`
+- **Description:** position on the map to which the control will be added. Valid values are 'top-left' , 'top-right' , 'bottom-left' , and 'bottom-right'
+- **See:** `position` in [addControl](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#addcontrol)
+
 ## AttributionControl
 
 An AttributionControl control presents the map's attribution information.

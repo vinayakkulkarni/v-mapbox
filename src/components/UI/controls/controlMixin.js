@@ -32,5 +32,12 @@ export default {
     },
   },
 
+  watch: {
+    position() {
+      this.map.removeControl(this.control);
+      this.map.addControl(this.control, this.position);
+    },
+  },
+
   render() {},
 };
