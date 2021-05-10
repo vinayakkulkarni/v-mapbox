@@ -5,6 +5,7 @@ import GeolocateControl from './components/UI/controls/GeolocateControl';
 import FullscreenControl from './components/UI/controls/FullscreenControl';
 import AttributionControl from './components/UI/controls/AttributionControl';
 import ScaleControl from './components/UI/controls/ScaleControl';
+import IControl from './components/UI/controls/IControl';
 import Marker from './components/UI/Marker.vue';
 import Popup from './components/UI/Popup.vue';
 
@@ -39,6 +40,7 @@ export const MglGeolocateControl = GeolocateControl;
 export const MglFullscreenControl = FullscreenControl;
 export const MglAttributionControl = AttributionControl;
 export const MglScaleControl = ScaleControl;
+export const MglIControl = IControl;
 
 export const MglGeojsonLayer = GeojsonLayer;
 export const MglImageLayer = ImageLayer;

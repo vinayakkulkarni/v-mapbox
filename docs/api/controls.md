@@ -1,5 +1,20 @@
 # Map control components
 
+## IControl
+
+a versatile control box for your content
+
+### Props
+
+none
+
+### Slots
+
+### `default`
+Your content as text, HTML or Template, will be wrapped in div with `mapboxgl-ctrl mapboxgl-ctrl-group` classes
+
+***See:*** [IControl](https://docs.mapbox.com/mapbox-gl-js/api/markers/#icontrol)
+
 ## AttributionControl
 
 An AttributionControl control presents the map's attribution information.
