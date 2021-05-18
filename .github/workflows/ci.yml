@@ -34,17 +34,6 @@ jobs:
       - name: Upgrade npm 🎉
         run: npm install -g npm@latest
 
-      - name: Get npm cache directory 🏗
-        id: npm-cache
-        run: echo "::set-output name=dir::$(npm config get cache)"
-
-      - name: Restore cached node_modules 🤷‍♂️
-        uses: actions/cache@v2.1.5
-        with:
-          path: ${{ steps.npm-cache.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
-
       - name: Install dependencies 🚀
         run: npm ci --prefer-offline --no-audit
 
