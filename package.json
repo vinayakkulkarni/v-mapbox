@@ -80,6 +80,9 @@
     "vue-template-compiler": "^2.6.12",
     "vuepress": "^1.8.2"
   },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  },
   "engines": {
     "node": ">=12.18.3"
   },
