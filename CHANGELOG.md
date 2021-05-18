@@ -1,3 +1,26 @@
+## [1.7.1](https://github.com/geospoc/v-mapbox/compare/v1.7.0...v1.7.1) (2021-05-18)
+
+
+### Bug Fixes
+
+* add props reflecting Mapbox API ([0a762b3](https://github.com/geospoc/v-mapbox/commit/0a762b32b7283ebcc04987fce747722369b376d6))
+* build fsevents on linux ([b011a2f](https://github.com/geospoc/v-mapbox/commit/b011a2f41c6a5f5ac549d1bbddd36f97046038bb))
+* set `--no-optional` flag to `npm ci` ([2dd7c4e](https://github.com/geospoc/v-mapbox/commit/2dd7c4e516b289e7ce0d5cfdc67f807d23efddcb))
+* typo deafult to default ([f71b030](https://github.com/geospoc/v-mapbox/commit/f71b03059a42788efac0b4ee6f93cce355201426))
+* update eslint config to support `eslint-config-prettier` ([07d7a4a](https://github.com/geospoc/v-mapbox/commit/07d7a4ab86d9c33445daa2fd4139fea3b242f86d))
+* use npm install instead of npm ci ([c8043d1](https://github.com/geospoc/v-mapbox/commit/c8043d156be5c144bbf797fc14e6e6303fdcb7a1))
+* **build:** use sass instead of node-sass ([558f11b](https://github.com/geospoc/v-mapbox/commit/558f11bc0b87299bf87cc44ef7c5d0f8ad1b6503))
+* **deps:** bump actions/cache from v2 to v2.1.4 ([49a1bce](https://github.com/geospoc/v-mapbox/commit/49a1bce7353c1a1d4328c99a8337d5b375300644))
+* **deps:** bump actions/cache from v2.1.4 to v2.1.5 ([bfde50f](https://github.com/geospoc/v-mapbox/commit/bfde50f85504c940f6bd060b510137d4c2071710))
+* **deps:** bump actions/setup-node from v2.1.4 to v2.1.5 ([b087acf](https://github.com/geospoc/v-mapbox/commit/b087acf1b8495277537e99fb7fac41c6319345a7))
+
+
+### Reverts
+
+* use npm ci & restore cached `node_modules` ([d57f8f7](https://github.com/geospoc/v-mapbox/commit/d57f8f716d4f949d65b313efb455659bffe8c08e))
+
+
+
 # [1.7.0](https://github.com/geospoc/v-mapbox/compare/v1.6.4...v1.7.0) (2021-01-29)
 
 
