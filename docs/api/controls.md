@@ -65,6 +65,14 @@ Provides a button that uses the browser's geolocation API to locate the user on 
 - **Description:** If true the Geolocate Control becomes a toggle button and when active the map will receive updates to the user's location as it changes.to the user's location.
 - **See:** `options.trackUserLocation` in [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
 
+### `showAccuracyCircle`
+
+- **Type:** `Boolean`
+- **Default:** `true`
+- **Non-Synced**
+- **Description:** By default, if showUserLocation is true , a transparent circle will be drawn around the user location indicating the accuracy (95% confidence level) of the user's location. Set to false to disable. Always disabled when showUserLocation is false . 
+- **See:** `options.showUserLocation` in [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+
 ### `showUserLocation`
 
 - **Type:** `Boolean`
@@ -100,6 +108,14 @@ Provides a button that uses the browser's geolocation API to locate the user on 
 - **Non-Synced**
 - **Description:** If true the zoom-in and zoom-out buttons are included.
 - **See:** `options.showZoom` in [NavigationControl](https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+
+### `visualizePitch`
+
+- **Type:** `Boolean`
+- **Default:** `false`
+- **Non-Synced**
+- **Description:** If true the pitch is visualized by rotating X-axis of compass.
+- **See:** `options.visualizePitch` in [NavigationControl](https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
 
 ## ScaleControl
 

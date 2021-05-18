@@ -31,6 +31,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    showAccuracyCircle: {
+      type: Boolean,
+      default: false,
+    },
     showUserLocation: {
       type: Boolean,
       default: true,

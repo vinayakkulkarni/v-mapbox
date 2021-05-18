@@ -13,6 +13,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    visualizePitch: {
+      type: Boolean,
+      default: true,
+    },
   },
 
   created() {
