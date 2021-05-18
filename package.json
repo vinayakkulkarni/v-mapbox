@@ -1,6 +1,6 @@
 {
   "name": "v-mapbox",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "private": false,
   "sideEffects": [
     "*.css"
@@ -35,6 +35,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "fsevents": "^2.3.2",
     "map-promisified": "^0.4.0"
   },
   "peerDependencies": {
