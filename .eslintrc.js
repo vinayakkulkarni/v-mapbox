@@ -12,7 +12,6 @@ module.exports = {
     'plugin:vue/recommended',
     'plugin:prettier/recommended',
     'prettier',
-    'prettier/vue',
   ],
   // required to lint *.vue files
   plugins: ['vue', 'prettier'],

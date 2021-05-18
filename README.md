@@ -33,13 +33,13 @@
 <a title="Peer Dependencies" href="https://david-dm.org/geospoc/v-mapbox?type=peer" rel="nofollow">
   <img alt="David" src="https://img.shields.io/david/peer/geospoc/v-mapbox">
 </a>
-<a title="Last Commit" href="https://github.com/geospoc/v-mapbox/commits/master" rel="nofollow">
+<a title="Last Commit" href="https://github.com/geospoc/v-mapbox/commits/main" rel="nofollow">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/geospoc/v-mapbox">
 </a>
 <a title="Contributors" href="https://github.com/geospoc/v-mapbox/graphs/contributors" rel="nofollow">
   <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/geospoc/v-mapbox">
 </a>
-<a title="maintenance" href="https://github.com/geospoc/v-mapbox/commits/master" rel="nofollow">
+<a title="maintenance" href="https://github.com/geospoc/v-mapbox/commits/main" rel="nofollow">
   <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2021">
 </a>
 <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fgeospoc%2Fv-mapbox?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgeospoc%2Fv-mapbox.svg?type=shield"/></a>

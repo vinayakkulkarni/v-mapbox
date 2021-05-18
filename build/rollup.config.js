@@ -19,7 +19,7 @@ export default [
       }),
       commonjs(),
       vue({ css: false }),
-      scss({ output: 'dist/v-mapbox.css' }),
+      scss({ output: 'dist/v-mapbox.css', sass: require('sass') }),
     ],
     external: ['vue', 'mapbox-gl', 'map-promisified'],
   },
