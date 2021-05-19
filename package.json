@@ -39,7 +39,7 @@
     "map-promisified": "^0.4.0"
   },
   "peerDependencies": {
-    "mapbox-gl": "^1.13.1",
+    "mapbox-gl": "^2.2.0",
     "vue": "^2.6.12"
   },
   "devDependencies": {
@@ -66,7 +66,7 @@
     "husky": "^6.0.0",
     "jsdom-global": "^3.0.2",
     "lint-staged": "^11.0.0",
-    "mapbox-gl": "^1.13.1",
+    "mapbox-gl": "^2.2.0",
     "prettier": "^2.3.0",
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^1.0.0",
