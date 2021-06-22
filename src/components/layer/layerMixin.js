@@ -58,6 +58,14 @@ export default {
     };
   },
 
+  watch: {
+    before(layer, oldLayer) {
+      if (layer !== oldLayer) {
+        this.move(layer);
+      }
+    },
+  },
+
   computed: {
     sourceLoaded() {
       return this.map ? this.map.isSourceLoaded(this.sourceId) : false;
