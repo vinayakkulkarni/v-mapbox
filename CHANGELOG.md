@@ -1,3 +1,13 @@
+## [1.7.3](https://github.com/geospoc/v-mapbox/compare/v1.7.2...v1.7.3) (2021-06-22)
+
+
+### Bug Fixes
+
+* before prop reactive ([9a5a1b2](https://github.com/geospoc/v-mapbox/commit/9a5a1b25eb939ddbc12d045faa395b55d4fa3ddd)), closes [#204](https://github.com/geospoc/v-mapbox/issues/204)
+* control position reactivity & doc ([9f38751](https://github.com/geospoc/v-mapbox/commit/9f387516c45cd9f68a0497ff52f6ae9e808e0498)), closes [#362](https://github.com/geospoc/v-mapbox/issues/362)
+
+
+
 ## [1.7.2](https://github.com/geospoc/v-mapbox/compare/v1.7.1...v1.7.2) (2021-06-22)
 
 
