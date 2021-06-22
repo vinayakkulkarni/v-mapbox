@@ -1,3 +1,12 @@
+## [1.7.2](https://github.com/geospoc/v-mapbox/compare/v1.7.1...v1.7.2) (2021-06-22)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/cache from 2.1.5 to 2.1.6 ([52401b5](https://github.com/geospoc/v-mapbox/commit/52401b5eb9f3fa822354f804e77811298824488c))
+
+
+
 ## [1.7.1](https://github.com/geospoc/v-mapbox/compare/v1.7.0...v1.7.1) (2021-05-18)
 
 
