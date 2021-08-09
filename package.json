@@ -65,7 +65,7 @@
     "eslint-plugin-vue": "^7.15.1",
     "husky": "^6.0.0",
     "jsdom-global": "^3.0.2",
-    "lint-staged": "^11.1.1",
+    "lint-staged": "^11.1.2",
     "mapbox-gl": "^1.13.1",
     "prettier": "^2.3.2",
     "require-extension-hooks": "^0.3.3",
