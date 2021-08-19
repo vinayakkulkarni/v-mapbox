@@ -48,10 +48,10 @@ const watchers = {
 };
 
 /**
- * @param prop
- * @param callback
- * @param next
- * @param prev
+ * @param {object} prop - property name
+ * @param {Function} callback - callback function
+ * @param {object} next - next value
+ * @param {object} prev - previous value
  */
 function watcher(prop, callback, next, prev) {
   if (this.initial) return;
@@ -72,7 +72,7 @@ function watcher(prop, callback, next, prev) {
 }
 
 /**
- *
+ * @returns {object} wrapper
  */
 function makeWatchers() {
   const wrappers = {};

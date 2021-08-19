@@ -100,7 +100,7 @@ export default Vue.extend({
         function (next) {
           if (this.initial) return;
           if (next) {
-            for (let prop of Object.keys(next)) {
+            for (const prop of Object.keys(next)) {
               this.map.setPaintProperty(this.layerId, prop, next[prop]);
             }
           }
@@ -115,7 +115,7 @@ export default Vue.extend({
         function (next) {
           if (this.initial) return;
           if (next) {
-            for (let prop of Object.keys(next)) {
+            for (const prop of Object.keys(next)) {
               this.map.setLayoutProperty(this.layerId, prop, next[prop]);
             }
           }

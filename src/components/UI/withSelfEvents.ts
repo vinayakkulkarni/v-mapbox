@@ -10,8 +10,8 @@ export default Vue.extend({
      * MapboxGL JS emits this events on popup or marker object,
      * so we treat them as 'self' events of these objects
      *
-     * @param events
-     * @param emitter
+     * @param {object} events - events to bind
+     * @param {any} emitter - object to bind events to
      */
     $_bindSelfEvents(events, emitter) {
       Object.keys(this.$listeners).forEach((eventName) => {

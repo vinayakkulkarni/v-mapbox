@@ -45,7 +45,7 @@ export default Vue.extend({
 
   methods: {
     $_deferredMount() {
-      let source = {
+      const source = {
         type: 'vector',
         ...this.source,
       };
@@ -66,7 +66,7 @@ export default Vue.extend({
     },
 
     $_addLayer() {
-      let existed = this.map.getLayer(this.layerId);
+      const existed = this.map.getLayer(this.layerId);
       if (existed) {
         if (this.replace) {
           this.map.removeLayer(this.layerId);
@@ -75,7 +75,7 @@ export default Vue.extend({
           return existed;
         }
       }
-      let layer = {
+      const layer = {
         id: this.layerId,
         source: this.sourceId,
         ...this.layer,
