@@ -1,6 +1,7 @@
+import Vue from 'vue';
 import controlMixin from './controlMixin';
 
-export default {
+export default Vue.extend({
   name: 'AttributionControl',
   mixins: [controlMixin],
   props: {
@@ -10,7 +11,7 @@ export default {
     },
     customAttribution: {
       type: [String, Array],
-      deafault: undefined,
+      default: undefined,
     },
   },
 
@@ -18,4 +19,6 @@ export default {
     this.control = new this.mapbox.AttributionControl(this.$props);
     this.$_addControl();
   },
-};
+
+  render() {},
+});

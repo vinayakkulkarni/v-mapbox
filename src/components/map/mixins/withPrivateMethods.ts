@@ -1,9 +1,10 @@
-export default {
+import Vue from 'vue';
+export default Vue.extend({
   methods: {
     $_updateSyncedPropsFabric(prop, data) {
       return () => {
         this.propsIsUpdating[prop] = true;
-        let info = typeof data === 'function' ? data() : data;
+        const info = typeof data === 'function' ? data() : data;
         return this.$emit(`update:${prop}`, info);
       };
     },
@@ -84,4 +85,4 @@ export default {
       });
     },
   },
-};
+});

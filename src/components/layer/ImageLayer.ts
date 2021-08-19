@@ -1,7 +1,8 @@
-import mixin from './layerMixin';
+import Vue from 'vue';
 import layerEvents from '../../lib/layerEvents';
+import mixin from './layerMixin';
 
-export default {
+export default Vue.extend({
   name: 'ImageLayer',
   mixins: [mixin],
 
@@ -61,7 +62,7 @@ export default {
     },
 
     $_addLayer() {
-      let existed = this.map.getLayer(this.layerId);
+      const existed = this.map.getLayer(this.layerId);
       if (existed) {
         if (this.replace) {
           this.map.removeLayer(this.layerId);
@@ -81,4 +82,4 @@ export default {
       this.$_emitEvent('added', { layerId: this.layerId });
     },
   },
-};
+});

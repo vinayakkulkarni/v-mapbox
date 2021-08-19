@@ -1,7 +1,8 @@
+import Vue from 'vue';
 import layerEvents from '../../lib/layerEvents';
 import mixin from './layerMixin';
 
-export default {
+export default Vue.extend({
   name: 'VectorLayer',
   mixins: [mixin],
 
@@ -106,4 +107,4 @@ export default {
       }
     },
   },
-};
+});

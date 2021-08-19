@@ -1,18 +1,31 @@
+import Vue from 'vue';
 import layerEvents from '../../lib/layerEvents';
 import mixin from './layerMixin';
 
-export default {
-  name: 'RasterLayer',
+export default Vue.extend({
+  name: 'VideoLayer',
   mixins: [mixin],
 
+  computed: {
+    video() {
+      return this.map.getSource(this.sourceId).getVideo();
+    },
+  },
+
   created() {
+    if (this.source && this.source.coordinates) {
+      this.$watch('source.coordinates', function (next) {
+        if (this.initial) return;
+        this.mapSource.setCoordinates(next);
+      });
+    }
     this.$_deferredMount();
   },
 
   methods: {
     $_deferredMount() {
-      let source = {
-        type: 'raster',
+      const source = {
+        type: 'video',
         ...this.source,
       };
 
@@ -27,12 +40,11 @@ export default {
       }
       this.$_addLayer();
       this.$_bindLayerEvents(layerEvents);
-      this.map.off('dataloading', this.$_watchSourceLoading);
       this.initial = false;
     },
 
     $_addLayer() {
-      let existed = this.map.getLayer(this.layerId);
+      const existed = this.map.getLayer(this.layerId);
       if (existed) {
         if (this.replace) {
           this.map.removeLayer(this.layerId);
@@ -41,10 +53,10 @@ export default {
           return existed;
         }
       }
-      let layer = {
+      const layer = {
         id: this.layerId,
-        type: 'raster',
         source: this.sourceId,
+        type: 'background',
         ...this.layer,
       };
 
@@ -52,4 +64,4 @@ export default {
       this.$_emitEvent('added', { layerId: this.layerId });
     },
   },
-};
+});

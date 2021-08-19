@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 const watchers = {
   maxBounds(next) {
     this.map.setMaxBounds(next);
@@ -45,6 +47,12 @@ const watchers = {
   },
 };
 
+/**
+ * @param prop
+ * @param callback
+ * @param next
+ * @param prev
+ */
 function watcher(prop, callback, next, prev) {
   if (this.initial) return;
   if (this.$listeners[`update:${prop}`]) {
@@ -63,6 +71,9 @@ function watcher(prop, callback, next, prev) {
   }
 }
 
+/**
+ *
+ */
 function makeWatchers() {
   const wrappers = {};
   Object.entries(watchers).forEach((prop) => {
@@ -73,6 +84,6 @@ function makeWatchers() {
   return wrappers;
 }
 
-export default {
+export default Vue.extend({
   watch: makeWatchers(),
-};
+});

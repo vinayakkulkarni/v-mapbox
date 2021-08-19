@@ -1,30 +1,45 @@
+import Vue from 'vue';
 import layerEvents from '../../lib/layerEvents';
 import mixin from './layerMixin';
 
-export default {
-  name: 'VideoLayer',
+export default Vue.extend({
+  name: 'CanvasLayer',
   mixins: [mixin],
 
+  inject: ['mapbox', 'map'],
+
+  props: {
+    source: {
+      type: Object,
+      required: true,
+    },
+    layer: {
+      type: Object,
+      default: null,
+    },
+  },
+
   computed: {
-    video() {
-      return this.map.getSource(this.sourceId).getVideo();
+    canvasElement() {
+      return this.mapSource ? this.mapSource.getCanvas() : null;
+    },
+  },
+
+  watch: {
+    coordinates(val) {
+      if (this.initial) return;
+      this.mapSource.setCoordinates(val);
     },
   },
 
   created() {
-    if (this.source && this.source.coordinates) {
-      this.$watch('source.coordinates', function (next) {
-        if (this.initial) return;
-        this.mapSource.setCoordinates(next);
-      });
-    }
     this.$_deferredMount();
   },
 
   methods: {
     $_deferredMount() {
       const source = {
-        type: 'video',
+        type: 'canvas',
         ...this.source,
       };
 
@@ -55,12 +70,14 @@ export default {
       let layer = {
         id: this.layerId,
         source: this.sourceId,
-        type: 'background',
+        type: 'raster',
         ...this.layer,
       };
-
       this.map.addLayer(layer, this.before);
-      this.$_emitEvent('added', { layerId: this.layerId });
+      this.$_emitEvent('added', {
+        layerId: this.layerId,
+        canvas: this.canvasElement,
+      });
     },
   },
-};
+});

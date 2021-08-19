@@ -1,3 +1,4 @@
+import Vue from 'vue';
 // import withRegistration from "../../lib/withRegistration";
 import withEvents from '../../lib/withEvents';
 
@@ -42,28 +43,20 @@ const componentProps = {
   },
 };
 
-export default {
+export default Vue.extend({
   mixins: [withEvents],
+
+  inject: ['mapbox', 'map'],
   props: {
     ...mapboxSourceProps,
     ...mapboxLayerStyleProps,
     ...componentProps,
   },
 
-  inject: ['mapbox', 'map'],
-
   data() {
     return {
       initial: true,
     };
-  },
-
-  watch: {
-    before(layer, oldLayer) {
-      if (layer !== oldLayer) {
-        this.move(layer);
-      }
-    },
   },
 
   computed: {
@@ -75,6 +68,14 @@ export default {
     },
     mapSource() {
       return this.map ? this.map.getSource(this.sourceId) : null;
+    },
+  },
+
+  watch: {
+    before(layer, oldLayer) {
+      if (layer !== oldLayer) {
+        this.move(layer);
+      }
     },
   },
 
@@ -203,4 +204,4 @@ export default {
   },
 
   render() {},
-};
+});

@@ -1,8 +1,9 @@
 // import withRegistration from "../../../lib/withRegistration";
+import Vue from 'vue';
 import withEvents from '../../../lib/withEvents';
 import withSelfEvents from '../withSelfEvents';
 
-export default {
+export default Vue.extend({
   mixins: [withEvents, withSelfEvents],
 
   inject: ['mapbox', 'map', 'actions'],
@@ -48,6 +49,4 @@ export default {
       this.$_emitEvent('removed', { control: this.control });
     },
   },
-
-  render() {},
-};
+});

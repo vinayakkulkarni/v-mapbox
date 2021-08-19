@@ -1,6 +1,7 @@
 import promisify from 'map-promisified';
+import Vue from 'vue';
 
-export default {
+export default Vue.extend({
   created() {
     this.actions = {};
   },
@@ -26,4 +27,4 @@ export default {
       };
     },
   },
-};
+});

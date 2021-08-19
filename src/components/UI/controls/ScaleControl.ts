@@ -1,6 +1,7 @@
+import Vue from 'vue';
 import controlMixin from './controlMixin';
 
-export default {
+export default Vue.extend({
   name: 'ScaleControl',
 
   mixins: [controlMixin],
@@ -31,4 +32,6 @@ export default {
     this.control = new this.mapbox.ScaleControl(this.$props);
     this.$_addControl();
   },
-};
+
+  render() {},
+});

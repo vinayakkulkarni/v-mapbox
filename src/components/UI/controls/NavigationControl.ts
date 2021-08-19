@@ -1,6 +1,7 @@
+import Vue from 'vue';
 import controlMixin from './controlMixin';
 
-export default {
+export default Vue.extend({
   name: 'NavigationControl',
   mixins: [controlMixin],
 
@@ -23,4 +24,6 @@ export default {
     this.control = new this.mapbox.NavigationControl(this.$props);
     this.$_addControl();
   },
-};
+
+  render() {},
+});

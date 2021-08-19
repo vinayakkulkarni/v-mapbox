@@ -1,6 +1,7 @@
-import controlMixin from './controlMixin';
+import Vue from 'vue';
 import withEvents from '../../../lib/withEvents';
 import withSelfEvents from '../withSelfEvents';
+import controlMixin from './controlMixin';
 
 const geolocationEvents = {
   trackuserlocationstart: 'trackuserlocationstart',
@@ -9,7 +10,7 @@ const geolocationEvents = {
   error: 'error',
 };
 
-export default {
+export default Vue.extend({
   name: 'GeolocateControl',
   mixins: [withEvents, withSelfEvents, controlMixin],
 
@@ -55,4 +56,6 @@ export default {
       }
     },
   },
-};
+
+  render() {},
+});

@@ -1,35 +1,10 @@
+import Vue from 'vue';
 import layerEvents from '../../lib/layerEvents';
 import mixin from './layerMixin';
 
-export default {
-  name: 'CanvasLayer',
+export default Vue.extend({
+  name: 'RasterLayer',
   mixins: [mixin],
-
-  inject: ['mapbox', 'map'],
-
-  props: {
-    source: {
-      type: Object,
-      required: true,
-    },
-    layer: {
-      type: Object,
-      default: null,
-    },
-  },
-
-  computed: {
-    canvasElement() {
-      return this.mapSource ? this.mapSource.getCanvas() : null;
-    },
-  },
-
-  watch: {
-    coordinates(val) {
-      if (this.initial) return;
-      this.mapSource.setCoordinates(val);
-    },
-  },
 
   created() {
     this.$_deferredMount();
@@ -38,7 +13,7 @@ export default {
   methods: {
     $_deferredMount() {
       const source = {
-        type: 'canvas',
+        type: 'raster',
         ...this.source,
       };
 
@@ -53,11 +28,12 @@ export default {
       }
       this.$_addLayer();
       this.$_bindLayerEvents(layerEvents);
+      this.map.off('dataloading', this.$_watchSourceLoading);
       this.initial = false;
     },
 
     $_addLayer() {
-      let existed = this.map.getLayer(this.layerId);
+      const existed = this.map.getLayer(this.layerId);
       if (existed) {
         if (this.replace) {
           this.map.removeLayer(this.layerId);
@@ -66,17 +42,15 @@ export default {
           return existed;
         }
       }
-      let layer = {
+      const layer = {
         id: this.layerId,
-        source: this.sourceId,
         type: 'raster',
+        source: this.sourceId,
         ...this.layer,
       };
+
       this.map.addLayer(layer, this.before);
-      this.$_emitEvent('added', {
-        layerId: this.layerId,
-        canvas: this.canvasElement,
-      });
+      this.$_emitEvent('added', { layerId: this.layerId });
     },
   },
-};
+});
