@@ -12,6 +12,7 @@ module.exports = {
     lib: ['es2020'],
     ecmaFeatures: {
       jsx: true,
+      tsx: true,
     },
     extraFileExtensions: ['.vue'],
   },
