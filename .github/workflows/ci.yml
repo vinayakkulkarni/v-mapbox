@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-      - dev
-  pull_request:
+      - next
+  pull_request_target:
     branches:
       - main
-      - dev
+      - next
 
 jobs:
   ci:
@@ -26,24 +26,15 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Setup node env 📦
-        uses: actions/setup-node@v2.3.0
+        uses: actions/setup-node@v2.4.0
         with:
           node-version: ${{ matrix.node }}
           registry-url: https://registry.npmjs.org
+          check-latest: true
+          cache: 'npm'
 
       - name: Upgrade npm 🎉
-        run: npm install -g npm@latest
-
-      - name: Get npm cache directory 🏗
-        id: npm-cache
-        run: echo "::set-output name=dir::$(npm config get cache)"
-
-      - name: Restore cached node_modules 🤷‍♂️
-        uses: actions/cache@v2.1.6
-        with:
-          path: ${{ steps.npm-cache.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
+        run: npm i -g npm@latest
 
       - name: Install dependencies 🚀
         run: npm ci --prefer-offline --no-audit --no-optional
@@ -61,3 +52,6 @@ jobs:
           prettier: true
           prettier_extensions: js,ts,vue
           neutral_check_on_warning: true
+
+      - name: Run build 🏁
+        run: npm run build
