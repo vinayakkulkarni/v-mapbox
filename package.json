@@ -67,7 +67,7 @@
     "jsdom-global": "^3.0.2",
     "lint-staged": "^11.1.1",
     "mapbox-gl": "^1.13.1",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.0",
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^1.0.0",
     "require-extension-hooks-vue": "^3.0.0",
