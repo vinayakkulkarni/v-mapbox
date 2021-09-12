@@ -1,3 +1,18 @@
+# [1.8.0](https://github.com/geospoc/v-mapbox/compare/v1.7.3...v1.8.0) (2021-09-12)
+
+
+### Bug Fixes
+
+* lint issue ([2e2b103](https://github.com/geospoc/v-mapbox/commit/2e2b10336b32454f3ded9729a9941edbee4699d2))
+* update CI workflow ([b1fecd0](https://github.com/geospoc/v-mapbox/commit/b1fecd00bd4bc1636f2432ce4dabb5372e4a03cb))
+* update deps ([f77392c](https://github.com/geospoc/v-mapbox/commit/f77392cddc3f5e3dd10464c8213a672e702b544a))
+* use lint-staged ([34972fa](https://github.com/geospoc/v-mapbox/commit/34972fa6a228e21c0ee907098f9b622ef7950e6c))
+* vuepress build issue ([dfc4658](https://github.com/geospoc/v-mapbox/commit/dfc4658bf3ff204312b4a09d1b1f8e6db7aa71b2))
+* **deps:** bump actions/setup-node from 2.1.5 to 2.2.0 ([0e29024](https://github.com/geospoc/v-mapbox/commit/0e29024965dbb35c05fba4c13916833a397b949d))
+* **deps:** bump actions/setup-node from 2.2.0 to 2.3.0 ([55ba848](https://github.com/geospoc/v-mapbox/commit/55ba84812f888c28bcf2605a896947cdab3c742c))
+
+
+
 ## [1.7.3](https://github.com/geospoc/v-mapbox/compare/v1.7.2...v1.7.3) (2021-06-22)
 
 
