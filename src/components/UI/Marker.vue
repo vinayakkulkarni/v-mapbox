@@ -7,7 +7,8 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import Vue from 'vue';
   import withEvents from '../../lib/withEvents';
   import withSelfEvents from './withSelfEvents';
 
@@ -23,7 +24,7 @@
     mouseleave: 'mouseleave',
   };
 
-  export default {
+  export default Vue.extend({
     name: 'MapMarker',
     mixins: [withEvents, withSelfEvents],
 
@@ -147,5 +148,5 @@
         return this.marker.togglePopup();
       },
     },
-  };
+  });
 </script>

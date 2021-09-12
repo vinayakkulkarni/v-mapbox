@@ -1,82 +1,85 @@
 {
   "name": "v-mapbox",
   "version": "1.7.3",
-  "private": false,
-  "sideEffects": [
-    "*.css"
-  ],
-  "main": "dist/v-mapbox.js",
+  "description": "Mapbox with Vue 💚",
+  "types": "types/index.d.ts",
+  "main": "dist/v-mapbox.cjs.js",
   "module": "dist/v-mapbox.esm.js",
-  "unpkg": "dist/v-mapbox.min.js",
-  "jsdelivr": "dist/v-mapbox.min.js",
+  "unpkg": "dist/v-mapbox.js",
+  "jsdelivr": "dist/v-mapbox.js",
   "cdn": "dist/v-mapbox.js",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
   "scripts": {
-    "test": "ava",
-    "test:snapshot": "ava --update-snapshots",
-    "build": "npm run bundle && npm run bundle:min",
-    "bundle": "rollup -c build/rollup.config.js",
-    "bundle:min": "rollup -c build/rollup.config.min.js",
-    "lint": "npm run lint:eslint && npm run lint:prettier",
-    "lintfix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
-    "lint:eslint": "eslint 'src/**/*.{js,vue}'",
-    "lint:eslint:fix": "eslint --fix 'src/**/*.{js,vue}'",
-    "lint:prettier": "prettier --check \"{,!(node_modules|dist)/**/}*.{js,vue}\"",
-    "lint:prettier:fix": "prettier --write \"{,!(node_modules|dist)/**/}*.{js,vue}\"",
+    "build": "rimraf dist && npm run bundle && npm run bundle:min",
+    "bundle": "rollup -c build/rollup.config.ts",
+    "bundle:min": "rollup -c build/rollup.config.min.ts",
+    "test": "echo 'test!'",
+    "prepare": "husky install",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:css",
+    "lintfix": "npm run lint:prettier:fix && npm run lint:eslint:fix && npm run lint:css:fix",
+    "lint:js": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint \"{,!(node_modules|dist)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --fix \"{,!(node_modules|dist)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
+    "lint:prettier": "prettier --check \"{,!(node_modules|dist)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
+    "lint:prettier:fix": "prettier --write \"{,!(node_modules|dist)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
+    "lint:css": "stylelint \"{,!(node_modules|dist)/**/}*.{css,scss,vue}\" --ignore-path .gitignore",
+    "lint:css:fix": "stylelint --fix \"{,!(node_modules|dist)/**/}*.{css,scss,vue}\" --ignore-path .gitignore",
+    "lint-staged": "lint-staged",
     "release": "shipjs prepare",
-    "prepare": "husky install"
+    "release:auto": "shipjs prepare --yes",
+    "release:dry": "shipjs prepare --dry-run"
   },
   "dependencies": {
-    "fsevents": "^2.3.2",
     "map-promisified": "^0.4.0"
   },
   "peerDependencies": {
-    "mapbox-gl": "^1.13.1",
+    "@vue/composition-api": "^1.1.5",
+    "mapbox-gl": "1.13.1",
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@ava/babel": "^2.0.0",
-    "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.14.9",
+    "@babel/preset-env": "^7.15.6",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@rollup/plugin-alias": "^3.1.5",
     "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-beep": "^0.2.0",
     "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-sucrase": "^4.0.0",
+    "@types/mapbox-gl": "1.13.2",
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
-    "@vue/test-utils": "^1.2.2",
-    "ava": "^3.15.0",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
-    "babel-plugin-module-resolver": "^4.1.0",
-    "babel-preset-vue": "^2.0.2",
-    "browser-env": "^3.3.0",
+    "@vue/compiler-sfc": "^3.2.11",
+    "@vue/component-compiler-utils": "^3.2.2",
+    "@vue/composition-api": "^1.1.5",
+    "@vue/runtime-dom": "^3.2.11",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-vue": "^7.15.1",
-    "husky": "^6.0.0",
-    "jsdom-global": "^3.0.2",
-    "lint-staged": "^11.1.1",
-    "mapbox-gl": "^1.13.1",
-    "prettier": "^2.3.2",
-    "require-extension-hooks": "^0.3.3",
-    "require-extension-hooks-babel": "^1.0.0",
-    "require-extension-hooks-vue": "^3.0.0",
-    "rollup": "^2.55.1",
-    "rollup-plugin-scss": "^2.6.1",
+    "eslint-plugin-jsdoc": "^36.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.17.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "mapbox-gl": "2.4.1",
+    "prettier": "^2.4.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-vue": "^5.1.9",
-    "sass": "^1.37.2",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.39.2",
     "shipjs": "^0.23.3",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "typescript": "^4.4.3",
     "vue": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
     "vuepress": "^1.8.2"
@@ -84,8 +87,21 @@
   "optionalDependencies": {
     "fsevents": "^2.3.2"
   },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "mapbox",
+    "mapbox-gl-js",
+    "mapbox-gl",
+    "mapbox-gl-geocoder"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "engines": {
-    "node": ">=12.18.3"
+    "node": ">=16.5.0",
+    "npm": ">=7.20.0"
   },
   "author": {
     "email": "developers@geospoc.com",
@@ -104,17 +120,14 @@
       "url": "https://github.com/soal"
     }
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:geospoc/v-mapbox.git"
   },
-  "keywords": [
-    "vue",
-    "vuejs",
-    "mapbox",
-    "mapbox-gl-js",
-    "mapbox-gl",
-    "mapbox-gl-geocoder"
+  "private": false,
+  "sideEffects": [
+    "*.css"
   ],
   "bugs": {
     "url": "https://github.com/geospoc/v-mapbox/issues"

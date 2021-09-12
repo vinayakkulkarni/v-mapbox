@@ -5,7 +5,8 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import Vue from 'vue';
   import withEvents from '../../lib/withEvents';
   import withSelfEvents from './withSelfEvents';
 
@@ -16,9 +17,10 @@
 
   /**
    * Popup component.
+   *
    * @see See [Mapbox Gl JS Popup](https://www.mapbox.com/mapbox-gl-js/api/#popup)
    */
-  export default {
+  export default Vue.extend({
     name: 'Popup',
     mixins: [withEvents, withSelfEvents],
 
@@ -232,5 +234,5 @@
         this.$_emitEvent('remove', { popup: this.popup });
       },
     },
-  };
+  });
 </script>

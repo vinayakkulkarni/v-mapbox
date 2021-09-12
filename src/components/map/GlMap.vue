@@ -5,7 +5,8 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import Vue from 'vue';
   import withEvents from '../../lib/withEvents';
   import mapEvents from './events';
   import options from './options';
@@ -13,7 +14,7 @@
   import withPrivateMethods from './mixins/withPrivateMethods';
   import withAsyncActions from './mixins/withAsyncActions';
 
-  export default {
+  export default Vue.extend({
     name: 'GlMap',
 
     mixins: [withWatchers, withAsyncActions, withPrivateMethods, withEvents],
@@ -110,7 +111,7 @@
         if (this.map) this.map.remove();
       });
     },
-  };
+  });
 </script>
 
 <style lang="scss">
