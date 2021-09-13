@@ -1,5 +1,14 @@
 import Vue from 'vue';
+import { ref } from '@vue/composition-api';
+import type { Ref } from '@vue/composition-api';
+
 export default Vue.extend({
+  setup(_, context) {
+    const templateRefs: Ref<{
+      [key: string]: Vue | Element | Vue[] | Element[];
+    }> = ref(context.refs);
+    return { templateRefs };
+  },
   methods: {
     $_updateSyncedPropsFabric(prop, data) {
       return () => {
@@ -59,7 +68,7 @@ export default Vue.extend({
           if (this.accessToken) this.mapbox.accessToken = this.accessToken;
           const map = new this.mapbox.Map({
             ...this._props,
-            container: this.$refs.container,
+            container: this.templateRefs.container,
             style: this.mapStyle,
           });
           map.on('load', () => resolve(map));
