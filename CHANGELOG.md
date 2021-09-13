@@ -1,3 +1,12 @@
+## [1.8.1](https://github.com/geospoc/v-mapbox/compare/v1.8.0...v1.8.1) (2021-09-13)
+
+
+### Bug Fixes
+
+* map container template ref not found ([145d978](https://github.com/geospoc/v-mapbox/commit/145d97882fb514c96a50e7eb9fd9d4e76bc2cb07))
+
+
+
 # [1.8.0](https://github.com/geospoc/v-mapbox/compare/v1.7.3...v1.8.0) (2021-09-12)
 
 
