@@ -1,9 +1,12 @@
 import Vue from 'vue';
 import { ref } from '@vue/composition-api';
+import type { Ref } from '@vue/composition-api';
 
 export default Vue.extend({
   setup(_, context) {
-    const templateRefs = ref(context.refs);
+    const templateRefs: Ref<{
+      [key: string]: Vue | Element | Vue[] | Element[];
+    }> = ref(context.refs);
     return { templateRefs };
   },
   methods: {
