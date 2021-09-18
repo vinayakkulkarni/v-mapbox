@@ -1,6 +1,6 @@
 {
   "name": "v-mapbox",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "Mapbox with Vue 💚",
   "types": "types/index.d.ts",
   "main": "dist/v-mapbox.cjs.js",
