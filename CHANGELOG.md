@@ -1,3 +1,12 @@
+## [1.8.2](https://github.com/geospoc/v-mapbox/compare/v1.8.1...v1.8.2) (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** use rollup-plugin-vue v5 to bundle the pkg ([7143c2f](https://github.com/geospoc/v-mapbox/commit/7143c2f41f40875010293bc30148089117faa9f6))
+
+
+
 ## [1.8.1](https://github.com/geospoc/v-mapbox/compare/v1.8.0...v1.8.1) (2021-09-13)
 
 
