@@ -1,6 +1,6 @@
-import Vue from 'vue';
-import { ref } from '@vue/composition-api';
 import type { Ref } from '@vue/composition-api';
+import { ref } from '@vue/composition-api';
+import Vue from 'vue';
 
 export default Vue.extend({
   setup(_, context) {

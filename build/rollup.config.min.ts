@@ -12,7 +12,7 @@ import pkg from '../package.json';
 const plugins = [
   alias({
     entries: {
-      vue: 'vue/dist/vue.runtime.esm.js',
+      vue$: 'vue/dist/vue.runtime.esm.js',
     },
   }),
   resolve({
@@ -31,6 +31,7 @@ const plugins = [
   vue({ css: false }),
   scss({
     output: 'dist/v-mapbox.min.css',
+    // @ts-ignore
     outputStyle: 'compressed',
     sourceMap: true,
     sass: require('sass'),
