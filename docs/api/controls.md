@@ -1,6 +1,5 @@
 # Map control components
 
-<<<<<<< HEAD
 ### Common Props
 
 ### `position`
@@ -10,8 +9,6 @@
 - **Description:** position on the map to which the control will be added. Valid values are 'top-left' , 'top-right' , 'bottom-left' , and 'bottom-right'
 - **See:** `position` in [addControl](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#addcontrol)
 
-=======
->>>>>>> 5958dc2 (feat: add iControl componnent)
 ## IControl
 
 a versatile control box for your content
