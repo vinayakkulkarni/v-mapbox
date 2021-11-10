@@ -15,7 +15,7 @@
   import withAsyncActions from './mixins/withAsyncActions';
 
   export default Vue.extend({
-    name: 'GlMap',
+    name: 'MglMap',
 
     mixins: [withWatchers, withAsyncActions, withPrivateMethods, withEvents],
 
@@ -117,6 +117,9 @@
 </script>
 
 <style lang="scss">
+  .hidden {
+    display: none;
+  }
   .mgl-map-wrapper {
     height: 100%;
     position: relative;

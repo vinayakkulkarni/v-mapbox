@@ -3,7 +3,7 @@ import layerEvents from '../../lib/layerEvents';
 import mixin from './layerMixin';
 
 export default Vue.extend({
-  name: 'VectorLayer',
+  name: 'MglVectorLayer',
   mixins: [mixin],
 
   computed: {

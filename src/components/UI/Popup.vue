@@ -1,5 +1,5 @@
 <template>
-  <div style="display: none">
+  <div class="hidden">
     <!-- @slot Slot for popup content -->
     <slot :class="[className]" />
   </div>
@@ -21,7 +21,7 @@
    * @see See [Mapbox Gl JS Popup](https://www.mapbox.com/mapbox-gl-js/api/#popup)
    */
   export default Vue.extend({
-    name: 'Popup',
+    name: 'MglPopup',
     mixins: [withEvents, withSelfEvents],
 
     inject: {
