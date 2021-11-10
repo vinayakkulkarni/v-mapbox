@@ -61,7 +61,7 @@ const props = {
   },
   container: {
     type: String as PropType<string | HTMLElement>,
-    required: true,
+    required: false,
     default: () => `map-${('' + Math.random()).split('.')[1]}`,
   },
   customAttribution: {
