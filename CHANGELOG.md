@@ -1,3 +1,22 @@
+# [1.9.0](https://github.com/geospoc/v-mapbox/compare/v1.8.2...v1.9.0) (2021-11-10)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 2.4.0 to 2.4.1 ([36c3434](https://github.com/geospoc/v-mapbox/commit/36c343473e5ab683778bb9370925c4b4e4b04694))
+
+
+### Features
+
+* add iControl ([93fef74](https://github.com/geospoc/v-mapbox/commit/93fef7465b00283e8c366569bd5aa5cc93d2a76d))
+
+
+### Reverts
+
+* don't make `container` as required field prop ([7dc81ad](https://github.com/geospoc/v-mapbox/commit/7dc81ad1123d9486cef64818a3914368261258e4))
+
+
+
 ## [1.8.2](https://github.com/geospoc/v-mapbox/compare/v1.8.1...v1.8.2) (2021-09-18)
 
 
