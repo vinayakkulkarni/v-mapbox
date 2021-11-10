@@ -8,6 +8,7 @@ export { default as MglMap } from './components/map/GlMap.vue';
 export { default as MglAttributionControl } from './components/UI/controls/AttributionControl';
 export { default as MglFullscreenControl } from './components/UI/controls/FullscreenControl';
 export { default as MglGeolocateControl } from './components/UI/controls/GeolocateControl';
+export { default as MglIControl } from './components/UI/controls/IControl';
 export { default as MglNavigationControl } from './components/UI/controls/NavigationControl';
 export { default as MglScaleControl } from './components/UI/controls/ScaleControl';
 export { default as MglMarker } from './components/UI/Marker.vue';

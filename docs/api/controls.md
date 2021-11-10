@@ -9,6 +9,30 @@
 - **Description:** position on the map to which the control will be added. Valid values are 'top-left' , 'top-right' , 'bottom-left' , and 'bottom-right'
 - **See:** `position` in [addControl](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#addcontrol)
 
+### Common Props
+
+### `position`
+
+- **Type:** `String`
+- **Default:** `'top-right'`
+- **Description:** position on the map to which the control will be added. Valid values are 'top-left' , 'top-right' , 'bottom-left' , and 'bottom-right'
+- **See:** `position` in [addControl](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#addcontrol)
+
+## IControl
+
+a versatile control box for your content
+
+### Props
+
+none
+
+### Slots
+
+### `default`
+Your content as text, HTML or Template, will be wrapped in div with `mapboxgl-ctrl mapboxgl-ctrl-group` classes
+
+***See:*** [IControl](https://docs.mapbox.com/mapbox-gl-js/api/markers/#icontrol)
+
 ## AttributionControl
 
 An AttributionControl control presents the map's attribution information.
