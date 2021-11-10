@@ -60,7 +60,7 @@
     "@vue/component-compiler-utils": "^3.2.2",
     "@vue/composition-api": "^1.1.5",
     "@vue/runtime-dom": "^3.2.11",
-    "eslint": "^7.32.0",
+    "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsdoc": "^36.1.0",
     "eslint-plugin-prettier": "^4.0.0",
