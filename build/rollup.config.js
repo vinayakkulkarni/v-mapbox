@@ -8,6 +8,7 @@ import resolve from '@rollup/plugin-node-resolve';
 
 const extensions = ['.js', '.ts', '.vue'];
 const plugins = [
+  vue({ css: false }),
   alias({
     entries: {
       vue: 'vue/dist/vue.runtime.esm-browser.prod.js',
@@ -17,9 +18,9 @@ const plugins = [
   babel({
     babelHelpers: 'bundled',
     exclude: 'node_modules/**',
+    include: '**/*.js',
   }),
   commonjs(),
-  vue({ css: false }),
   scss({
     output: 'dist/v-mapbox.css',
   }),
