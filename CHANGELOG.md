@@ -1,3 +1,19 @@
+# [1.10.0](https://github.com/geospoc/v-mapbox/compare/v1.9.0...v1.10.0) (2021-12-06)
+
+
+### Bug Fixes
+
+* update pre-push hook ([baa2b6e](https://github.com/geospoc/v-mapbox/commit/baa2b6e9f16f44d7422cf77e1870c5ddbcb7c12c))
+* update typings for Vue components ([ec183fd](https://github.com/geospoc/v-mapbox/commit/ec183fdf82f31c2a5380565bf72ab1f6cae272dc))
+* **deps:** bump actions/setup-node from 2.4.1 to 2.5.0 ([c39d507](https://github.com/geospoc/v-mapbox/commit/c39d5076a254551cbf70ad596af2663b7e680331))
+
+
+### Features
+
+* add `.nvmrc` to use current node version ([3adf1de](https://github.com/geospoc/v-mapbox/commit/3adf1ded474fb06e611ed2ceab789dea84021389))
+
+
+
 # [1.9.0](https://github.com/geospoc/v-mapbox/compare/v1.8.2...v1.9.0) (2021-11-10)
 
 
