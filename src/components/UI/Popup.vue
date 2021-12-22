@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden">
+  <div class="mgl-hidden">
     <!-- @slot Slot for popup content -->
     <slot :class="[className]" />
   </div>
