@@ -120,7 +120,6 @@
   .mgl-hidden {
     display: none;
   }
-  
   .mgl-map-wrapper {
     height: 100%;
     position: relative;
