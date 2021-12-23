@@ -31,7 +31,6 @@ const install: PluginFunction<Application> = (app: Application) => {
       asControl: controlMixin,
       asLayer: layerMixin,
     };
-    app.use(VueCompositionApi);
     app.component('MglMap', GlMap);
     app.component('MglNavigationControl', NavigationControl);
     app.component('MglGeolocateControl', GeolocateControl);

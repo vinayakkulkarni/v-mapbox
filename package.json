@@ -50,7 +50,6 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-sucrase": "^4.0.1",
-    "@types/mapbox-gl": "^2.6.1",
     "@types/node": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
