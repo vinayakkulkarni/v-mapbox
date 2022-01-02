@@ -1,11 +1,12 @@
 <template>
-  <div style="display: none">
+  <div class="hidden">
     <!-- @slot Slot for popup content -->
     <slot :class="[className]" />
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import { defineComponent } from 'vue';
   import withEvents from '../../lib/withEvents';
   import withSelfEvents from './withSelfEvents';
 
@@ -16,10 +17,11 @@
 
   /**
    * Popup component.
+   *
    * @see See [Mapbox Gl JS Popup](https://www.mapbox.com/mapbox-gl-js/api/#popup)
    */
-  export default {
-    name: 'Popup',
+  export default defineComponent({
+    name: 'MglPopup',
     mixins: [withEvents, withSelfEvents],
 
     inject: ['mapboxCtx'],
@@ -46,6 +48,22 @@
        * If `true`, the popup will closed when the map is clicked. .
        */
       closeOnClick: {
+        type: Boolean,
+        default: true,
+      },
+      /**
+       * Mapbox GL popup option.
+       * If `true`, the popup will closed when the map moves.
+       */
+      closeOnMove: {
+        type: Boolean,
+        default: false,
+      },
+      /**
+       * Mapbox GL popup option.
+       * If `true`, the popup will try to focus the first focusable element inside the popup.
+       */
+      focusAfterOpen: {
         type: Boolean,
         default: true,
       },
@@ -89,7 +107,7 @@
 
       /**
        * Component option.
-       * If `true`, popup treats data in deafult slot as plain text
+       * If `true`, popup treats data in default slot as plain text
        */
       onlyText: {
         type: Boolean,
@@ -152,9 +170,6 @@
       showed(next, prev) {
         if (next !== prev) {
           this.open = next;
-          if (this.marker) {
-            this.marker.togglePopup();
-          }
         }
       },
     },
@@ -206,10 +221,6 @@
         }
         if (this.showed) {
           this.open = true;
-
-          if (this.marker) {
-            this.marker.togglePopup();
-          }
         }
       },
 
@@ -222,5 +233,5 @@
         this.$_emitEvent('remove', { popup: this.popup });
       },
     },
-  };
+  });
 </script>

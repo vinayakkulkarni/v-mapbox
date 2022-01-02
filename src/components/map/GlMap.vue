@@ -5,7 +5,8 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import { defineComponent } from 'vue';
   import withEvents from '../../lib/withEvents';
   import mapEvents from './events';
   import options from './options';
@@ -13,8 +14,8 @@
   import withPrivateMethods from './mixins/withPrivateMethods';
   import withAsyncActions from './mixins/withAsyncActions';
 
-  export default {
-    name: 'GlMap',
+  export default defineComponent({
+    name: 'MglMap',
 
     mixins: [withWatchers, withAsyncActions, withPrivateMethods, withEvents],
 
@@ -117,10 +118,13 @@
         if (this.map) this.map.remove();
       });
     },
-  };
+  });
 </script>
 
 <style lang="scss">
+  .hidden {
+    display: none;
+  }
   .mgl-map-wrapper {
     height: 100%;
     position: relative;

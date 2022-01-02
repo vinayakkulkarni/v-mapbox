@@ -1,3 +1,129 @@
+# [1.10.0](https://github.com/geospoc/v-mapbox/compare/v1.9.0...v1.10.0) (2021-12-06)
+
+
+### Bug Fixes
+
+* update pre-push hook ([baa2b6e](https://github.com/geospoc/v-mapbox/commit/baa2b6e9f16f44d7422cf77e1870c5ddbcb7c12c))
+* update typings for Vue components ([ec183fd](https://github.com/geospoc/v-mapbox/commit/ec183fdf82f31c2a5380565bf72ab1f6cae272dc))
+* **deps:** bump actions/setup-node from 2.4.1 to 2.5.0 ([c39d507](https://github.com/geospoc/v-mapbox/commit/c39d5076a254551cbf70ad596af2663b7e680331))
+
+
+### Features
+
+* add `.nvmrc` to use current node version ([3adf1de](https://github.com/geospoc/v-mapbox/commit/3adf1ded474fb06e611ed2ceab789dea84021389))
+
+
+
+# [1.9.0](https://github.com/geospoc/v-mapbox/compare/v1.8.2...v1.9.0) (2021-11-10)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 2.4.0 to 2.4.1 ([36c3434](https://github.com/geospoc/v-mapbox/commit/36c343473e5ab683778bb9370925c4b4e4b04694))
+
+
+### Features
+
+* add iControl ([93fef74](https://github.com/geospoc/v-mapbox/commit/93fef7465b00283e8c366569bd5aa5cc93d2a76d))
+
+
+### Reverts
+
+* don't make `container` as required field prop ([7dc81ad](https://github.com/geospoc/v-mapbox/commit/7dc81ad1123d9486cef64818a3914368261258e4))
+
+
+
+## [1.8.2](https://github.com/geospoc/v-mapbox/compare/v1.8.1...v1.8.2) (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** use rollup-plugin-vue v5 to bundle the pkg ([7143c2f](https://github.com/geospoc/v-mapbox/commit/7143c2f41f40875010293bc30148089117faa9f6))
+
+
+
+## [1.8.1](https://github.com/geospoc/v-mapbox/compare/v1.8.0...v1.8.1) (2021-09-13)
+
+
+### Bug Fixes
+
+* map container template ref not found ([145d978](https://github.com/geospoc/v-mapbox/commit/145d97882fb514c96a50e7eb9fd9d4e76bc2cb07))
+
+
+
+# [1.8.0](https://github.com/geospoc/v-mapbox/compare/v1.7.3...v1.8.0) (2021-09-12)
+
+
+### Bug Fixes
+
+* lint issue ([2e2b103](https://github.com/geospoc/v-mapbox/commit/2e2b10336b32454f3ded9729a9941edbee4699d2))
+* update CI workflow ([b1fecd0](https://github.com/geospoc/v-mapbox/commit/b1fecd00bd4bc1636f2432ce4dabb5372e4a03cb))
+* update deps ([f77392c](https://github.com/geospoc/v-mapbox/commit/f77392cddc3f5e3dd10464c8213a672e702b544a))
+* use lint-staged ([34972fa](https://github.com/geospoc/v-mapbox/commit/34972fa6a228e21c0ee907098f9b622ef7950e6c))
+* vuepress build issue ([dfc4658](https://github.com/geospoc/v-mapbox/commit/dfc4658bf3ff204312b4a09d1b1f8e6db7aa71b2))
+* **deps:** bump actions/setup-node from 2.1.5 to 2.2.0 ([0e29024](https://github.com/geospoc/v-mapbox/commit/0e29024965dbb35c05fba4c13916833a397b949d))
+* **deps:** bump actions/setup-node from 2.2.0 to 2.3.0 ([55ba848](https://github.com/geospoc/v-mapbox/commit/55ba84812f888c28bcf2605a896947cdab3c742c))
+
+
+
+## [1.7.3](https://github.com/geospoc/v-mapbox/compare/v1.7.2...v1.7.3) (2021-06-22)
+
+
+### Bug Fixes
+
+* before prop reactive ([9a5a1b2](https://github.com/geospoc/v-mapbox/commit/9a5a1b25eb939ddbc12d045faa395b55d4fa3ddd)), closes [#204](https://github.com/geospoc/v-mapbox/issues/204)
+* control position reactivity & doc ([9f38751](https://github.com/geospoc/v-mapbox/commit/9f387516c45cd9f68a0497ff52f6ae9e808e0498)), closes [#362](https://github.com/geospoc/v-mapbox/issues/362)
+
+
+
+## [1.7.2](https://github.com/geospoc/v-mapbox/compare/v1.7.1...v1.7.2) (2021-06-22)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/cache from 2.1.5 to 2.1.6 ([52401b5](https://github.com/geospoc/v-mapbox/commit/52401b5eb9f3fa822354f804e77811298824488c))
+
+
+
+## [1.7.1](https://github.com/geospoc/v-mapbox/compare/v1.7.0...v1.7.1) (2021-05-18)
+
+
+### Bug Fixes
+
+* add props reflecting Mapbox API ([0a762b3](https://github.com/geospoc/v-mapbox/commit/0a762b32b7283ebcc04987fce747722369b376d6))
+* build fsevents on linux ([b011a2f](https://github.com/geospoc/v-mapbox/commit/b011a2f41c6a5f5ac549d1bbddd36f97046038bb))
+* set `--no-optional` flag to `npm ci` ([2dd7c4e](https://github.com/geospoc/v-mapbox/commit/2dd7c4e516b289e7ce0d5cfdc67f807d23efddcb))
+* typo deafult to default ([f71b030](https://github.com/geospoc/v-mapbox/commit/f71b03059a42788efac0b4ee6f93cce355201426))
+* update eslint config to support `eslint-config-prettier` ([07d7a4a](https://github.com/geospoc/v-mapbox/commit/07d7a4ab86d9c33445daa2fd4139fea3b242f86d))
+* use npm install instead of npm ci ([c8043d1](https://github.com/geospoc/v-mapbox/commit/c8043d156be5c144bbf797fc14e6e6303fdcb7a1))
+* **build:** use sass instead of node-sass ([558f11b](https://github.com/geospoc/v-mapbox/commit/558f11bc0b87299bf87cc44ef7c5d0f8ad1b6503))
+* **deps:** bump actions/cache from v2 to v2.1.4 ([49a1bce](https://github.com/geospoc/v-mapbox/commit/49a1bce7353c1a1d4328c99a8337d5b375300644))
+* **deps:** bump actions/cache from v2.1.4 to v2.1.5 ([bfde50f](https://github.com/geospoc/v-mapbox/commit/bfde50f85504c940f6bd060b510137d4c2071710))
+* **deps:** bump actions/setup-node from v2.1.4 to v2.1.5 ([b087acf](https://github.com/geospoc/v-mapbox/commit/b087acf1b8495277537e99fb7fac41c6319345a7))
+
+
+### Reverts
+
+* use npm ci & restore cached `node_modules` ([d57f8f7](https://github.com/geospoc/v-mapbox/commit/d57f8f716d4f949d65b313efb455659bffe8c08e))
+
+
+
+# [1.7.0](https://github.com/geospoc/v-mapbox/compare/v1.6.4...v1.7.0) (2021-01-29)
+
+
+### Bug Fixes
+
+* prop "showed" in popup caused cyclic issue ([0854318](https://github.com/geospoc/v-mapbox/commit/0854318422339a6cd34c5a7c1d144f400c76beab)), closes [#203](https://github.com/geospoc/v-mapbox/issues/203)
+* **deps:** bump actions/setup-node from v2.1.2 to v2.1.3 ([659971d](https://github.com/geospoc/v-mapbox/commit/659971d1489724bc5e599d1118a3a09c165009ba))
+* **deps:** bump actions/setup-node from v2.1.3 to v2.1.4 ([b4728c5](https://github.com/geospoc/v-mapbox/commit/b4728c555c38c3acd3588bcbc9750030ab8b08e2))
+
+
+### Features
+
+* add `closeOnMove` & `focusAfterOpen` props ([f77a4b5](https://github.com/geospoc/v-mapbox/commit/f77a4b5648f03c52c01a134bdf2adbf4010ac747))
+
+
+
 ## [1.6.4](https://github.com/geospoc/v-mapbox/compare/v1.6.3...v1.6.4) (2020-10-30)
 
 

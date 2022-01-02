@@ -1,5 +1,5 @@
 <template>
-  <div style="display: none">
+  <div class="hidden">
     <!-- slot for custom marker -->
     <slot name="marker" />
     <!-- slot for popup -->
@@ -7,7 +7,8 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import { defineComponent } from 'vue';
   import withEvents from '../../lib/withEvents';
   import withSelfEvents from './withSelfEvents';
 
@@ -23,7 +24,7 @@
     'mouseleave',
   ];
 
-  export default {
+  export default defineComponent({
     name: 'MapMarker',
     mixins: [withEvents, withSelfEvents],
 
@@ -154,5 +155,5 @@
         return this.marker.togglePopup();
       },
     },
-  };
+  });
 </script>

@@ -20,6 +20,18 @@
 - **Description:** If `true`, the popup will closed when the map is clicked.
 - **See:** `closeOnClick` in [Popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup)
 
+### `closeOnMove`
+
+- **Type**: `Boolean`
+- **Description:** If `true`, the popup will closed when the map moves.
+- **See:** `closeOnMove` in [Popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup)
+
+### `focusAfterOpen`
+
+- **Type**: `Boolean`
+- **Description:** If `true`, the popup will try to focus the first focusable element inside the popup.
+- **See:** `closeOnClick` in [Popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup)
+
 ### `anchor`
 
 - **Type**: `String`

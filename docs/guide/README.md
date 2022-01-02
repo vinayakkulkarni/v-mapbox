@@ -14,6 +14,7 @@ Add Mapbox JS and CSS files to the files where you need them:
 
 ```js
 import 'mapbox-gl/dist/mapbox-gl.css'
+import 'v-mapbox/dist/v-mapbox.css';
 import Mapbox from "mapbox-gl"
 import { MglMap } from "v-mapbox"
 ```

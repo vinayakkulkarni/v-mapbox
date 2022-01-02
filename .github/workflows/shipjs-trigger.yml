@@ -16,13 +16,19 @@ jobs:
           ref: main
 
       - name: Setup node env 🏗
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v2.5.0
         with:
-          registry-url: "https://registry.npmjs.org"
+          node-version: 17
+          registry-url: https://registry.npmjs.org
+          check-latest: true
+          cache: 'npm'
 
-      - name: Install dependencies 👨🏻‍💻
-        run: npm install
-        
+      - name: Upgrade npm 🎉
+        run: npm i -g npm@latest
+
+      - name: Install dependencies 🚀
+        run: npm ci --prefer-offline --no-audit
+
       - name: Release new version to registry 🎉
         run: npx shipjs trigger
         env:

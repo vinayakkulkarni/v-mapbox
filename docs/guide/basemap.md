@@ -2,8 +2,8 @@
 
 ## Adding map component
 
-For using maps with Mapbox GL JS you need a [map style](https://mapbox.com/mapbox-gl-js/style-spec).  
-If you using Mapbox-hosted maps, you need to set `access_token`. Look for details in Mapbox [documentation](https://mapbox.com/help/define-access-token/).  
+For using maps with Mapbox GL JS you need a [map style](https://mapbox.com/mapbox-gl-js/style-spec).
+If you using Mapbox-hosted maps, you need to set `access_token`. Look for details in Mapbox [documentation](https://mapbox.com/help/define-access-token/).
 If you using self-hosting maps on your own server you can omit this parameter.
 
 ```vue
@@ -100,12 +100,12 @@ export default {
 ## Map actions
 
 Asynchronous map methods exposed at MglMap component in `actions` property. They returns `Promise`, that resolves when action completed.
-Promise resolves with map properties that has been changed by used action.  
+Promise resolves with map properties that has been changed by used action.
 For example:
 
 ```vue
 <script>
-export deafult {
+export default {
   name: 'App',
 
   methods: {
