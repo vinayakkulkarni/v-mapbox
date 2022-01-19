@@ -1,3 +1,13 @@
+## [1.10.1](https://github.com/geospoc/v-mapbox/compare/v1.10.0...v1.10.1) (2022-01-19)
+
+
+### Bug Fixes
+
+* scope the `hidden` class to avoid conflict with tailwind ([559121b](https://github.com/geospoc/v-mapbox/commit/559121b292a1d5d4675e2f46740ad91a8aae2a46))
+* **deps:** bump actions/setup-node from 2.5.0 to 2.5.1 ([8a5c510](https://github.com/geospoc/v-mapbox/commit/8a5c5105a82aebc684772ae067278aa0f9895e84))
+
+
+
 # [1.10.0](https://github.com/geospoc/v-mapbox/compare/v1.9.0...v1.10.0) (2021-12-06)
 
 
