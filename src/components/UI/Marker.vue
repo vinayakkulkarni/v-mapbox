@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden">
+  <div class="mgl-hidden">
     <!-- slot for custom marker -->
     <slot name="marker" />
     <!-- slot for popup -->

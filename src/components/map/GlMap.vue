@@ -117,7 +117,7 @@
 </script>
 
 <style lang="scss">
-  .hidden {
+  .mgl-hidden {
     display: none;
   }
   .mgl-map-wrapper {
