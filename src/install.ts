@@ -1,5 +1,4 @@
-import VueCompositionApi from '@vue/composition-api';
-import { PluginFunction, VueConstructor as Application } from 'vue';
+import { App, Plugin } from 'vue';
 import CanvasLayer from './components/layer/CanvasLayer';
 import GeojsonLayer from './components/layer/GeojsonLayer';
 import ImageLayer from './components/layer/ImageLayer';
@@ -22,33 +21,34 @@ import { setVueInstance } from './utils/config';
 
 let installed: boolean = false;
 
-const install: PluginFunction<Application> = (app: Application) => {
-  if (!installed) {
-    setVueInstance(app);
-    const $helpers = {
-      withEvents: withEventsMixin,
-      withSelfEvents: withSelfEventsMixin,
-      asControl: controlMixin,
-      asLayer: layerMixin,
-    };
-    app.use(VueCompositionApi);
-    app.component('MglMap', GlMap);
-    app.component('MglNavigationControl', NavigationControl);
-    app.component('MglGeolocateControl', GeolocateControl);
-    app.component('MglFullscreenControl', FullscreenControl);
-    app.component('MglAttributionControl', AttributionControl);
-    app.component('MglScaleControl', ScaleControl);
-    app.component('MglGeojsonLayer', GeojsonLayer);
-    app.component('MglImageLayer', ImageLayer);
-    app.component('MglCanvasLayer', CanvasLayer);
-    app.component('MglVideoLayer', VideoLayer);
-    app.component('MglVectorLayer', VectorLayer);
-    app.component('MglRasterLayer', RasterLayer);
-    app.component('MglMarker', Marker);
-    app.component('MglPopup', Popup);
-    app.prototype.$helpers = $helpers;
-    installed = true;
+export const plugin: Plugin = {
+  install(app: App) {
+    if (!installed) {
+      setVueInstance(app);
+      const $helpers = {
+        withEvents: withEventsMixin,
+        withSelfEvents: withSelfEventsMixin,
+        asControl: controlMixin,
+        asLayer: layerMixin,
+      };
+      app.component('MglMap', GlMap);
+      app.component('MglNavigationControl', NavigationControl);
+      app.component('MglGeolocateControl', GeolocateControl);
+      app.component('MglFullscreenControl', FullscreenControl);
+      app.component('MglAttributionControl', AttributionControl);
+      app.component('MglScaleControl', ScaleControl);
+      app.component('MglGeojsonLayer', GeojsonLayer);
+      app.component('MglImageLayer', ImageLayer);
+      app.component('MglCanvasLayer', CanvasLayer);
+      app.component('MglVideoLayer', VideoLayer);
+      app.component('MglVectorLayer', VectorLayer);
+      app.component('MglRasterLayer', RasterLayer);
+      app.component('MglMarker', Marker);
+      app.component('MglPopup', Popup);
+      app.config.globalProperties.$helpers = $helpers;
+      installed = true;
+    }
   }
 };
 
-export default install;
+export default plugin;
