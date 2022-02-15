@@ -17,8 +17,9 @@
     PopupOptions,
   } from 'mapbox-gl';
   import { Marker } from 'mapbox-gl';
-  import { defineComponent, onMounted, PropType, SetupContext } from 'vue';
-  import { MapKey, MapLoadedKey } from '../../types/symbols';
+  import type { PropType, Ref, SetupContext } from 'vue-demi';
+  import { defineComponent, onMounted, ref } from 'vue-demi';
+  import { MapKey } from '../../types/symbols';
   import { markerDOMEvents, markerMapEvents } from '../constants/events';
   import VPopup from '../popups/VPopup.vue';
   import { injectStrict } from '../utils';
@@ -52,8 +53,21 @@
     },
     setup(props, { emit }: SetupContext) {
       let map = injectStrict(MapKey);
-      let loaded = injectStrict(MapLoadedKey);
       let marker: Marker = new Marker(props.options);
+      let loaded: Ref<boolean> = ref(true);
+
+      map.value.on('style.load', () => {
+        // https://github.com/mapbox/mapbox-gl-js/issues/2268#issuecomment-401979967
+        const styleTimeout = () => {
+          if (!map.value.isStyleLoaded()) {
+            loaded.value = false;
+            setTimeout(styleTimeout, 200);
+          } else {
+            loaded.value = true;
+          }
+        };
+        styleTimeout();
+      });
 
       onMounted(() => {
         if (loaded.value) {

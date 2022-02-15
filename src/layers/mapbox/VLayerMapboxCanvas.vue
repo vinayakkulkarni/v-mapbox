@@ -6,8 +6,9 @@
 <script lang="ts">
   import type { FeatureCollection } from 'geojson';
   import type { AnyLayer, GeoJSONSourceRaw } from 'mapbox-gl';
-  import { defineComponent, onMounted, PropType } from 'vue';
-  import { MapKey, MapLoadedKey } from '../../../types/symbols';
+  import type { PropType, Ref } from 'vue-demi';
+  import { defineComponent, onMounted, ref, watch } from 'vue-demi';
+  import { MapKey } from '../../../types/symbols';
   import { injectStrict } from '../../utils';
 
   export default defineComponent({
@@ -40,23 +41,53 @@
     },
     setup(props) {
       let map = injectStrict(MapKey);
-      let loaded = injectStrict(MapLoadedKey);
+      let loaded: Ref<boolean> = ref(false);
 
-      onMounted(() => {
-        if (loaded.value) {
-          const source: GeoJSONSourceRaw = {
-            type: 'geojson',
-            data: props.source,
-          };
-          const layer = {
-            ...props.layer,
-            id: props.layerId,
-            source: props.sourceId,
-          };
-          map.value.addSource(props.sourceId, source);
-          map.value.addLayer(layer, props.before);
+      const layer = {
+        ...props.layer,
+        id: props.layerId,
+        source: props.sourceId,
+      };
+      const source: GeoJSONSourceRaw = {
+        type: 'geojson',
+        data: props.source,
+      };
+
+      map.value.on('style.load', () => {
+        // https://github.com/mapbox/mapbox-gl-js/issues/2268#issuecomment-401979967
+        const styleTimeout = () => {
+          if (!map.value.isStyleLoaded()) {
+            loaded.value = false;
+            setTimeout(styleTimeout, 200);
+          } else {
+            loaded.value = true;
+          }
+        };
+        styleTimeout();
+      });
+
+      /**
+       * Watcher(s)
+       */
+      watch(loaded, (value) => {
+        if (value) {
+          addLayer();
         }
       });
+
+      onMounted(() => {
+        addLayer();
+      });
+
+      /**
+       * Re–adds the layer when style changed
+       *
+       * @returns {void}
+       */
+      function addLayer(): void {
+        map.value.addSource(props.sourceId, source);
+        map.value.addLayer(layer, props.before);
+      }
     },
   });
 </script>
