@@ -20,9 +20,6 @@
       let loaded: Ref<boolean> = ref(false);
       let events: Ref<Array<keyof MapEventType>> = ref(mapEvents);
 
-      let styleChanged: Ref<boolean> = ref(false);
-      let tilesLoaded: Ref<boolean> = ref(false);
-
       onMounted(() => {
         map.value = new Map(props.options);
         loaded.value = true;
