@@ -11,7 +11,7 @@ _All controls_:
 ```vue
 <template>
   <div id="#app">
-    <MglMap
+    <VMap
       :accessToken="accessToken"
       :mapStyle.sync="mapStyle"
       :attributionControl="false"
@@ -22,13 +22,13 @@ _All controls_:
       <MglNavigationControl position="top-right" />
       <MglGeolocateControl position="top-right" />
       <MglScaleControl />
-    </MglMap>
+    </VMap>
   </div>
 </template>
 
 <script>
 import {
-  MglMap,
+  VMap,
   MglAttributionControl,
   MglNavigationControl,
   MglGeolocateControl,
@@ -38,7 +38,7 @@ import {
 
 export default {
   components: {
-    MglMap,
+    VMap,
     MglNavigationControl,
     MglGeolocateControl
   },
@@ -58,5 +58,5 @@ See list of controls and they properties in [API docs](/api/controls.md).
 
 Due to Mapbox [policy](https://docs.mapbox.com/help/how-attribution-works/) attribution control
 is enabled by default. You can disable default attributions by setting
-`attributionControl` prop of MglMap to `false` and set your own attribution
+`attributionControl` prop of VMap to `false` and set your own attribution
 using AttributionControl component.
