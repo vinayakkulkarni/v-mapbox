@@ -64,12 +64,6 @@ cd v-mapbox
 npm install
 ```
 
-Running in dev mode:
-
-```sh
-npm run serve
-```
-
 Build for production:
 
 ```sh
