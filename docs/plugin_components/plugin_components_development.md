@@ -4,10 +4,10 @@
 
 The purpose VueMapbox is to wrap up Mapbox Gl JS library. Any other functions are out of scope. However, there are some plugins for Mapbox Gl JS, that provides additional capabilities, and it where plugin components come into play.
 
-Plugin components are essentially just Vue components that utilize `mapbox` and `map` objects provided by basic `MglMap`.
+Plugin components are essentially just Vue components that utilize `mapbox` and `map` objects provided by basic `VMap`.
 
 VueMapbox internally use dependency injection mechanism of Vue ([provide/inject](https://vuejs.org/v2/api/#provide-inject) in Vue docs).
-When `MglMap` created, it waits for map loads and initializes then renders it's child components, and provide them `mapbox` (Mapbox GL JS library), `map` (initialized instance of the [Map](https://docs.mapbox.com/mapbox-gl-js/api/#map)) and `actions` ([promisified](/api/#actions) Mapbox Map methods).
+When `VMap` created, it waits for map loads and initializes then renders it's child components, and provide them `mapbox` (Mapbox GL JS library), `map` (initialized instance of the [Map](https://docs.mapbox.com/mapbox-gl-js/api/#map)) and `actions` ([promisified](/api/#actions) Mapbox Map methods).
 Inject these objects in your component, and you can add to map features you need.
 
 The basic idea is to keep the declarative style of Vue, so it's good to add for example additional controls or layer types to map as a component. It's a right place to wrap Mapbox Gl JS plugins, but it can be used for various purpose.
@@ -18,18 +18,18 @@ The basic idea is to keep the declarative style of Vue, so it's good to add for 
 
 ```vue
 <template>
-  <MglMap :accessToken="accessToken" :mapStyle="mapStyle">
+  <VMap :accessToken="accessToken" :mapStyle="mapStyle">
     <MyPluginComponent />
-  </MglMap>
+  </VMap>
 </template>
 
 <script>
 import Mapbox from "mapbox-gl";
-import { MglMap } from "v-mapbox";
+import { VMap } from "v-mapbox";
 
 export default {
   components: {
-    MglMap
+    VMap
   },
   data() {
     return {
@@ -51,7 +51,7 @@ export default {
 
 <script>
 import Mapbox from "mapbox-gl";
-import { MglMap } from "v-mapbox";
+import { VMap } from "v-mapbox";
 
 export default {
   name: "MyPluginComponent"
@@ -140,7 +140,7 @@ export default {
   name: "GeocoderControl",
   mixins: [$helpers.asControl], // MapboxGeocoder is a control, so we use mixin
 
-  inject: ["mapbox", "map"], // Here we inject objects provided by MglMap
+  inject: ["mapbox", "map"], // Here we inject objects provided by VMap
 
   props: {
     // MapboxGeocoder requires access token
@@ -201,7 +201,7 @@ export default {
 
   methods: {
     $_deferredMount() {
-      // Because this component placed in MglMap sub-tree, map already initialized and injected above
+      // Because this component placed in VMap sub-tree, map already initialized and injected above
       this.map.addControl(this.control);
       if (this.input) {
         // Set input in MapboxGeocoder if there is default data

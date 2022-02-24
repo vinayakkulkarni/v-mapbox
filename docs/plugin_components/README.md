@@ -6,29 +6,29 @@ However, they can be implemented as plugin components.
 
 ## Using plugin components
 
-Using plugin components is easy. Just put component inside `MglMap` components tree and pass necessary props to it.
+Using plugin components is easy. Just put component inside `VMap` components tree and pass necessary props to it.
 Below is example for using [VueMapbox Geocoder](https://github.com/soal/vue-mapbox-geocoder).
 
 ```vue
 <template>
-  <MglMap :accessToken="accessToken" :mapStyle="mapStyle">
+  <VMap :accessToken="accessToken" :mapStyle="mapStyle">
     <MglGeocoderControl
       :accessToken="accessToken"
       :input.sync="defaultInput"
       @results="handleSearch"
     />
-  </MglMap>
+  </VMap>
 </template>
 
 <script>
-import { MglMap } from "v-mapbox";
+import { VMap } from "v-mapbox";
 import MglGeocoderControl from "v-mapbox-geocoder";
 
 export default {
   name: "App",
 
   components: {
-    MglMap,
+    VMap,
     MglGeocoderControl
   },
   data() {

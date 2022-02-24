@@ -12,27 +12,27 @@ For example adding a layer with GeoJSON data:
 
 ```vue
 <template>
-  <MglMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
+  <VMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
     <!-- Adding navigation control -->
     <MglNavigationControl position="top-right" />
     <!-- Adding GeoJSON layer -->
-    <MglGeojsonLayer
+    <VLayerMapboxGeojson
       :sourceId="geoJsonSource.id"
       :source="geoJsonSource"
       layerId="myLayer"
       :layer="geoJsonlayer"
     />
-  </MglMap>
+  </VMap>
 </template>
 
 <script>
-import { MglMap, MglNavigationControl, MglGeojsonLayer } from "v-mapbox";
+import { VMap, MglNavigationControl, VLayerMapboxGeojson } from "v-mapbox";
 
 export default {
   components: {
-    MglMap,
+    VMap,
     MglNavigationControl,
-    MglGeojsonLayer
+    VLayerMapboxGeojson
   },
   data() {
     return {

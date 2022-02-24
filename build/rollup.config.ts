@@ -50,7 +50,7 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: 'dist/v-mapbox.cjs.js',
+      file: pkg.main,
       format: 'cjs',
       name: 'VMapbox',
       exports: 'named',
@@ -59,7 +59,7 @@ export default {
       banner,
     },
     {
-      file: 'dist/v-mapbox.esm.js',
+      file: pkg.module,
       format: 'es',
       name: 'VMapbox',
       exports: 'named',
@@ -67,7 +67,7 @@ export default {
       banner,
     },
     {
-      file: 'dist/v-mapbox.js',
+      file: pkg.unpkg,
       format: 'umd',
       name: 'VMapbox',
       exports: 'named',

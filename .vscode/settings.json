@@ -1,5 +1,7 @@
 {
-  "volar.tsPlugin": true,
   "files.eol": "\n",
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "css.validate": false,
+  "scss.validate": false,
+  "editor.formatOnSave": true
 }

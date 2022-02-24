@@ -8,17 +8,17 @@ If you using self-hosting maps on your own server you can omit this parameter.
 
 ```vue
 <template>
-  <MglMap :accessToken="accessToken" :mapStyle="mapStyle" />
+  <VMap :accessToken="accessToken" :mapStyle="mapStyle" />
 </template>
 
 <script>
 import 'mapbox-gl/dist/mapbox-gl.css'
-import Mapbox from "mapbox-gl";
-import { MglMap } from "v-mapbox";
+import mapbox from "mapbox-gl";
+import { VMap } from "v-mapbox";
 
 export default {
   components: {
-    MglMap
+    VMap
   },
   data() {
     return {
@@ -29,7 +29,7 @@ export default {
 
   created() {
     // We need to set mapbox-gl library here in order to use it in template
-    this.mapbox = Mapbox;
+    this.mapbox = mapbox;
   }
 };
 </script>
@@ -41,7 +41,7 @@ Example:
 
 ```vue
 <template>
-  <MglMap
+  <VMap
     :mapbox-gl="mapbox-gl"
     :access-token="accessToken"
     :map-style.sync="mapStyle"
@@ -62,8 +62,8 @@ Full list of props see in [API docs](/api/#props), note field 'Synced' in descri
 
 ## Map loading
 
-When map loads, `MglMap` component emits `load` event. Payload of the event contains Mapbox GL JS `Map` object.
-All components placed under `MglMap` will be rendered only after map fully loaded.
+When map loads, `VMap` component emits `load` event. Payload of the event contains Mapbox GL JS `Map` object.
+All components placed under `VMap` will be rendered only after map fully loaded.
 
 ::: warning Storing Map object
 Take note that it's generally bad idea to add to Vuex or component's `data` anything but primitive types and plain objects. Vue adds getters and setters to every property, so if you add `Map` object to Vuex store or component `data`, it may lead to weird bugs.
@@ -72,7 +72,7 @@ If you want to store map object, store it as non-reactive property like in examp
 
 ```vue
 <template>
-  <MglMap
+  <VMap
     :access-token="accessToken"
     :map-style.sync="mapStyle"
     @load="onMapLoaded"
@@ -99,7 +99,7 @@ export default {
 
 ## Map actions
 
-Asynchronous map methods exposed at MglMap component in `actions` property. They returns `Promise`, that resolves when action completed.
+Asynchronous map methods exposed at VMap component in `actions` property. They returns `Promise`, that resolves when action completed.
 Promise resolves with map properties that has been changed by used action.
 For example:
 

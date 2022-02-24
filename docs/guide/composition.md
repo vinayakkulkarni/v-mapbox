@@ -7,7 +7,7 @@ For example, adding map controls:
 ```vue
 <template>
 <div id="#app">
-  <MglMap
+  <VMap
     :accessToken="accessToken"
     :mapStyle.sync="mapStyle"
   >
@@ -18,11 +18,11 @@ For example, adding map controls:
 </template>
 
 <script>
-import { MglMap, MglNavigationControl, MglGeolocateControl } from "v-mapbox";
+import { VMap, MglNavigationControl, MglGeolocateControl } from "v-mapbox";
 
 export default {
   components: {
-    MglMap,
+    VMap,
     MglNavigationControl,
     MglGeolocateControl
   },
@@ -41,30 +41,30 @@ Adding a popup:
 ```vue
 <template>
   <div id="#app">
-    <MglMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
+    <VMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
       <MglNavigationControl position="top-right" />
       <MglGeolocateControl position="top-right" />
-      <MglPopup :coordinates="popupCoordinates">
+      <VPopup :coordinates="popupCoordinates">
         <span>Hello world!</span>
-      </MglPopup>
-    </MglMap>
+      </VPopup>
+    </VMap>
   </div>
 </template>
 
 <script>
 import {
-  MglMap,
+  VMap,
   MglNavigationControl,
   MglGeolocateControl,
-  MglPopup
+  VPopup
 } from "v-mapbox";
 
 export default {
   components: {
-    MglMap,
+    VMap,
     MglNavigationControl,
     MglGeolocateControl,
-    MglPopup
+    VPopup
   },
   data() {
     return {
@@ -86,19 +86,19 @@ For example:
 ```vue
 <template>
   <div class="popup-wrapper">
-    <MglPopup :coordinates="popupCoordinates">
+    <VPopup :coordinates="popupCoordinates">
       <span>Hello world from wrapped popup!</span>
-    </MglPopup>
+    </VPopup>
   </div>
 </template>
 
 <script>
-import { MglPopup } from 'v-mapbox';
+import { VPopup } from 'v-mapbox';
 
 export default {
   name: 'PopupWrapper'
   components: {
-    MglPopup
+    VPopup
   },
   computed() {
     popupCoordinates() {
@@ -116,20 +116,20 @@ export default {
 ```vue
 <template>
   <div id="#app">
-    <MglMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
+    <VMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
       <PopupWrapper />
       <!-- works! -->
-    </MglMap>
+    </VMap>
   </div>
 </template>
 
 <script>
-import { MglMap } from "v-mapbox";
+import { VMap } from "v-mapbox";
 import PopupWrapper from "PopupWrapper"; // wrapper for popup
 
 export default {
   components: {
-    MglMap,
+    VMap,
     PopupWrapper // wrapper for popup
   },
   data() {
@@ -143,7 +143,7 @@ export default {
 ```
 
 ::: tip
-VueMapbox internally use dependency injection mechanism (`provide/inject` in Vue [docs](https://vuejs.org)). It means that any component in `MglMap` sub-tree can access to `map`, `mapbox` and `actions` through `inject` property.
+VueMapbox internally use dependency injection mechanism (`provide/inject` in Vue [docs](https://vuejs.org)). It means that any component in `VMap` sub-tree can access to `map`, `mapbox` and `actions` through `inject` property.
 :::
 
 After successful mount all components emits `added` envent with Vue component object and additional data, such as corresponding Mapbox GL JS object or object containing layer id in payload.

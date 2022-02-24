@@ -1,33 +1,42 @@
-export { default as MglCanvasLayer } from './components/layer/CanvasLayer';
-export { default as MglGeojsonLayer } from './components/layer/GeojsonLayer';
-export { default as MglImageLayer } from './components/layer/ImageLayer';
-export { default as MglRasterLayer } from './components/layer/RasterLayer';
-export { default as MglVectorLayer } from './components/layer/VectorLayer';
-export { default as MglVideoLayer } from './components/layer/VideoLayer';
-export { default as MglMap } from './components/map/GlMap.vue';
-export { default as MglAttributionControl } from './components/UI/controls/AttributionControl';
-export { default as MglFullscreenControl } from './components/UI/controls/FullscreenControl';
-export { default as MglGeolocateControl } from './components/UI/controls/GeolocateControl';
-export { default as MglIControl } from './components/UI/controls/IControl';
-export { default as MglNavigationControl } from './components/UI/controls/NavigationControl';
-export { default as MglScaleControl } from './components/UI/controls/ScaleControl';
-export { default as MglMarker } from './components/UI/Marker.vue';
-export { default as MglPopup } from './components/UI/Popup.vue';
-export { default } from './install';
+// Controls
+import VControlAttribution from './controls/VControlAttribution.vue';
+import VControlFullscreen from './controls/VControlFullscreen.vue';
+import VControlGeolocate from './controls/VControlGeolocate.vue';
+import VControlNavigation from './controls/VControlNavigation.vue';
+import VControlScale from './controls/VControlScale.vue';
+// Layers – Mapbox
+import VLayerMapboxCanvas from './layers/mapbox/VLayerMapboxCanvas.vue';
+import VLayerMapboxGeojson from './layers/mapbox/VLayerMapboxGeojson.vue';
+import VLayerMapboxImage from './layers/mapbox/VLayerMapboxImage.vue';
+import VLayerMapboxRaster from './layers/mapbox/VLayerMapboxRaster.vue';
+import VLayerMapboxVector from './layers/mapbox/VLayerMapboxVector.vue';
+import VLayerMapboxVideo from './layers/mapbox/VLayerMapboxVideo.vue';
+// Map
+import VMap from './map/VMap.vue';
+// Marker
+import VMarker from './markers/VMarker.vue';
+// Popup
+import VPopup from './popups/VPopup.vue';
 
-import layerMixin from './components/layer/layerMixin';
-import controlMixin from './components/UI/controls/controlMixin';
-import withSelfEventsMixin from './components/UI/withSelfEvents';
-import withEventsMixin from './lib/withEvents';
-
-export const withEvents = withEventsMixin;
-export const withSelfEvents = withSelfEventsMixin;
-export const asControl = controlMixin;
-export const asLayer = layerMixin;
-
-export const $helpers = {
-  withEvents: withEventsMixin,
-  withSelfEvents: withSelfEventsMixin,
-  asControl: controlMixin,
-  asLayer: layerMixin,
+export {
+  VMap,
+  // Marker
+  VMarker,
+  // Popup
+  VPopup,
+  // Layers
+  VLayerMapboxCanvas,
+  VLayerMapboxGeojson,
+  VLayerMapboxImage,
+  VLayerMapboxRaster,
+  VLayerMapboxVector,
+  VLayerMapboxVideo,
+  // Controls
+  VControlAttribution,
+  VControlFullscreen,
+  VControlGeolocate,
+  VControlNavigation,
+  VControlScale,
 };
+
+export default VMap;

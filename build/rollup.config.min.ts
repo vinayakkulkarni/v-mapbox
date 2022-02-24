@@ -59,7 +59,7 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: 'dist/v-mapbox.min.js',
+      file: pkg.cdn,
       format: 'umd',
       name: 'VMapbox',
       exports: 'named',

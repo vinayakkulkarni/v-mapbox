@@ -6,22 +6,22 @@ The Marker component is a wrapper around the [Mapbox GL Marker API](https://docs
 
 ```vue
 <template>
-  <MglMap
+  <VMap
     :accessToken="mapboxAccessToken"
     :mapStyle.sync="mapStyle"
     :center="coordinates"
   >
-    <MglMarker :coordinates="coordinates" color="blue" />
-  </MglMap>
+    <VMarker :coordinates="coordinates" color="blue" />
+  </VMap>
 </template>
 
 <script>
-import { MglMap, MglMarker } from "v-mapbox";
+import { VMap, VMarker } from "v-mapbox";
 
 export default {
   components: {
-    MglMap,
-    MglMarker
+    VMap,
+    VMarker
   },
   data() {
     return {
@@ -51,24 +51,24 @@ The `marker` slot allows you to customize the look of the marker. Here is an exa
 
 ```vue
 <template>
-  <MglMap
+  <VMap
     :accessToken="mapboxAccessToken"
     :mapStyle.sync="mapStyle"
     :center="coordinates"
   >
-    <MglMarker :coordinates="coordinates">
+    <VMarker :coordinates="coordinates">
       <v-icon slot="marker">mdi-map-marker</v-icon>
-    </MglMarker>
-  </MglMap>
+    </VMarker>
+  </VMap>
 </template>
 
 <script>
-import { MglMap, MglMarker } from "v-mapbox";
+import { VMap, VMarker } from "v-mapbox";
 
 export default {
   components: {
-    MglMap,
-    MglMarker
+    VMap,
+    VMarker
   },
 
   data() {
@@ -94,24 +94,24 @@ In this example [Vuetify card component](https://vuetifyjs.com/en/components/car
 
 ```vue
 <template>
-  <MglMap
+  <VMap
     :accessToken="mapboxAccessToken"
     :mapStyle.sync="mapStyle"
     :center="coordinates"
   >
-    <MglPopup :coordinates="coordinates" anchor="top">
+    <VPopup :coordinates="coordinates" anchor="top">
       <VCard> <div>Hello, I'm popup!</div> </VCard>
-    </MglPopup>
-  </MglMap>
+    </VPopup>
+  </VMap>
 </template>
 
 <script>
-import { MglMap, MglPopup } from "v-mapbox";
+import { VMap, VPopup } from "v-mapbox";
 
 export default {
   components: {
-    MglMap,
-    MglPopup
+    VMap,
+    VPopup
   },
   data() {
     return {
@@ -151,29 +151,29 @@ Popup often used inside of map markers. You can achive this by passing Popup ins
 
 ```vue
 <template>
-  <MglMap
+  <VMap
     :accessToken="mapboxAccessToken"
     :mapStyle.sync="mapStyle"
     :center="coordinates"
   >
-    <MglMarker :coordinates="coordinates">
-      <MglPopup>
+    <VMarker :coordinates="coordinates">
+      <VPopup>
         <VCard>
           <div>Hello, I'm popup!</div>
         </VCard>
-      </MglPopup>
-    </MglMarker>
-  </MglMap>
+      </VPopup>
+    </VMarker>
+  </VMap>
 </template>
 
 <script>
-import { MglMap, MglPopup, MglMarker } from "v-mapbox";
+import { VMap, VPopup, VMarker } from "v-mapbox";
 
 export default {
   components: {
-    MglMap,
-    MglMarker,
-    MglPopup
+    VMap,
+    VMarker,
+    VPopup
   },
 
   data() {

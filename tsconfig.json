@@ -18,8 +18,12 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
     },
     "types": [
       "@types/node",
@@ -29,7 +33,8 @@
   "include": [
     "src",
     "build",
-    "shims"
+    "shims",
+    "types"
   ],
   "exclude": [
     "node_modules",
