@@ -1,3 +1,20 @@
+# [3.0.0](https://github.com/geospoc/v-mapbox/compare/v1.10.1...v3.0.0) (2022-02-24)
+
+
+### Bug Fixes
+
+* **deps:** bump node-fetch from 2.6.1 to 2.6.7 ([d1286f4](https://github.com/geospoc/v-mapbox/commit/d1286f481eab69dc50da7c4f1389b543ea8375f5))
+* unused variables ([1a967e3](https://github.com/geospoc/v-mapbox/commit/1a967e38c37182b6e78c7a612b2964a327d48420))
+
+
+### Features
+
+* add default controls 🎉 ([dd5ad1a](https://github.com/geospoc/v-mapbox/commit/dd5ad1a41707fb047a1c100cf05054d906cb1367))
+* persist layers when style/basemap changes ([d81a70c](https://github.com/geospoc/v-mapbox/commit/d81a70c11b41117f806971bff6200bd322579d04))
+* setup CodeQL ([6fb9fd3](https://github.com/geospoc/v-mapbox/commit/6fb9fd3b679f062c0bf0e279dc5d83e32c9f1dd5))
+
+
+
 ## [1.10.1](https://github.com/geospoc/v-mapbox/compare/v1.10.0...v1.10.1) (2022-01-19)
 
 
