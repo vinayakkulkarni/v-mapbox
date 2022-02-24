@@ -40,7 +40,7 @@
   <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/geospoc/v-mapbox">
 </a>
 <a title="maintenance" href="https://github.com/geospoc/v-mapbox/commits/main" rel="nofollow">
-  <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2021">
+  <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2022">
 </a>
 <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fgeospoc%2Fv-mapbox?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgeospoc%2Fv-mapbox.svg?type=shield"/></a>
 
@@ -62,12 +62,6 @@ V-Mapbox is wrapper around Mapbox GL JS library that provides vueish-way to inte
 git clone git@github.com:geospoc/v-mapbox.git
 cd v-mapbox
 npm install
-```
-
-Running in dev mode:
-
-```sh
-npm run serve
 ```
 
 Build for production:
