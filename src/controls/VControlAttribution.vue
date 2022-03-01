@@ -49,6 +49,7 @@
           ...props.options,
         };
         if (slots && slots.default!() && Array.isArray(slots.default!())) {
+          // @ts-ignore
           options.customAttribution = slots.default().at(0).el.data;
         }
         const control = new AttributionControl(options);
