@@ -1,3 +1,17 @@
+# [3.1.0](https://github.com/geospoc/v-mapbox/compare/v3.0.0...v3.1.0) (2022-03-01)
+
+
+### Bug Fixes
+
+* minor housekeeping ([b24bc9e](https://github.com/geospoc/v-mapbox/commit/b24bc9e29b530bc981a634684de446c30019ffc1))
+
+
+### Features
+
+* **ts:** add `.d.ts` using `vue-tsc` ([745afee](https://github.com/geospoc/v-mapbox/commit/745afeece5f0630000aa01f3ef84359f3160e6e5))
+
+
+
 # [3.0.0](https://github.com/geospoc/v-mapbox/compare/v1.10.1...v3.0.0) (2022-02-24)
 
 
