@@ -1,3 +1,21 @@
+# [1.11.0](https://github.com/geospoc/v-mapbox/compare/v1.10.1...v1.11.0) (2022-03-01)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 2.5.1 to 3 ([6fd1831](https://github.com/geospoc/v-mapbox/commit/6fd1831f36fc0514c900c9667233ea9fa2f53d91))
+* **deps:** bump node-fetch from 2.6.1 to 2.6.7 ([d1286f4](https://github.com/geospoc/v-mapbox/commit/d1286f481eab69dc50da7c4f1389b543ea8375f5))
+* **deps:** bump prismjs from 1.26.0 to 1.27.0 ([8b8d3d8](https://github.com/geospoc/v-mapbox/commit/8b8d3d80c8fce97065ef91b6a2309ac198d7218c))
+* **deps:** bump url-parse from 1.5.4 to 1.5.7 ([6c4602a](https://github.com/geospoc/v-mapbox/commit/6c4602a2b860ed3bcd8bbd4f1174ee3554b2484f))
+* **deps:** bump url-parse from 1.5.7 to 1.5.10 ([ebaa887](https://github.com/geospoc/v-mapbox/commit/ebaa887c4468463c097a26a02b41d4af3931e63c))
+
+
+### Features
+
+* setup CodeQL ([6fb9fd3](https://github.com/geospoc/v-mapbox/commit/6fb9fd3b679f062c0bf0e279dc5d83e32c9f1dd5))
+
+
+
 ## [1.10.1](https://github.com/geospoc/v-mapbox/compare/v1.10.0...v1.10.1) (2022-01-19)
 
 
