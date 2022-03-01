@@ -1,15 +1,32 @@
-import Vue, { VueConstructor } from 'vue';
+import VControlAttribution from './controls/VControlAttribution.vue';
+import VControlFullscreen from './controls/VControlFullscreen.vue';
+import VControlGeolocate from './controls/VControlGeolocate.vue';
+import VControlNavigation from './controls/VControlNavigation.vue';
+import VControlScale from './controls/VControlScale.vue';
+import VLayerMapboxCanvas from './layers/mapbox/VLayerMapboxCanvas.vue';
+import VLayerMapboxGeojson from './layers/mapbox/VLayerMapboxGeojson.vue';
+import VLayerMapboxImage from './layers/mapbox/VLayerMapboxImage.vue';
+import VLayerMapboxRaster from './layers/mapbox/VLayerMapboxRaster.vue';
+import VLayerMapboxVector from './layers/mapbox/VLayerMapboxVector.vue';
+import VLayerMapboxVideo from './layers/mapbox/VLayerMapboxVideo.vue';
+import VMap from './map/VMap.vue';
+import VMarker from './markers/VMarker.vue';
+import VPopup from './popups/VPopup.vue';
 
-export const MglMap: VueConstructor<Vue>;
-export const MglNavigationControl: VueConstructor<Vue>;
-export const MglGeolocateControl: VueConstructor<Vue>;
-export const MglFullscreenControl: VueConstructor<Vue>;
-export const MglAttributionControl: VueConstructor<Vue>;
-export const MglScaleControl: VueConstructor<Vue>;
-export const MglGeojsonLayer: VueConstructor<Vue>;
-export const MglImageLayer: VueConstructor<Vue>;
-export const MglVideoLayer: VueConstructor<Vue>;
-export const MglVectorLayer: VueConstructor<Vue>;
-export const MglRasterLayer: VueConstructor<Vue>;
-export const MglMarker: VueConstructor<Vue>;
-export const MglPopup: VueConstructor<Vue>;
+export {
+  VMap,
+  VMarker,
+  VPopup,
+  VLayerMapboxCanvas,
+  VLayerMapboxGeojson,
+  VLayerMapboxImage,
+  VLayerMapboxRaster,
+  VLayerMapboxVector,
+  VLayerMapboxVideo,
+  VControlAttribution,
+  VControlFullscreen,
+  VControlGeolocate,
+  VControlNavigation,
+  VControlScale,
+};
+export default VMap;
