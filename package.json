@@ -61,7 +61,7 @@
     "@vue/runtime-dom": "^3.2.24",
     "eslint": "^8.4.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jsdoc": "^37.1.0",
+    "eslint-plugin-jsdoc": "^38.1.4",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.2.0",
     "husky": "^7.0.4",
