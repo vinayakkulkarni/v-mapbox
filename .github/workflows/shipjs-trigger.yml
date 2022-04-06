@@ -1,4 +1,4 @@
-name: Ship js trigger (v1)
+name: Ship js trigger
 on:
   pull_request:
     types:
