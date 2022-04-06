@@ -24,15 +24,6 @@
 <a title="deploy" href="https://github.com/algolia/shipjs" rel="nofollow">
   <img src="https://img.shields.io/badge/deploy-🛳%20Ship.js-blue?style=flat" />
 </a>
-<a title="Dependencies" href="https://david-dm.org/geospoc/v-mapbox" rel="nofollow">
-  <img alt="David" src="https://img.shields.io/david/geospoc/v-mapbox">
-</a>
-<a title="Dev Dependencies" href="https://david-dm.org/geospoc/v-mapbox?type=dev" rel="nofollow">
-  <img alt="David" src="https://img.shields.io/david/dev/geospoc/v-mapbox">
-</a>
-<a title="Peer Dependencies" href="https://david-dm.org/geospoc/v-mapbox?type=peer" rel="nofollow">
-  <img alt="David" src="https://img.shields.io/david/peer/geospoc/v-mapbox">
-</a>
 <a title="Last Commit" href="https://github.com/geospoc/v-mapbox/commits/main" rel="nofollow">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/geospoc/v-mapbox">
 </a>
