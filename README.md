@@ -15,8 +15,8 @@
 <a href="https://lgtm.com/projects/g/geospoc/v-mapbox/context:javascript">
   <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/geospoc/v-mapbox.svg?logo=lgtm&logoWidth=18"/>
 </a>
-<a title="DeepScan Grade" href="https://deepscan.io/dashboard#view=project&tid=9055&pid=12397&bid=190811">
-  <img src="https://deepscan.io/api/teams/9055/projects/12397/branches/190811/badge/grade.svg" alt="DeepScan grade">
+<a title="DeepScan Grade" href="https://deepscan.io/dashboard#view=project&tid=9381&pid=14423&bid=267899">
+  <img src="https://deepscan.io/api/teams/9381/projects/14423/branches/267899/badge/grade.svg" alt="DeepScan grade">
 </a>
 <a title="downloads" href="http://npm-stat.com/charts.html?package=v-mapbox" rel="nofollow">
   <img alt="npm" src="https://img.shields.io/npm/dm/v-mapbox">
