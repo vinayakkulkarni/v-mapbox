@@ -43,7 +43,7 @@
       // mapbox marker options
       offset: {
         type: [Object, Array],
-        default: () => [0, 0],
+        default: () => [0, -14],
       },
       coordinates: {
         type: Array,
