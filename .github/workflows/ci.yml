@@ -5,10 +5,12 @@ on:
     branches:
       - main
       - next
+      - v1
   pull_request_target:
     branches:
       - main
       - next
+      - v1
 
 permissions:
   checks: write
