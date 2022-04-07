@@ -1,3 +1,14 @@
+## [1.11.1](https://github.com/geospoc/v-mapbox/compare/v1.11.0...v1.11.1) (2022-04-07)
+
+
+### Bug Fixes
+
+* default offset value for marker ([009ecf6](https://github.com/geospoc/v-mapbox/commit/009ecf6788607730c6359e1df4443ad6c497b7fc)), closes [#309](https://github.com/geospoc/v-mapbox/issues/309)
+* **deps:** bump actions/checkout from 2 to 3 ([810bc8d](https://github.com/geospoc/v-mapbox/commit/810bc8d108beeba915f5a760e14481e9903b8d84))
+* **deps:** bump minimist from 1.2.5 to 1.2.6 ([cba370b](https://github.com/geospoc/v-mapbox/commit/cba370bad80f5659672f4a3e60cf0bf8aee50bf3))
+
+
+
 # [1.11.0](https://github.com/geospoc/v-mapbox/compare/v1.10.1...v1.11.0) (2022-03-01)
 
 
