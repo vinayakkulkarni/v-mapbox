@@ -43,6 +43,15 @@ V-Mapbox is wrapper around Mapbox GL JS library that provides vueish-way to inte
 
 [Description and documentation](https://v-mapbox.netlify.app/)
 
+## Installation
+
+```sh
+# For Vue 2
+$ npm i v-mapbox@legacy
+# For Vue 3
+$ npm i v-mapbox
+```
+
 ## Demo
 
 [![Edit v-mapbox-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/v-mapbox-map-demo-k1l1n?file=/src/App.vue?fontsize=14&hidenavigation=1&theme=dark)
