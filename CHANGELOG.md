@@ -1,3 +1,7 @@
+## [1.11.2](https://github.com/geospoc/v-mapbox/compare/v1.11.1...v1.11.2) (2022-04-12)
+
+
+
 ## [1.11.1](https://github.com/geospoc/v-mapbox/compare/v1.11.0...v1.11.1) (2022-04-07)
 
 
