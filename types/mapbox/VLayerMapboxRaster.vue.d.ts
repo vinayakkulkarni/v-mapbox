@@ -1,7 +1,7 @@
 /// <reference types="@types/mapbox-gl" />
 import type { FeatureCollection } from 'geojson';
 import type { AnyLayer } from 'mapbox-gl';
-import type { PropType } from 'vue-demi';
+import type { PropType } from 'vue';
 declare const _default: import('vue-demi').DefineComponent<
   {
     sourceId: {

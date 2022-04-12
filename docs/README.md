@@ -13,8 +13,6 @@ features:
 footer: MIT Licensed
 ---
 
-If you like a long story, check out [blog post](https://soal.red/reasoning-behind-vue-mapbox/)
-
 <iframe src="https://codesandbox.io/embed/v-mapbox-map-demo-k1l1n?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
    style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
    title="v-mapbox-map-demo"
@@ -23,7 +21,7 @@ If you like a long story, check out [blog post](https://soal.red/reasoning-behin
  ></iframe>
 
 ::: tip Dependencies
-[Vue.js 2.6+](https://github.com/vuejs/vue)  
+[Vue.js 3.x+](https://github.com/vuejs/vue)  
 [Mapbox GL JS >=1 && < 2](https://github.com/mapbox/mapbox-gl-js)
 :::
 

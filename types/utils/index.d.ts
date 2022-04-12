@@ -1,4 +1,4 @@
-import type { InjectionKey } from 'vue-demi';
+import type { InjectionKey } from 'vue';
 /**
  * Dependency injection 🥳
  *

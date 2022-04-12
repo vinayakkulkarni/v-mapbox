@@ -1,6 +1,6 @@
 /// <reference types="@types/mapbox-gl" />
 import type { LngLatLike, Marker, PopupOptions } from 'mapbox-gl';
-import type { PropType, Ref } from 'vue-demi';
+import type { PropType, Ref } from 'vue';
 declare const _default: import('vue-demi').DefineComponent<
   {
     marker: {

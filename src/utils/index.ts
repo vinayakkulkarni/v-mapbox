@@ -1,5 +1,5 @@
-import type { InjectionKey } from 'vue-demi';
-import { inject } from 'vue-demi';
+import type { InjectionKey } from 'vue';
+import { inject } from 'vue';
 
 /**
  * Dependency injection 🥳
