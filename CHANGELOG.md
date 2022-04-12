@@ -1,3 +1,15 @@
+## [3.1.1](https://github.com/geospoc/v-mapbox/compare/v3.1.0...v3.1.1) (2022-04-12)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 2 to 3 ([207d8f0](https://github.com/geospoc/v-mapbox/commit/207d8f0de31507877be4ca1ec66975e18fe43aeb))
+* **deps:** bump actions/setup-node from 2.5.1 to 3.1.0 ([34153f5](https://github.com/geospoc/v-mapbox/commit/34153f50f4d73d8fcebf3ca6f4ca25319a1b57c9))
+* **deps:** bump actions/setup-node from 3.1.0 to 3.1.1 ([9897d5c](https://github.com/geospoc/v-mapbox/commit/9897d5c0d7f627ea67d63dcf90f155a1eca729d9))
+* issue with passing options to `Map()` ([b09ef8a](https://github.com/geospoc/v-mapbox/commit/b09ef8a55adf934596016b313068dbe2d70e4b06))
+
+
+
 # [3.1.0](https://github.com/geospoc/v-mapbox/compare/v3.0.0...v3.1.0) (2022-03-01)
 
 
