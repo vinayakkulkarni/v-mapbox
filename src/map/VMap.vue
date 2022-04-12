@@ -1,3 +1,8 @@
+<template>
+  <div :id="options.container || 'map'" class="v-map-container">
+    <slot />
+  </div>
+</template>
 <script lang="ts">
   import type { MapboxOptions, MapEventType } from 'mapbox-gl';
   import { Map } from 'mapbox-gl';
@@ -15,13 +20,16 @@
         default: () => ({}),
       },
     },
-    setup(props, { emit, slots }: SetupContext) {
+    setup(props, { emit }: SetupContext) {
       let map: Ref<Map> = ref({} as Map);
       let loaded: Ref<boolean> = ref(false);
       let events: Ref<Array<keyof MapEventType>> = ref(mapEvents);
 
       onMounted(() => {
-        map.value = new Map(props.options);
+        const options = props.options.container
+          ? props.options
+          : { ...props.options, container: 'map' };
+        map.value = new Map(options);
         loaded.value = true;
         provide(MapKey, map);
         listenMapEvents();
@@ -47,16 +55,6 @@
           });
         });
       }
-
-      return () =>
-        h(
-          'div',
-          {
-            id: props.options.container || 'map',
-            class: 'v-map-container',
-          },
-          slots && slots.default ? slots.default() : {},
-        );
     },
   });
 </script>
