@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { MapboxOptions, MapEventType } from 'mapbox-gl';
   import { Map } from 'mapbox-gl';
-  import type { PropType, Ref, SetupContext } from 'vue-demi';
-  import { defineComponent, h, onMounted, provide, ref } from 'vue-demi';
+  import type { PropType, Ref, SetupContext } from 'vue';
+  import { defineComponent, onMounted, provide, ref } from 'vue';
   import { MapKey } from '../../types/symbols';
   import { mapEvents } from '../constants/events';
 
