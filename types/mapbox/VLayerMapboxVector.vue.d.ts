@@ -1,6 +1,6 @@
 /// <reference types="@types/mapbox-gl" />
 import type { AnyLayer, VectorSource } from 'mapbox-gl';
-import type { PropType } from 'vue-demi';
+import type { PropType } from 'vue';
 declare const _default: import('vue-demi').DefineComponent<
   {
     sourceId: {
