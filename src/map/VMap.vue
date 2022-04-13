@@ -8,8 +8,8 @@
   import { Map } from 'mapbox-gl';
   import type { PropType, Ref, SetupContext } from 'vue';
   import { defineComponent, onMounted, provide, ref } from 'vue';
-  import { MapKey } from '../../types/symbols';
   import { mapEvents } from '../constants/events';
+  import { MapKey } from '../utils';
 
   export default defineComponent({
     name: 'VMap',

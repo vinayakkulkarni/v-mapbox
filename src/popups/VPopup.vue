@@ -8,9 +8,8 @@
   import { Popup } from 'mapbox-gl';
   import type { PropType, Ref, SetupContext } from 'vue';
   import { defineComponent, onBeforeUnmount, onMounted, ref } from 'vue';
-  import { MapKey } from '../../types/symbols';
   import { popupEvents } from '../constants/events';
-  import { injectStrict } from '../utils';
+  import { injectStrict, MapKey } from '../utils';
 
   export default defineComponent({
     name: 'VPopup',
