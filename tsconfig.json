@@ -8,12 +8,13 @@
       "esnext.asynciterable",
       "dom"
     ],
-    "outDir": "./dist",
+    "outDir": "./types",
+    "rootDir": "./src",
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
     "strict": true,
-    "noEmit": true,
+    "noEmit": false,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
@@ -32,9 +33,6 @@
   },
   "include": [
     "src",
-    "build",
-    "shims",
-    "types"
   ],
   "exclude": [
     "node_modules",
