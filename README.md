@@ -54,7 +54,7 @@ $ npm i v-mapbox
 
 ## Demo
 
-[![Edit v-mapbox-vue-3](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/v-mapbox-vue-3-uq9ri2?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit v-mapbox-vue-3](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/v-mapbox-uq9ri2?fontsize=14&hidenavigation=1&theme=dark)
 
 ## Development
 
