@@ -3,6 +3,7 @@ import babel from '@rollup/plugin-babel';
 import beep from '@rollup/plugin-beep';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
 import sucrase from '@rollup/plugin-sucrase';
 import scss from 'rollup-plugin-scss';
 import { terser } from 'rollup-plugin-terser';
@@ -35,6 +36,11 @@ const plugins = [
     outputStyle: 'compressed',
     sourceMap: true,
     sass: require('sass'),
+  }),
+  replace({
+    preventAssignment: true,
+    __VUE_OPTIONS_API__: JSON.stringify('true'),
+    __VUE_PROD_DEVTOOLS__: JSON.stringify('false'),
   }),
   sucrase({
     exclude: ['node_modules/**'],
