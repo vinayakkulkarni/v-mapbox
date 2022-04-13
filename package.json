@@ -16,6 +16,7 @@
     "build": "rimraf dist && npm run bundle && npm run bundle:min",
     "bundle": "rollup -c build/rollup.config.ts",
     "bundle:min": "rollup -c build/rollup.config.min.ts",
+    "build:dts": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && npm run lintfix",
     "test": "echo 'test!'",
     "prepare": "husky install",
     "docs:dev": "export NODE_OPTIONS=--openssl-legacy-provider; vuepress dev docs",
@@ -79,6 +80,7 @@
     "stylelint-config-standard-scss": "^3.0.0",
     "typescript": "^4.6.3",
     "vue": "^3.2.32",
+    "vue-tsc": "^0.34.6",
     "vuepress": "^2.0.0-beta.35"
   },
   "keywords": [
