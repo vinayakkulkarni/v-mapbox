@@ -1,3 +1,17 @@
+## [3.1.5](https://github.com/geospoc/v-mapbox/compare/v3.1.4...v3.1.5) (2022-04-13)
+
+
+### Bug Fixes
+
+* tsconfig config for `vue-tsc` ([f0cd276](https://github.com/geospoc/v-mapbox/commit/f0cd276a765151ffe91d0d506b2b752befb1c24b))
+
+
+### Features
+
+* **deps:** add `vue-tsc` for auto-generating the typings ([535f3c8](https://github.com/geospoc/v-mapbox/commit/535f3c81aef37d0dcd99816d7393737dd23ffaa2))
+
+
+
 ## [3.1.4](https://github.com/geospoc/v-mapbox/compare/v3.1.3...v3.1.4) (2022-04-13)
 
 
