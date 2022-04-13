@@ -7,3 +7,4 @@ import type { InjectionKey } from 'vue';
  * @returns {undefined} - The value
  */
 export declare function injectStrict<T>(key: InjectionKey<T>, fallback?: T): T;
+export { MapKey } from './symbols';

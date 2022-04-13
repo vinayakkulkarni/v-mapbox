@@ -1,7 +1,7 @@
 /// <reference types="@types/mapbox-gl" />
 import type { AnyLayer, VectorSource } from 'mapbox-gl';
 import type { PropType } from 'vue';
-declare const _default: import('vue-demi').DefineComponent<
+declare const _default: import('vue').DefineComponent<
   {
     sourceId: {
       type: PropType<string>;
@@ -32,15 +32,15 @@ declare const _default: import('vue-demi').DefineComponent<
   unknown,
   {},
   {},
-  import('vue-demi').ComponentOptionsMixin,
-  import('vue-demi').ComponentOptionsMixin,
+  import('vue').ComponentOptionsMixin,
+  import('vue').ComponentOptionsMixin,
   Record<string, any>,
   string,
-  import('vue-demi').VNodeProps &
-    import('vue-demi').AllowedComponentProps &
-    import('vue-demi').ComponentCustomProps,
+  import('vue').VNodeProps &
+    import('vue').AllowedComponentProps &
+    import('vue').ComponentCustomProps,
   Readonly<
-    import('vue-demi').ExtractPropTypes<{
+    import('vue').ExtractPropTypes<{
       sourceId: {
         type: PropType<string>;
         default: string;

@@ -1,6 +1,5 @@
+/// <reference types="@types/mapbox-gl" />
 import type { Map } from 'mapbox-gl';
 import type { InjectionKey, Ref } from 'vue';
-
-const MapKey: InjectionKey<Ref<Map>> = Symbol('Map');
-
+declare const MapKey: InjectionKey<Ref<Map>>;
 export { MapKey };

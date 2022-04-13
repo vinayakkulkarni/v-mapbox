@@ -12,7 +12,6 @@ import VLayerMapboxVideo from './layers/mapbox/VLayerMapboxVideo.vue';
 import VMap from './map/VMap.vue';
 import VMarker from './markers/VMarker.vue';
 import VPopup from './popups/VPopup.vue';
-
 export {
   VMap,
   VMarker,
