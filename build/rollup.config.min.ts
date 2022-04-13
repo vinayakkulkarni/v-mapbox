@@ -42,6 +42,7 @@ const plugins = [
     __VUE_OPTIONS_API__: JSON.stringify('true'),
     __VUE_PROD_DEVTOOLS__: JSON.stringify('false'),
   }),
+  // @ts-ignore
   sucrase({
     exclude: ['node_modules/**'],
     transforms: ['typescript'],

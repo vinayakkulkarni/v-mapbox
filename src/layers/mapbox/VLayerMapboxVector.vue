@@ -7,8 +7,7 @@
   import type { AnyLayer, VectorSource } from 'mapbox-gl';
   import type { PropType, Ref } from 'vue';
   import { defineComponent, onMounted, ref, watch } from 'vue';
-  import { MapKey } from '../../../types/symbols';
-  import { injectStrict } from '../../utils';
+  import { injectStrict, MapKey } from '../../utils';
 
   export default defineComponent({
     name: 'VLayerMapboxVector',

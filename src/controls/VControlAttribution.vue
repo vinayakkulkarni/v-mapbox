@@ -7,8 +7,7 @@
   import { AttributionControl } from 'mapbox-gl';
   import type { PropType } from 'vue';
   import { defineComponent, onMounted } from 'vue';
-  import { MapKey } from '../../types/symbols';
-  import { injectStrict } from '../utils';
+  import { injectStrict, MapKey } from '../utils';
 
   export default defineComponent({
     name: 'VControlAttribution',

@@ -3,9 +3,8 @@
   import { GeolocateControl } from 'mapbox-gl';
   import type { PropType } from 'vue';
   import { defineComponent, onMounted } from 'vue';
-  import { MapKey } from '../../types/symbols';
   import { geolocateControlEvents as events } from '../constants/events/geolocate';
-  import { injectStrict } from '../utils';
+  import { injectStrict, MapKey } from '../utils';
 
   export default defineComponent({
     name: 'VControlFullscreen',

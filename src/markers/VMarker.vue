@@ -19,10 +19,9 @@
   import { Marker } from 'mapbox-gl';
   import type { PropType, Ref, SetupContext } from 'vue';
   import { defineComponent, onMounted, ref } from 'vue';
-  import { MapKey } from '../../types/symbols';
   import { markerDOMEvents, markerMapEvents } from '../constants/events';
   import VPopup from '../popups/VPopup.vue';
-  import { injectStrict } from '../utils';
+  import { injectStrict, MapKey } from '../utils';
 
   export default defineComponent({
     name: 'VMarker',

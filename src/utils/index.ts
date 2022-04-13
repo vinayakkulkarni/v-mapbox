@@ -15,3 +15,5 @@ export function injectStrict<T>(key: InjectionKey<T>, fallback?: T): T {
   }
   return resolved;
 }
+
+export { MapKey } from './symbols';
