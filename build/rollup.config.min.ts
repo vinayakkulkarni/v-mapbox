@@ -12,7 +12,7 @@ import pkg from '../package.json';
 const plugins = [
   alias({
     entries: {
-      vue$: 'vue/dist/vue.runtime.esm.js',
+      vue$: 'vue/dist/vue.runtime.esm-bundler.js',
     },
   }),
   resolve({
