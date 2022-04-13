@@ -1,3 +1,7 @@
+## [3.1.6](https://github.com/geospoc/v-mapbox/compare/v3.1.5...v3.1.6) (2022-04-13)
+
+
+
 ## [3.1.5](https://github.com/geospoc/v-mapbox/compare/v3.1.4...v3.1.5) (2022-04-13)
 
 
