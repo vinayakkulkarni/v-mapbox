@@ -1,3 +1,12 @@
+## [3.1.3](https://github.com/geospoc/v-mapbox/compare/v3.1.2...v3.1.3) (2022-04-13)
+
+
+### Bug Fixes
+
+* vue bundler path in plugin alias ([ca09890](https://github.com/geospoc/v-mapbox/commit/ca09890f06afd4dd0d0c992f82a255a2cc495ada))
+
+
+
 ## [3.1.2](https://github.com/geospoc/v-mapbox/compare/v3.1.1...v3.1.2) (2022-04-12)
 
 
