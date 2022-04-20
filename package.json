@@ -38,10 +38,16 @@
     "mapbox-gl": "1.13.2",
     "vue": "^3.0.0"
   },
+  "optionalDependencies": {
+    "@deck.gl/layers": "^8.7.7",
+    "@deck.gl/mapbox": "^8.7.7"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
+    "@deck.gl/layers": "^8.7.7",
+    "@deck.gl/mapbox": "^8.7.7",
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-beep": "^0.2.0",
