@@ -1,3 +1,20 @@
+# [3.2.0](https://github.com/geospoc/v-mapbox/compare/v3.1.6...v3.2.0) (2022-04-20)
+
+
+### Bug Fixes
+
+* **docs:** remove environment details in netlify deploy ([c845761](https://github.com/geospoc/v-mapbox/commit/c845761ffb9716d0416446e61c6c778fab938801))
+
+
+### Features
+
+* **deck.gl:** add `deck.gl` Arc layer ([60f728f](https://github.com/geospoc/v-mapbox/commit/60f728fc5e5da8fa35f9ef185f726eeb1cf1d975))
+* **deck.gl:** add `deck.gl` GeoJSON layer ([bfe18f0](https://github.com/geospoc/v-mapbox/commit/bfe18f019f4373a3d1c34500d16bf4ab90fd79d2))
+* enable `[@deck](https://github.com/deck).gl` devDeps ([4fa728f](https://github.com/geospoc/v-mapbox/commit/4fa728ff7b51cc2041104c70be78cbfa59f5e592))
+* upgrade GitHub actions to Node 18 ([20d6fcc](https://github.com/geospoc/v-mapbox/commit/20d6fcc1028a804a7a8f807da24c4e2e60410df4))
+
+
+
 ## [3.1.6](https://github.com/geospoc/v-mapbox/compare/v3.1.5...v3.1.6) (2022-04-13)
 
 
