@@ -85,9 +85,16 @@ export default {
         'mapbox-gl': 'mapboxGl',
         '@deck.gl/mapbox': 'deckGlMapbox',
         '@deck.gl/layers': 'deckGlLayers',
+        '@deck.gl/core': 'deckGlCore',
       },
     },
   ],
   plugins,
-  external: ['vue', 'mapbox-gl', '@deck.gl/layers', '@deck.gl/mapbox'],
+  external: [
+    'vue',
+    'mapbox-gl',
+    '@deck.gl/layers',
+    '@deck.gl/mapbox',
+    '@deck.gl/core',
+  ],
 };
