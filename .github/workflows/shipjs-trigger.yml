@@ -18,7 +18,7 @@ jobs:
       - name: Setup node env 🏗
         uses: actions/setup-node@v3.1.1
         with:
-          node-version: 17
+          node-version: 18
           registry-url: https://registry.npmjs.org
           check-latest: true
           cache: 'npm'
