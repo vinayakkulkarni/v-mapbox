@@ -56,6 +56,9 @@ $ npm i v-mapbox
 
 [![Edit v-mapbox-vue-3](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/v-mapbox-uq9ri2?fontsize=14&hidenavigation=1&theme=dark)
 
+## Deck.gl 🆕
+[![Edit v-mapbox-with-deck-gl-geojson](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/v-mapbox-with-deck-gl-geojson-f8nn5q?fontsize=14&hidenavigation=1&theme=dark)
+
 ## Development
 
 ```sh
