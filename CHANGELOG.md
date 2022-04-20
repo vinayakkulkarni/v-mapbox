@@ -1,3 +1,12 @@
+## [3.2.2](https://github.com/geospoc/v-mapbox/compare/v3.2.1...v3.2.2) (2022-04-20)
+
+
+### Bug Fixes
+
+* generate new typings using `vue-tsc` ([a2df6fd](https://github.com/geospoc/v-mapbox/commit/a2df6fdb8826520e9127ff5448d8fb3baf7e95b1))
+
+
+
 ## [3.2.1](https://github.com/geospoc/v-mapbox/compare/v3.2.0...v3.2.1) (2022-04-20)
 
 
