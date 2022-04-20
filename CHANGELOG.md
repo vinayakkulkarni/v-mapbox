@@ -1,3 +1,12 @@
+## [3.2.1](https://github.com/geospoc/v-mapbox/compare/v3.2.0...v3.2.1) (2022-04-20)
+
+
+### Bug Fixes
+
+* build with `deck.gl/core` ([f684b4d](https://github.com/geospoc/v-mapbox/commit/f684b4dc865c651ca04d7d43b99205b069145343))
+
+
+
 # [3.2.0](https://github.com/geospoc/v-mapbox/compare/v3.1.6...v3.2.0) (2022-04-20)
 
 
