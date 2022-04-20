@@ -3,6 +3,8 @@ import VControlFullscreen from './controls/VControlFullscreen.vue';
 import VControlGeolocate from './controls/VControlGeolocate.vue';
 import VControlNavigation from './controls/VControlNavigation.vue';
 import VControlScale from './controls/VControlScale.vue';
+import VLayerDeckArc from './layers/deck.gl/VLayerDeckArc.vue';
+import VLayerDeckGeojson from './layers/deck.gl/VLayerDeckGeojson.vue';
 import VLayerMapboxCanvas from './layers/mapbox/VLayerMapboxCanvas.vue';
 import VLayerMapboxGeojson from './layers/mapbox/VLayerMapboxGeojson.vue';
 import VLayerMapboxImage from './layers/mapbox/VLayerMapboxImage.vue';
@@ -16,6 +18,8 @@ export {
   VMap,
   VMarker,
   VPopup,
+  VLayerDeckArc,
+  VLayerDeckGeojson,
   VLayerMapboxCanvas,
   VLayerMapboxGeojson,
   VLayerMapboxImage,

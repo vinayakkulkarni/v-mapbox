@@ -1,20 +1,13 @@
-/// <reference types="@types/mapbox-gl" />
-import type { FeatureCollection } from 'geojson';
-import type { AnyLayer } from 'mapbox-gl';
+import { FeatureCollection } from 'geojson';
 import type { PropType } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {
-    sourceId: {
-      type: PropType<string>;
-      default: string;
-      required: true;
-    };
     layerId: {
       type: PropType<string>;
       default: string;
       required: true;
     };
-    source: {
+    data: {
       type: PropType<
         FeatureCollection<
           import('geojson').Geometry,
@@ -23,9 +16,8 @@ declare const _default: import('vue').DefineComponent<
       >;
       required: true;
     };
-    layer: {
-      type: PropType<AnyLayer>;
-      default: () => {};
+    options: {
+      type: ObjectConstructor;
       required: true;
     };
     before: {
@@ -47,17 +39,12 @@ declare const _default: import('vue').DefineComponent<
     import('vue').ComponentCustomProps,
   Readonly<
     import('vue').ExtractPropTypes<{
-      sourceId: {
-        type: PropType<string>;
-        default: string;
-        required: true;
-      };
       layerId: {
         type: PropType<string>;
         default: string;
         required: true;
       };
-      source: {
+      data: {
         type: PropType<
           FeatureCollection<
             import('geojson').Geometry,
@@ -66,9 +53,8 @@ declare const _default: import('vue').DefineComponent<
         >;
         required: true;
       };
-      layer: {
-        type: PropType<AnyLayer>;
-        default: () => {};
+      options: {
+        type: ObjectConstructor;
         required: true;
       };
       before: {
@@ -81,8 +67,6 @@ declare const _default: import('vue').DefineComponent<
   {
     layerId: string;
     before: string;
-    sourceId: string;
-    layer: AnyLayer;
   }
 >;
 export default _default;

@@ -68,10 +68,10 @@ declare const _default: import('vue').DefineComponent<
     }>
   >,
   {
-    sourceId: string;
     layerId: string;
-    layer: AnyLayer;
     before: string;
+    sourceId: string;
+    layer: AnyLayer;
   }
 >;
 export default _default;
