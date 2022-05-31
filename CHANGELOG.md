@@ -1,3 +1,25 @@
+## [3.2.3](https://github.com/geospoc/v-mapbox/compare/v3.2.2...v3.2.3) (2022-05-31)
+
+
+### Bug Fixes
+
+* add `lint-staged` as devDep ([20f4f60](https://github.com/geospoc/v-mapbox/commit/20f4f60934c1afb030042f4fb14b0baf9d82dccd))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.7.7 to 8.7.8 ([c711cf3](https://github.com/geospoc/v-mapbox/commit/c711cf3ef8915bea286f655b113e69398c04107f))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.7.8 to 8.7.9 ([254fb9d](https://github.com/geospoc/v-mapbox/commit/254fb9d81c7f2c263335bb9bf5c8933512f919a0))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.7.9 to 8.7.10 ([8b311aa](https://github.com/geospoc/v-mapbox/commit/8b311aa0e8da19cdf7ca3adec9074b4ed0c136f8))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.7.7 to 8.7.8 ([5083356](https://github.com/geospoc/v-mapbox/commit/5083356252931c3fdaab6247adb49fc61b3dcadf))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.7.8 to 8.7.9 ([62424d4](https://github.com/geospoc/v-mapbox/commit/62424d4f4176551bf148a12e3df2def7edbebde4))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.7.9 to 8.7.10 ([e0177a3](https://github.com/geospoc/v-mapbox/commit/e0177a3a639300df4f7f82dd7d08f427f44aa37f))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.7.7 to 8.7.8 ([fb7297c](https://github.com/geospoc/v-mapbox/commit/fb7297c59878feb7b0a0b942819f0d1864274ab4))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.7.8 to 8.7.9 ([09cdb2a](https://github.com/geospoc/v-mapbox/commit/09cdb2a2f38a04c48694ebd0c1fdb5e76ba9656f))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.7.9 to 8.7.10 ([23a01d7](https://github.com/geospoc/v-mapbox/commit/23a01d72690653d9a0f9a3e3c35eba47f51faade))
+* **deps:** bump actions/setup-node from 3.1.1 to 3.2.0 ([d281b5c](https://github.com/geospoc/v-mapbox/commit/d281b5ce3141b7fb74c8156476bc23cc3aacaefb))
+* **deps:** bump ejs from 3.1.6 to 3.1.7 ([7cb23ad](https://github.com/geospoc/v-mapbox/commit/7cb23ad858ee8ad51b4b1c465f23897ca146b9ce))
+* **deps:** bump github/codeql-action from 1 to 2 ([c3ec927](https://github.com/geospoc/v-mapbox/commit/c3ec92715c076ae820549e5664d384aeed79be01))
+* **deps:** bump wearerequired/lint-action from 1 to 2 ([57e0ec6](https://github.com/geospoc/v-mapbox/commit/57e0ec60a33cea16f496d5dc40c39d856ff1bdf5))
+
+
+
 ## [3.2.2](https://github.com/geospoc/v-mapbox/compare/v3.2.1...v3.2.2) (2022-04-20)
 
 
