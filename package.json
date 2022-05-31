@@ -68,7 +68,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsdoc": "^39.2.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.6.0",
+    "eslint-plugin-vue": "^9.0.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
     "mapbox-gl": "1.13.2",
