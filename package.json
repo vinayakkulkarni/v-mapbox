@@ -70,6 +70,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^9.0.1",
     "husky": "^8.0.1",
+    "lint-staged": "^12.4.3",
     "mapbox-gl": "1.13.2",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
