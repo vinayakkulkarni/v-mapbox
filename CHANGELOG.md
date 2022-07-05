@@ -1,3 +1,25 @@
+## [3.2.4](https://github.com/geospoc/v-mapbox/compare/v3.2.3...v3.2.4) (2022-07-05)
+
+
+### Bug Fixes
+
+* ci and lint-pr workflows ([1967366](https://github.com/geospoc/v-mapbox/commit/196736681cf48238a7dfebf5be8b6dbec434f115))
+* clean up workflows ([cd0796f](https://github.com/geospoc/v-mapbox/commit/cd0796fdcccd9b13f5fd65d87f9c4dfc0b3b799a))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.7.10 to 8.7.11 ([95331d4](https://github.com/geospoc/v-mapbox/commit/95331d41b9aaefe375afaf633be1cfdaa5ce4f85))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.7.11 to 8.8.2 ([fc9fd75](https://github.com/geospoc/v-mapbox/commit/fc9fd75a0062f77c42a6b8f70d82c8a71ebe81f8))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.7.10 to 8.7.11 ([b157338](https://github.com/geospoc/v-mapbox/commit/b1573381cd131c4e0ab19dede0e0d9e8a4551e90))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.7.11 to 8.8.2 ([4b4d87e](https://github.com/geospoc/v-mapbox/commit/4b4d87e6286931a9364006f170252b87972eefc2))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.7.10 to 8.7.11 ([08877e4](https://github.com/geospoc/v-mapbox/commit/08877e49cabc6fd231b1d3a3a04e50ec53f7dc6b))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.7.11 to 8.8.2 ([e9d4017](https://github.com/geospoc/v-mapbox/commit/e9d401763521c13152c563e21e6b5779267a4383))
+* **deps:** bump actions/setup-node from 3.2.0 to 3.3.0 ([007c9b0](https://github.com/geospoc/v-mapbox/commit/007c9b0967a6b7938908de3c6bd6525da8806e4a))
+
+
+### Features
+
+* **husky:** add DAO settings in hook ([575dc51](https://github.com/geospoc/v-mapbox/commit/575dc5159087d4ab4e1073098bb0b2b0d60e6fff))
+
+
+
 ## [3.2.3](https://github.com/geospoc/v-mapbox/compare/v3.2.2...v3.2.3) (2022-05-31)
 
 
