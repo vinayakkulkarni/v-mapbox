@@ -29,11 +29,11 @@ jobs:
         node: [18]
 
     steps:
-      - name: Check out repository (push)
-        if: ${{ github.event_name == 'push' || github.event_name == 'pull_request_target' || github.event_name == 'pull_request' && github.actor != 'dependabot[bot]' }}
+      - name: Check out repository ✨
+        if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' || github.event_name == 'pull_request_target' && github.actor != 'dependabot[bot]' }}
         uses: actions/checkout@v3
 
-      - name: Check out repository (pull_request_target)
+      - name: Check out repository 🎉 (dependabot)
         if: ${{ github.event_name == 'pull_request_target' }}
         uses: actions/checkout@v3
         with:
@@ -51,7 +51,7 @@ jobs:
         run: npm i -g npm@latest
 
       - name: Install dependencies 🚀
-        run: npm ci --prefer-offline --no-audit --no-optional
+        run: npm ci --prefer-offline --no-audit
 
       - name: Run linter(s) 👀
         uses: wearerequired/lint-action@v2

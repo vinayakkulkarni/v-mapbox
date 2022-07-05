@@ -8,8 +8,20 @@ on:
       - synchronize
 
 jobs:
-  main:
+  check-sign-off:
+    if: startsWith(github.head_ref, 'releases/v') == false
+    name: Write comment if unsigned commits found
+    env:
+      FORCE_COLOR: 1
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: live627/check-pr-signoff-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+  semantic-pull-request:
     name: Validate PR title
+    needs: [check-sign-off]
     runs-on: ubuntu-latest
     steps:
       - uses: amannn/action-semantic-pull-request@v4
