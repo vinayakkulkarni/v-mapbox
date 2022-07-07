@@ -1,3 +1,13 @@
+## [3.3.1](https://github.com/geospoc/v-mapbox/compare/v3.3.0...v3.3.1) (2022-07-07)
+
+
+### Bug Fixes
+
+* **geojson:** clean up of props 📍 ([2cc57b1](https://github.com/geospoc/v-mapbox/commit/2cc57b1691a85bd42f10ca5279a50eeb2c46e78a))
+* issue with `container` undefined 🐛 ([f9269b5](https://github.com/geospoc/v-mapbox/commit/f9269b517eea449a6bfca91169befcc84b413139))
+
+
+
 # [3.3.0](https://github.com/geospoc/v-mapbox/compare/v3.2.4...v3.3.0) (2022-07-07)
 
 
