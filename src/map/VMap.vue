@@ -1,5 +1,5 @@
 <template>
-  <div :id="options.container || 'map'" class="v-map-container">
+  <div :id="`${options.container}` || 'map'" class="v-map-container">
     <slot />
   </div>
 </template>
