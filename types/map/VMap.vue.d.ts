@@ -9,7 +9,9 @@ declare const _default: import('vue').DefineComponent<
       default: () => {};
     };
   },
-  void,
+  {
+    getContainer: () => string;
+  },
   unknown,
   {},
   {},
