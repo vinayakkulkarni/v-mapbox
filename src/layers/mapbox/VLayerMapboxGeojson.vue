@@ -4,7 +4,6 @@
   </div>
 </template>
 <script lang="ts">
-  import type { FeatureCollection } from 'geojson';
   import type { AnyLayer, GeoJSONSourceRaw } from 'mapbox-gl';
   import type { PropType, Ref } from 'vue';
   import { defineComponent, onMounted, ref, watch } from 'vue';
@@ -24,7 +23,7 @@
         required: true,
       },
       source: {
-        type: Object as PropType<FeatureCollection | GeoJSONSourceRaw>,
+        type: Object as PropType<GeoJSONSourceRaw>,
         required: true,
       },
       layer: {
@@ -46,15 +45,6 @@
         ...props.layer,
         id: props.layerId,
         source: props.sourceId,
-      };
-
-      const source = () => {
-        // Assuming the source is FeatureCollection
-        if ('type' in props.source) {
-          return { type: 'geojson', data: props.source } as GeoJSONSourceRaw;
-        } else {
-          return props.source;
-        }
       };
 
       map.value.on('style.load', () => {
@@ -89,7 +79,7 @@
        * @returns {void}
        */
       function addLayer(): void {
-        map.value.addSource(props.sourceId, source());
+        map.value.addSource(props.sourceId, props.source);
         map.value.addLayer(layer, props.before);
       }
     },
