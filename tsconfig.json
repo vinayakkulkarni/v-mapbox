@@ -8,6 +8,7 @@
       "esnext.asynciterable",
       "dom"
     ],
+    "jsx": "preserve",
     "outDir": "./types",
     "rootDir": "./src",
     "esModuleInterop": true,
@@ -32,7 +33,7 @@
     ]
   },
   "include": [
-    "src",
+    "src"
   ],
   "exclude": [
     "node_modules",
