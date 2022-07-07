@@ -1,5 +1,5 @@
 <template>
-  <div :id="`${options.container}` || 'map'" class="v-map-container">
+  <div :id="getContainer()" class="v-map-container">
     <slot />
   </div>
 </template>
@@ -26,9 +26,10 @@
       let events: Ref<Array<keyof MapEventType>> = ref(mapEvents);
 
       onMounted(() => {
-        const options = props.options.container
-          ? props.options
-          : { ...props.options, container: 'map' };
+        const options =
+          'container' in props.options
+            ? props.options
+            : { ...props.options, container: 'map' };
         map.value = new Map(options);
         loaded.value = true;
         provide(MapKey, map);
@@ -55,6 +56,22 @@
           });
         });
       }
+
+      /**
+       * Gets the container element
+       *
+       * @returns {string} - The container element id
+       */
+      const getContainer = (): string => {
+        if (Object.keys(props.options).includes('container')) {
+          return `${props.options.container}`;
+        }
+        return 'map';
+      };
+
+      return {
+        getContainer,
+      };
     },
   });
 </script>
