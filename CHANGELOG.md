@@ -1,3 +1,20 @@
+# [3.3.0](https://github.com/geospoc/v-mapbox/compare/v3.2.4...v3.3.0) (2022-07-07)
+
+
+### Bug Fixes
+
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.8.2 to 8.8.3 ([00ecd85](https://github.com/geospoc/v-mapbox/commit/00ecd8587c9e2d2892fe9291a1c9898849a4bc4d))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.8.2 to 8.8.3 ([bdf1f3a](https://github.com/geospoc/v-mapbox/commit/bdf1f3a2291279735aa78cdab182069460185c0d))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.8.2 to 8.8.3 ([97f1eca](https://github.com/geospoc/v-mapbox/commit/97f1eca477bc71691d6acc2ef521c641d3728089))
+* issue with container not found 🐛 ([6306f73](https://github.com/geospoc/v-mapbox/commit/6306f731b2375b6a550ca9d34462af998b212d03))
+
+
+### Features
+
+* **geojson-layer:** pass source as `GeoJSONSourceRaw` 🕺 ([0ded1f5](https://github.com/geospoc/v-mapbox/commit/0ded1f5b7f22aef426dcce1e45a513209fda4ca7))
+
+
+
 ## [3.2.4](https://github.com/geospoc/v-mapbox/compare/v3.2.3...v3.2.4) (2022-07-05)
 
 
