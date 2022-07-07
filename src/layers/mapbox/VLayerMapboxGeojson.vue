@@ -24,7 +24,7 @@
         required: true,
       },
       source: {
-        type: Object as PropType<FeatureCollection>,
+        type: Object as PropType<FeatureCollection | GeoJSONSourceRaw>,
         required: true,
       },
       layer: {
@@ -47,9 +47,14 @@
         id: props.layerId,
         source: props.sourceId,
       };
-      const source: GeoJSONSourceRaw = {
-        type: 'geojson',
-        data: props.source,
+
+      const source = () => {
+        // Assuming the source is FeatureCollection
+        if ('type' in props.source) {
+          return { type: 'geojson', data: props.source } as GeoJSONSourceRaw;
+        } else {
+          return props.source;
+        }
       };
 
       map.value.on('style.load', () => {
@@ -84,7 +89,7 @@
        * @returns {void}
        */
       function addLayer(): void {
-        map.value.addSource(props.sourceId, source);
+        map.value.addSource(props.sourceId, source());
         map.value.addLayer(layer, props.before);
       }
     },

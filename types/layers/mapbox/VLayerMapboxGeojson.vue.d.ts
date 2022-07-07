@@ -1,6 +1,6 @@
 /// <reference types="@types/mapbox-gl" />
 import type { FeatureCollection } from 'geojson';
-import type { AnyLayer } from 'mapbox-gl';
+import type { AnyLayer, GeoJSONSourceRaw } from 'mapbox-gl';
 import type { PropType } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {
@@ -16,10 +16,11 @@ declare const _default: import('vue').DefineComponent<
     };
     source: {
       type: PropType<
-        FeatureCollection<
-          import('geojson').Geometry,
-          import('geojson').GeoJsonProperties
-        >
+        | FeatureCollection<
+            import('geojson').Geometry,
+            import('geojson').GeoJsonProperties
+          >
+        | GeoJSONSourceRaw
       >;
       required: true;
     };
@@ -59,10 +60,11 @@ declare const _default: import('vue').DefineComponent<
       };
       source: {
         type: PropType<
-          FeatureCollection<
-            import('geojson').Geometry,
-            import('geojson').GeoJsonProperties
-          >
+          | FeatureCollection<
+              import('geojson').Geometry,
+              import('geojson').GeoJsonProperties
+            >
+          | GeoJSONSourceRaw
         >;
         required: true;
       };
