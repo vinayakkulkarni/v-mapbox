@@ -1,5 +1,5 @@
 <template>
-  <section :id="`marker-${Date.now()}`">
+  <section v-if="hasPopup" :id="`marker-${Date.now()}`">
     <v-popup
       :marker="marker"
       :options="popupOptions"
@@ -18,7 +18,7 @@
   } from 'mapbox-gl';
   import { Marker } from 'mapbox-gl';
   import type { PropType, Ref, SetupContext } from 'vue';
-  import { defineComponent, onMounted, ref } from 'vue';
+  import { computed, defineComponent, onMounted, ref } from 'vue';
   import { markerDOMEvents, markerMapEvents } from '../constants/events';
   import VPopup from '../popups/VPopup.vue';
   import { injectStrict, MapKey } from '../utils';
@@ -50,7 +50,7 @@
         required: false,
       },
     },
-    setup(props, { emit }: SetupContext) {
+    setup(props, { emit, slots }: SetupContext) {
       let map = injectStrict(MapKey);
       let marker: Marker = new Marker(props.options);
       let loaded: Ref<boolean> = ref(true);
@@ -78,6 +78,8 @@
         }
         listenMarkerEvents();
       });
+
+      const hasPopup = computed(() => !!slots.default?.length);
 
       /**
        * Set marker coordinates
@@ -145,6 +147,7 @@
       }
 
       return {
+        hasPopup,
         marker,
       };
     },
