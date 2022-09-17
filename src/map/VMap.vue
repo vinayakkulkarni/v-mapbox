@@ -1,6 +1,6 @@
 <template>
   <div :id="getContainer()" class="v-map-container">
-    <slot />
+    <slot v-if="loaded" />
   </div>
 </template>
 <script lang="ts">
@@ -72,6 +72,7 @@
 
       return {
         getContainer,
+        loaded,
       };
     },
   });
