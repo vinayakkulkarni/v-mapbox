@@ -47,6 +47,7 @@
           map.value.on(e, (evt) => {
             switch (e) {
               case 'load':
+                map.value.resize();
                 emit('loaded', map.value);
                 break;
               default:
