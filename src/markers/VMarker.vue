@@ -32,12 +32,12 @@
       options: {
         type: Object as PropType<MarkerOptions>,
         default: () => ({} as MarkerOptions),
-        required: true,
+        required: false,
       },
       popupOptions: {
         type: Object as PropType<PopupOptions>,
         default: () => ({} as PopupOptions),
-        required: true,
+        required: false,
       },
       coordinates: {
         type: [Object, Array] as PropType<LngLatLike>,
