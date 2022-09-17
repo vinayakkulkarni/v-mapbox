@@ -18,7 +18,7 @@
           showUserLocation?: boolean;
         }>,
         default: () => ({}),
-        required: true,
+        required: false,
       },
       position: {
         type: String as PropType<
