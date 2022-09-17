@@ -5,7 +5,7 @@
   import { injectStrict, MapKey } from '../utils';
 
   export default defineComponent({
-    name: 'VControlFullscreen',
+    name: 'VControlNavigation',
     props: {
       options: {
         type: Object as PropType<{
