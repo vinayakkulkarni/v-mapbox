@@ -70,7 +70,9 @@
       });
 
       onMounted(() => {
-        addLayer();
+        if (loaded.value) {
+          addLayer();
+        }
       });
 
       /**
