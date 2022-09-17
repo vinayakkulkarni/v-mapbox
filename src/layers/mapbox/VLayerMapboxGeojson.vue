@@ -23,7 +23,7 @@
         required: true,
       },
       source: {
-        type: Object as PropType<GeoJSONSourceRaw>,
+        type: [Object, String] as PropType<GeoJSONSourceRaw | string>,
         required: true,
       },
       layer: {
