@@ -17,8 +17,8 @@
     PopupOptions,
   } from 'mapbox-gl';
   import { Marker } from 'mapbox-gl';
-  import type { PropType, Ref, SetupContext } from 'vue';
-  import { computed, defineComponent, onMounted, ref } from 'vue';
+  import type { PropType, SetupContext } from 'vue';
+  import { computed, defineComponent, onMounted, onUnmounted } from 'vue';
   import { markerDOMEvents, markerMapEvents } from '../constants/events';
   import VPopup from '../popups/VPopup.vue';
   import { injectStrict, MapKey } from '../utils';
@@ -53,30 +53,16 @@
     setup(props, { emit, slots }: SetupContext) {
       let map = injectStrict(MapKey);
       let marker: Marker = new Marker(props.options);
-      let loaded: Ref<boolean> = ref(true);
-
-      map.value.on('style.load', () => {
-        // https://github.com/mapbox/mapbox-gl-js/issues/2268#issuecomment-401979967
-        const styleTimeout = () => {
-          if (!map.value.isStyleLoaded()) {
-            loaded.value = false;
-            setTimeout(styleTimeout, 200);
-          } else {
-            loaded.value = true;
-          }
-        };
-        styleTimeout();
-      });
 
       onMounted(() => {
-        if (loaded.value) {
-          setMarkerCoordinates();
-          addToMap();
-          setCursorPointer();
-        } else {
-          removeFromMap();
-        }
+        setMarkerCoordinates();
+        addToMap();
+        setCursorPointer();
         listenMarkerEvents();
+      });
+
+      onUnmounted(() => {
+        removeFromMap();
       });
 
       const hasPopup = computed(() => !!slots.default?.length);
