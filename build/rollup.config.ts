@@ -77,10 +77,9 @@ export default {
         vue: 'vue',
         'mapbox-gl': 'mapboxGl',
         'map-promisified': 'mapPromisified',
-        '@vue/composition-api': 'vueCompositionApi',
       },
     },
   ],
   plugins,
-  external: ['vue', 'mapbox-gl', 'map-promisified', '@vue/composition-api'],
+  external: ['vue', 'mapbox-gl', 'map-promisified'],
 };
