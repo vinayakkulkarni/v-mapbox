@@ -25,7 +25,6 @@ If you like a long story, check out [blog post](https://soal.red/reasoning-behin
 ::: tip Dependencies
 [Vue.js 2.6+](https://github.com/vuejs/vue)  
 [Mapbox GL JS >=1 && < 2](https://github.com/mapbox/mapbox-gl-js)
-[@vue/composition-api](https://www.npmjs.com/package/@vue/composition-api) 
 [map-promisified](https://github.com/soal/map-promisified)
 :::
 

@@ -1,4 +1,3 @@
-import VueCompositionApi from '@vue/composition-api';
 import { PluginFunction, VueConstructor as Application } from 'vue';
 import CanvasLayer from './components/layer/CanvasLayer';
 import GeojsonLayer from './components/layer/GeojsonLayer';
@@ -31,7 +30,6 @@ const install: PluginFunction<Application> = (app: Application) => {
       asControl: controlMixin,
       asLayer: layerMixin,
     };
-    app.use(VueCompositionApi);
     app.component('MglMap', GlMap);
     app.component('MglNavigationControl', NavigationControl);
     app.component('MglGeolocateControl', GeolocateControl);
