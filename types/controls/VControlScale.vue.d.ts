@@ -12,7 +12,6 @@ declare const _default: import('vue').DefineComponent<
     position: {
       type: PropType<'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'>;
       default: () => string;
-      required: false;
     };
   },
   void,
@@ -41,7 +40,6 @@ declare const _default: import('vue').DefineComponent<
           'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
         >;
         default: () => string;
-        required: false;
       };
     }>
   >,

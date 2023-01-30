@@ -6,7 +6,6 @@ declare const _default: import('vue').DefineComponent<
     marker: {
       type: PropType<Marker>;
       default: () => Marker;
-      required: false;
     };
     options: {
       type: PropType<PopupOptions>;
@@ -37,7 +36,6 @@ declare const _default: import('vue').DefineComponent<
       marker: {
         type: PropType<Marker>;
         default: () => Marker;
-        required: false;
       };
       options: {
         type: PropType<PopupOptions>;

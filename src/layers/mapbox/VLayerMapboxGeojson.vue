@@ -5,8 +5,8 @@
 </template>
 <script lang="ts">
   import type { AnyLayer, GeoJSONSourceRaw } from 'mapbox-gl';
-  import type { PropType, Ref } from 'vue';
-  import { defineComponent, onMounted, ref, watch } from 'vue';
+  import type { PropType } from 'vue';
+  import { defineComponent, onMounted, onUnmounted, watch } from 'vue';
   import { injectStrict, MapKey } from '../../utils';
 
   export default defineComponent({
@@ -34,12 +34,14 @@
       before: {
         type: String as PropType<string>,
         default: '',
-        required: false,
+      },
+      visible: {
+        type: Boolean as PropType<boolean>,
+        default: true,
       },
     },
     setup(props) {
       let map = injectStrict(MapKey);
-      let loaded: Ref<boolean> = ref(false);
 
       const layer = {
         ...props.layer,
@@ -47,41 +49,28 @@
         source: props.sourceId,
       };
 
-      map.value.on('style.load', () => {
-        // https://github.com/mapbox/mapbox-gl-js/issues/2268#issuecomment-401979967
-        const styleTimeout = () => {
-          if (!map.value.isStyleLoaded()) {
-            loaded.value = false;
-            setTimeout(styleTimeout, 200);
-          } else {
-            loaded.value = true;
-          }
-        };
-        styleTimeout();
-      });
-
-      /**
-       * Watcher(s)
-       */
-      watch(loaded, (value) => {
-        if (value) {
-          addLayer();
-        }
-      });
-
       onMounted(() => {
-        addLayer();
-      });
-
-      /**
-       * Re–adds the layer when style changed
-       *
-       * @returns {void}
-       */
-      function addLayer(): void {
         map.value.addSource(props.sourceId, props.source);
         map.value.addLayer(layer, props.before);
-      }
+      });
+
+      onUnmounted(() => {
+        if (map.value.getLayer(props.layerId))
+          map.value.removeLayer(props.layerId);
+        if (map.value.getSource(props.sourceId))
+          map.value.removeSource(props.sourceId);
+      });
+
+      watch(
+        () => props.visible,
+        (visible) => {
+          map.value.setLayoutProperty(
+            props.layerId,
+            'visibility',
+            visible ? 'visible' : 'none',
+          );
+        },
+      );
     },
   });
 </script>

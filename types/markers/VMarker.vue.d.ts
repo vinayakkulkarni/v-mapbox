@@ -22,7 +22,6 @@ declare const _default: import('vue').DefineComponent<
     cursor: {
       type: PropType<string>;
       default: string;
-      required: false;
     };
   },
   {
@@ -58,7 +57,6 @@ declare const _default: import('vue').DefineComponent<
       cursor: {
         type: PropType<string>;
         default: string;
-        required: false;
       };
     }>
   >,

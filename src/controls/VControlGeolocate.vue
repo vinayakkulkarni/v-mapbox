@@ -7,7 +7,7 @@
   import { injectStrict, MapKey } from '../utils';
 
   export default defineComponent({
-    name: 'VControlFullscreen',
+    name: 'VControlGeolocate',
     props: {
       options: {
         type: Object as PropType<{
@@ -18,14 +18,12 @@
           showUserLocation?: boolean;
         }>,
         default: () => ({}),
-        required: true,
       },
       position: {
         type: String as PropType<
           'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
         >,
         default: () => 'top-left',
-        required: false,
       },
     },
     setup(props, { emit }) {
@@ -50,5 +48,6 @@
         });
       }
     },
+    render: () => [],
   });
 </script>

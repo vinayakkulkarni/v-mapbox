@@ -1,5 +1,5 @@
 <template>
-  <section :id="`marker-${Date.now()}`">
+  <section v-if="hasPopup" :id="`marker-${Date.now()}`">
     <v-popup
       :marker="marker"
       :options="popupOptions"
@@ -17,8 +17,8 @@
     PopupOptions,
   } from 'mapbox-gl';
   import { Marker } from 'mapbox-gl';
-  import type { PropType, Ref, SetupContext } from 'vue';
-  import { defineComponent, onMounted, ref } from 'vue';
+  import type { PropType, SetupContext } from 'vue';
+  import { computed, defineComponent, onMounted, onUnmounted } from 'vue';
   import { markerDOMEvents, markerMapEvents } from '../constants/events';
   import VPopup from '../popups/VPopup.vue';
   import { injectStrict, MapKey } from '../utils';
@@ -32,12 +32,10 @@
       options: {
         type: Object as PropType<MarkerOptions>,
         default: () => ({} as MarkerOptions),
-        required: true,
       },
       popupOptions: {
         type: Object as PropType<PopupOptions>,
         default: () => ({} as PopupOptions),
-        required: true,
       },
       coordinates: {
         type: [Object, Array] as PropType<LngLatLike>,
@@ -47,37 +45,24 @@
       cursor: {
         type: String as PropType<string>,
         default: 'pointer',
-        required: false,
       },
     },
-    setup(props, { emit }: SetupContext) {
+    setup(props, { emit, slots }: SetupContext) {
       let map = injectStrict(MapKey);
       let marker: Marker = new Marker(props.options);
-      let loaded: Ref<boolean> = ref(true);
-
-      map.value.on('style.load', () => {
-        // https://github.com/mapbox/mapbox-gl-js/issues/2268#issuecomment-401979967
-        const styleTimeout = () => {
-          if (!map.value.isStyleLoaded()) {
-            loaded.value = false;
-            setTimeout(styleTimeout, 200);
-          } else {
-            loaded.value = true;
-          }
-        };
-        styleTimeout();
-      });
 
       onMounted(() => {
-        if (loaded.value) {
-          setMarkerCoordinates();
-          addToMap();
-          setCursorPointer();
-        } else {
-          removeFromMap();
-        }
+        setMarkerCoordinates();
+        addToMap();
+        setCursorPointer();
         listenMarkerEvents();
       });
+
+      onUnmounted(() => {
+        removeFromMap();
+      });
+
+      const hasPopup = computed(() => !!slots.default?.length);
 
       /**
        * Set marker coordinates
@@ -145,6 +130,7 @@
       }
 
       return {
+        hasPopup,
         marker,
       };
     },

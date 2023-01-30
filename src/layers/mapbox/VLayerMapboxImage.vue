@@ -34,7 +34,6 @@
       before: {
         type: String as PropType<string>,
         default: '',
-        required: false,
       },
     },
     setup(props) {

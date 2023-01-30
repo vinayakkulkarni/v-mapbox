@@ -1,6 +1,6 @@
 <template>
   <div :id="getContainer()" class="v-map-container">
-    <slot />
+    <slot v-if="loaded" />
   </div>
 </template>
 <script lang="ts">
@@ -22,7 +22,7 @@
     },
     setup(props, { emit }: SetupContext) {
       let map: Ref<Map> = ref({} as Map);
-      let loaded: Ref<boolean> = ref(false);
+      let loaded = ref(false);
       let events: Ref<Array<keyof MapEventType>> = ref(mapEvents);
 
       onMounted(() => {
@@ -31,7 +31,6 @@
             ? props.options
             : { ...props.options, container: 'map' };
         map.value = new Map(options);
-        loaded.value = true;
         provide(MapKey, map);
         listenMapEvents();
       });
@@ -47,7 +46,17 @@
           map.value.on(e, (evt) => {
             switch (e) {
               case 'load':
-                emit('loaded', map.value);
+                // https://github.com/mapbox/mapbox-gl-js/issues/2268#issuecomment-401979967
+                const styleTimeout = () => {
+                  if (!map.value.isStyleLoaded()) {
+                    setTimeout(styleTimeout, 200);
+                  } else {
+                    loaded.value = true;
+                    map.value.resize();
+                    emit('loaded', map.value);
+                  }
+                };
+                styleTimeout();
                 break;
               default:
                 emit(e, evt);
@@ -71,6 +80,7 @@
 
       return {
         getContainer,
+        loaded,
       };
     },
   });

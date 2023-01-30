@@ -5,7 +5,7 @@
   import { injectStrict, MapKey } from '../utils';
 
   export default defineComponent({
-    name: 'VControlFullscreen',
+    name: 'VControlScale',
     props: {
       options: {
         type: Object as PropType<{ maxWidth?: number; unit?: string }>,
@@ -17,7 +17,6 @@
           'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
         >,
         default: () => 'bottom-left',
-        required: false,
       },
     },
     setup(props) {
