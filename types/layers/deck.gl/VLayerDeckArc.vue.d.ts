@@ -17,7 +17,6 @@ declare const _default: import('vue').DefineComponent<
     before: {
       type: PropType<string>;
       default: string;
-      required: false;
     };
   },
   void,
@@ -49,7 +48,6 @@ declare const _default: import('vue').DefineComponent<
       before: {
         type: PropType<string>;
         default: string;
-        required: false;
       };
     }>
   >,

@@ -21,7 +21,6 @@
           'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
         >,
         default: () => 'top-left',
-        required: false,
       },
     },
     setup(props) {

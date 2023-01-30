@@ -34,12 +34,10 @@
       before: {
         type: String as PropType<string>,
         default: '',
-        required: false,
       },
       visible: {
         type: Boolean as PropType<boolean>,
         default: true,
-        required: false,
       },
     },
     setup(props) {

@@ -32,12 +32,10 @@
       options: {
         type: Object as PropType<MarkerOptions>,
         default: () => ({} as MarkerOptions),
-        required: false,
       },
       popupOptions: {
         type: Object as PropType<PopupOptions>,
         default: () => ({} as PopupOptions),
-        required: false,
       },
       coordinates: {
         type: [Object, Array] as PropType<LngLatLike>,
@@ -47,7 +45,6 @@
       cursor: {
         type: String as PropType<string>,
         default: 'pointer',
-        required: false,
       },
     },
     setup(props, { emit, slots }: SetupContext) {

@@ -28,7 +28,6 @@
           'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
         >,
         default: () => 'bottom-right',
-        required: false,
       },
     },
     setup(props, { slots }) {

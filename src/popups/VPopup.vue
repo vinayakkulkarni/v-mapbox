@@ -17,7 +17,6 @@
       marker: {
         type: Object as PropType<Marker>,
         default: () => ({} as Marker),
-        required: false,
       },
       options: {
         type: Object as PropType<PopupOptions>,
