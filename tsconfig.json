@@ -9,7 +9,7 @@
       "dom"
     ],
     "jsx": "preserve",
-    "outDir": "./types",
+    "outDir": "./dist",
     "rootDir": "./src",
     "esModuleInterop": true,
     "allowJs": true,
