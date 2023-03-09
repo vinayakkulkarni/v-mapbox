@@ -1,6 +1,6 @@
 {
   "name": "v-mapbox",
-  "version": "3.3.1",
+  "version": "4.0.0",
   "description": "Mapbox with Vue 💚",
   "main": "./dist/v-mapbox.js",
   "module": "./dist/v-mapbox.js",
