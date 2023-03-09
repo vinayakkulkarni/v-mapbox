@@ -22,7 +22,7 @@ declare const _default: import('vue').DefineComponent<
   {},
   import('vue').ComponentOptionsMixin,
   import('vue').ComponentOptionsMixin,
-  Record<string, any>,
+  {},
   string,
   import('vue').VNodeProps &
     import('vue').AllowedComponentProps &
