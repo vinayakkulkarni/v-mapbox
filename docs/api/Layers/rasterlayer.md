@@ -2,7 +2,7 @@
 
 ## Props
 
-All common [layers props](/api/Layers/README.md#props)
+All common [layers props](/api/Layers/index.md#props)
 
 ### `source`
 

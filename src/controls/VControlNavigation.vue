@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { NavigationControl } from 'mapbox-gl';
+  import { NavigationControl } from 'maplibre-gl';
   import type { PropType } from 'vue';
   import { defineComponent, onMounted } from 'vue';
   import { injectStrict, MapKey } from '../utils';

@@ -1,4 +1,4 @@
-import type { Map } from 'mapbox-gl';
+import type { Map } from 'maplibre-gl';
 import type { InjectionKey, Ref } from 'vue';
 
 const MapKey: InjectionKey<Ref<Map>> = Symbol('Map');

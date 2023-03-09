@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { FullscreenControlOptions } from 'mapbox-gl';
-  import { FullscreenControl } from 'mapbox-gl';
+  import type { FullscreenOptions } from 'maplibre-gl';
+  import { FullscreenControl } from 'maplibre-gl';
   import type { PropType } from 'vue';
   import { defineComponent, onMounted } from 'vue';
   import { injectStrict, MapKey } from '../utils';
@@ -9,7 +9,7 @@
     name: 'VControlFullscreen',
     props: {
       options: {
-        type: Object as PropType<FullscreenControlOptions>,
+        type: Object as PropType<FullscreenOptions>,
         default: () => ({}),
         required: true,
       },

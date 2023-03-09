@@ -9,7 +9,7 @@
       "dom"
     ],
     "jsx": "preserve",
-    "outDir": "./types",
+    "outDir": "./dist",
     "rootDir": "./src",
     "esModuleInterop": true,
     "allowJs": true,
@@ -28,8 +28,7 @@
       ]
     },
     "types": [
-      "@types/node",
-      "@types/mapbox-gl"
+      "@types/node"
     ]
   },
   "include": [

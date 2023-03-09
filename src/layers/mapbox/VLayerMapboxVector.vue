@@ -4,7 +4,10 @@
   </div>
 </template>
 <script lang="ts">
-  import type { AnyLayer, VectorSource } from 'mapbox-gl';
+  import type {
+    LayerSpecification as AnyLayer,
+    VectorSourceSpecification as VectorSource,
+  } from 'maplibre-gl';
   import type { PropType, Ref } from 'vue';
   import { defineComponent, onMounted, ref, watch } from 'vue';
   import { injectStrict, MapKey } from '../../utils';
@@ -14,12 +17,12 @@
     props: {
       sourceId: {
         type: String as PropType<string>,
-        default: 'mapbox.gl-vector-source',
+        default: 'maplibre.gl-vector-source',
         required: true,
       },
       layerId: {
         type: String as PropType<string>,
-        default: 'mapbox.gl-vector-layer',
+        default: 'maplibre.gl-vector-layer',
         required: true,
       },
       source: {

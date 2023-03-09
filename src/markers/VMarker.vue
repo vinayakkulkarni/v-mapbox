@@ -10,18 +10,14 @@
   </section>
 </template>
 <script lang="ts">
-  import type {
-    EventData,
-    LngLatLike,
-    MarkerOptions,
-    PopupOptions,
-  } from 'mapbox-gl';
-  import { Marker } from 'mapbox-gl';
-  import type { PropType, Ref, SetupContext } from 'vue';
+  import type { LngLatLike, MarkerOptions, PopupOptions } from 'maplibre-gl';
+  import { Marker } from 'maplibre-gl';
+  import type { PropType, Ref } from 'vue';
   import { defineComponent, onMounted, ref } from 'vue';
   import { markerDOMEvents, markerMapEvents } from '../constants/events';
   import VPopup from '../popups/VPopup.vue';
-  import { injectStrict, MapKey } from '../utils';
+  import { MapKey } from '../utils/symbols';
+  import { injectStrict } from '../utils';
 
   export default defineComponent({
     name: 'VMarker',
@@ -34,15 +30,15 @@
         default: () => ({} as MarkerOptions),
         required: true,
       },
-      popupOptions: {
-        type: Object as PropType<PopupOptions>,
-        default: () => ({} as PopupOptions),
-        required: true,
-      },
       coordinates: {
         type: [Object, Array] as PropType<LngLatLike>,
         default: () => ({}),
         required: true,
+      },
+      popupOptions: {
+        type: Object as PropType<PopupOptions>,
+        default: () => ({} as PopupOptions),
+        required: false,
       },
       cursor: {
         type: String as PropType<string>,
@@ -50,7 +46,14 @@
         required: false,
       },
     },
-    setup(props, { emit }: SetupContext) {
+    emits: [
+      'added',
+      'update:coordinates',
+      'removed',
+      ...markerMapEvents,
+      ...markerDOMEvents,
+    ],
+    setup(props, { emit }) {
       let map = injectStrict(MapKey);
       let marker: Marker = new Marker(props.options);
       let loaded: Ref<boolean> = ref(true);
@@ -124,7 +127,7 @@
         let coordinates: LngLatLike;
         // Listen to Marker Mapbox events
         markerMapEvents.forEach((event: string) => {
-          marker.on(event, (e: EventData) => {
+          marker.on(event, (e: { target: Marker }) => {
             if (event === 'dragend') {
               if (props.coordinates instanceof Array) {
                 coordinates = [e.target._lngLat.lng, e.target._lngLat.lat];

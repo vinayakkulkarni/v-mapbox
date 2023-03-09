@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { ScaleControl } from 'mapbox-gl';
+  import type { ScaleOptions } from 'maplibre-gl';
+  import { ScaleControl } from 'maplibre-gl';
   import type { PropType } from 'vue';
   import { defineComponent, onMounted } from 'vue';
   import { injectStrict, MapKey } from '../utils';
@@ -8,7 +9,7 @@
     name: 'VControlFullscreen',
     props: {
       options: {
-        type: Object as PropType<{ maxWidth?: number; unit?: string }>,
+        type: Object as PropType<ScaleOptions>,
         default: () => ({}),
         required: true,
       },

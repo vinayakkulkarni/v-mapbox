@@ -4,12 +4,13 @@
   </section>
 </template>
 <script lang="ts">
-  import type { LngLatLike, Map, Marker, PopupOptions } from 'mapbox-gl';
-  import { Popup } from 'mapbox-gl';
-  import type { PropType, Ref, SetupContext } from 'vue';
+  import type { LngLatLike, Map, Marker, PopupOptions } from 'maplibre-gl';
+  import { Popup } from 'maplibre-gl';
+  import type { PropType, Ref } from 'vue';
   import { defineComponent, onBeforeUnmount, onMounted, ref } from 'vue';
   import { popupEvents } from '../constants/events';
-  import { injectStrict, MapKey } from '../utils';
+  import { MapKey } from '../utils/symbols';
+  import { injectStrict } from '../utils';
 
   export default defineComponent({
     name: 'VPopup',
@@ -30,7 +31,8 @@
         required: true,
       },
     },
-    setup(props, { emit }: SetupContext) {
+    emits: ['added', 'removed', ...popupEvents],
+    setup(props, { emit }) {
       let map: Ref<Map> = injectStrict(MapKey);
       let popup: Popup = new Popup(props.options);
       let loaded: Ref<boolean> = ref(true);
