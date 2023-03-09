@@ -1,8 +1,17 @@
 module.exports = {
+  plugins: ['stylelint-prettier'],
   extends: [
-    'stylelint-config-prettier',
+    'stylelint-prettier/recommended',
     'stylelint-config-recommended-vue',
-    'stylelint-config-standard',
   ],
-  rules: {},
+  ignoreFiles: ['node_modules/*', 'src/assets/**'],
+  rules: {
+    'prettier/prettier': [
+      true,
+      {
+        singleQuote: true,
+        tabWidth: 2,
+      },
+    ],
+  },
 };
