@@ -38,7 +38,7 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Controls', link: '/api/controls.md' },
         { text: 'Markers', link: '/api/marker.md' },
         { text: 'Popups', link: '/api/popup.md' },
-        { text: 'Layers', link: '/api/Layers/README.md' },
+        { text: 'Layers', link: '/api/Layers/index.md' },
         { text: 'GeoJSON Layer', link: '/api/Layers/geojsonlayer.md' },
         { text: 'Vector Layer', link: '/api/Layers/vectorlayer.md' },
         { text: 'Raster Layer', link: '/api/Layers/rasterlayer.md' },

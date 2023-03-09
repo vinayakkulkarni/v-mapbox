@@ -113,7 +113,7 @@ Provides backbone for Map controls (like )
 
 [Source](https://github.com/vinayakkulkarni/v-mapbox/blob/master/src/components/layer/layerMixin.js).  
 Provides backbone for Map layer.  
-See also [layers API doc](/api/layers)
+See also [layers API doc](/api/Layers/index.md)
 
 ## Creating component for Mapbox GL JS plugin
 
