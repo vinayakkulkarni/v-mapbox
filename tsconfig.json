@@ -28,8 +28,7 @@
       ]
     },
     "types": [
-      "@types/node",
-      "@types/mapbox-gl"
+      "@types/node"
     ]
   },
   "include": [

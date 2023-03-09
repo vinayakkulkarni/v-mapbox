@@ -1,16 +1,9 @@
-/// <reference types="@types/mapbox-gl" />
-import type { FitBoundsOptions, PositionOptions } from 'mapbox-gl';
+import type { GeolocateOptions } from 'maplibre-gl';
 import type { PropType } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {
     options: {
-      type: PropType<{
-        positionOptions?: PositionOptions | undefined;
-        fitBoundsOptions?: FitBoundsOptions | undefined;
-        trackUserLocation?: boolean | undefined;
-        showAccuracyCircle?: boolean | undefined;
-        showUserLocation?: boolean | undefined;
-      }>;
+      type: PropType<GeolocateOptions>;
       default: () => {};
       required: true;
     };
@@ -34,13 +27,7 @@ declare const _default: import('vue').DefineComponent<
   Readonly<
     import('vue').ExtractPropTypes<{
       options: {
-        type: PropType<{
-          positionOptions?: PositionOptions | undefined;
-          fitBoundsOptions?: FitBoundsOptions | undefined;
-          trackUserLocation?: boolean | undefined;
-          showAccuracyCircle?: boolean | undefined;
-          showUserLocation?: boolean | undefined;
-        }>;
+        type: PropType<GeolocateOptions>;
         default: () => {};
         required: true;
       };
@@ -54,13 +41,7 @@ declare const _default: import('vue').DefineComponent<
     }>
   >,
   {
-    options: {
-      positionOptions?: PositionOptions | undefined;
-      fitBoundsOptions?: FitBoundsOptions | undefined;
-      trackUserLocation?: boolean | undefined;
-      showAccuracyCircle?: boolean | undefined;
-      showUserLocation?: boolean | undefined;
-    };
+    options: GeolocateOptions;
     position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   }
 >;

@@ -1,23 +1,22 @@
-/// <reference types="@types/mapbox-gl" />
-import type { MapboxOptions } from 'mapbox-gl';
+import type { MapOptions } from 'maplibre-gl';
 import type { PropType } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {
     options: {
-      type: PropType<MapboxOptions>;
+      type: PropType<MapOptions>;
       required: true;
-      default: () => {};
+      default: () => {
+        container: string;
+      };
     };
   },
-  {
-    getContainer: () => string;
-  },
+  void,
   unknown,
   {},
   {},
   import('vue').ComponentOptionsMixin,
   import('vue').ComponentOptionsMixin,
-  import('vue').EmitsOptions,
+  Record<string, any>,
   string,
   import('vue').VNodeProps &
     import('vue').AllowedComponentProps &
@@ -25,14 +24,16 @@ declare const _default: import('vue').DefineComponent<
   Readonly<
     import('vue').ExtractPropTypes<{
       options: {
-        type: PropType<MapboxOptions>;
+        type: PropType<MapOptions>;
         required: true;
-        default: () => {};
+        default: () => {
+          container: string;
+        };
       };
     }>
   >,
   {
-    options: MapboxOptions;
+    options: MapOptions;
   }
 >;
 export default _default;

@@ -5,9 +5,11 @@
 </template>
 <script lang="ts">
   import type { FeatureCollection } from 'geojson';
-  import type { AnyLayer, GeoJSONSourceRaw } from 'mapbox-gl';
-  import type { PropType, Ref } from 'vue';
-  import { defineComponent, onMounted, ref, watch } from 'vue';
+  import type {
+    LayerSpecification as AnyLayer,
+    GeoJSONSourceSpecification as GeoJSONSourceRaw,
+  } from 'maplibre-gl';
+  import { defineComponent, onMounted, PropType, ref, Ref, watch } from 'vue';
   import { injectStrict, MapKey } from '../../utils';
 
   export default defineComponent({
@@ -15,12 +17,12 @@
     props: {
       sourceId: {
         type: String as PropType<string>,
-        default: 'mapbox.gl-raster-source',
+        default: 'maplibre.gl-raster-source',
         required: true,
       },
       layerId: {
         type: String as PropType<string>,
-        default: 'mapbox.gl-raster-layer',
+        default: 'maplibre.gl-raster-layer',
         required: true,
       },
       source: {

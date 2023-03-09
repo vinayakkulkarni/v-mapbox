@@ -1,36 +1,34 @@
 <template>
-  <div :id="getContainer()" class="v-map-container">
+  <div :id="`${$props.options?.container}`" class="v-map-container">
     <slot />
   </div>
 </template>
 <script lang="ts">
-  import type { MapboxOptions, MapEventType } from 'mapbox-gl';
-  import { Map } from 'mapbox-gl';
-  import type { PropType, Ref, SetupContext } from 'vue';
-  import { defineComponent, onMounted, provide, ref } from 'vue';
+  import type { MapOptions, MapEventType } from 'maplibre-gl';
+  import type { PropType, Ref } from 'vue';
+  import { Map } from 'maplibre-gl';
+  import { defineComponent, onMounted, provide, ref, shallowRef } from 'vue';
   import { mapEvents } from '../constants/events';
-  import { MapKey } from '../utils';
+  import { MapKey } from '../utils/symbols';
 
   export default defineComponent({
     name: 'VMap',
     props: {
       options: {
-        type: Object as PropType<MapboxOptions>,
+        type: Object as PropType<MapOptions>,
         required: true,
-        default: () => ({}),
+        default: () => ({
+          container: 'map',
+        }),
       },
     },
-    setup(props, { emit }: SetupContext) {
-      let map: Ref<Map> = ref({} as Map);
+    setup(props, { emit }) {
+      let map: Ref<Map> = shallowRef({} as Map);
       let loaded: Ref<boolean> = ref(false);
       let events: Ref<Array<keyof MapEventType>> = ref(mapEvents);
 
       onMounted(() => {
-        const options =
-          'container' in props.options
-            ? props.options
-            : { ...props.options, container: 'map' };
-        map.value = new Map(options);
+        map.value = new Map(props.options);
         loaded.value = true;
         provide(MapKey, map);
         listenMapEvents();
@@ -56,22 +54,6 @@
           });
         });
       }
-
-      /**
-       * Gets the container element
-       *
-       * @returns {string} - The container element id
-       */
-      const getContainer = (): string => {
-        if (Object.keys(props.options).includes('container')) {
-          return `${props.options.container}`;
-        }
-        return 'map';
-      };
-
-      return {
-        getContainer,
-      };
     },
   });
 </script>

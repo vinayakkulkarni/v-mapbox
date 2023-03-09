@@ -1,5 +1,7 @@
-/// <reference types="@types/mapbox-gl" />
-import type { AnyLayer, ImageSourceRaw } from 'mapbox-gl';
+import type {
+  LayerSpecification as AnyLayer,
+  ImageSourceSpecification as ImageSourceRaw,
+} from 'maplibre-gl';
 import type { PropType } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {

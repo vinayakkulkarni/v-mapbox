@@ -1,5 +1,5 @@
-/// <reference types="@types/mapbox-gl" />
-import type { AnyLayer, GeoJSONSourceRaw } from 'mapbox-gl';
+import type { FeatureCollection } from 'geojson';
+import type { LayerSpecification as AnyLayer } from 'maplibre-gl';
 import type { PropType } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {
@@ -14,7 +14,12 @@ declare const _default: import('vue').DefineComponent<
       required: true;
     };
     source: {
-      type: PropType<GeoJSONSourceRaw>;
+      type: PropType<
+        FeatureCollection<
+          import('geojson').Geometry,
+          import('geojson').GeoJsonProperties
+        >
+      >;
       required: true;
     };
     layer: {
@@ -52,7 +57,12 @@ declare const _default: import('vue').DefineComponent<
         required: true;
       };
       source: {
-        type: PropType<GeoJSONSourceRaw>;
+        type: PropType<
+          FeatureCollection<
+            import('geojson').Geometry,
+            import('geojson').GeoJsonProperties
+          >
+        >;
         required: true;
       };
       layer: {

@@ -1,3 +1,2 @@
-/// <reference types="@types/mapbox-gl" />
-import { MapLayerEventType } from 'mapbox-gl';
+import { MapLayerEventType } from 'maplibre-gl';
 export declare const mapLayerEvents: Array<keyof MapLayerEventType>;

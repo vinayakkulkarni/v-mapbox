@@ -74,7 +74,7 @@ export default {
       sourcemap: true,
       globals: {
         vue: 'vue',
-        'mapbox-gl': 'mapboxGl',
+        'maplibre-gl': 'maplibreGl',
         '@deck.gl/mapbox': 'deckGlMapbox',
         '@deck.gl/layers': 'deckGlLayers',
         '@deck.gl/core': 'deckGlCore',
@@ -84,7 +84,7 @@ export default {
   plugins,
   external: [
     'vue',
-    'mapbox-gl',
+    'maplibre-gl',
     '@deck.gl/layers',
     '@deck.gl/mapbox',
     '@deck.gl/core',

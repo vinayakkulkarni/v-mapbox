@@ -1,4 +1,4 @@
-import { MapEventType } from 'mapbox-gl';
+import { MapEventType } from 'maplibre-gl';
 
 export const mapEvents: Array<keyof MapEventType> = [
   'error',

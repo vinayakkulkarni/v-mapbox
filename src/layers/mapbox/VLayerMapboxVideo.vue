@@ -4,7 +4,10 @@
   </div>
 </template>
 <script lang="ts">
-  import type { AnyLayer, VectorSource } from 'mapbox-gl';
+  import type {
+    LayerSpecification as AnyLayer,
+    VectorSourceSpecification as VectorSource,
+  } from 'maplibre-gl';
   import type { PropType, Ref } from 'vue';
   import { defineComponent, onMounted, ref, watch } from 'vue';
   import { injectStrict, MapKey } from '../../utils';
@@ -14,12 +17,12 @@
     props: {
       sourceId: {
         type: String as PropType<string>,
-        default: 'mapbox.gl-video-source',
+        default: 'maplibre.gl-video-source',
         required: true,
       },
       layerId: {
         type: String as PropType<string>,
-        default: 'mapbox.gl-video-layer',
+        default: 'maplibre.gl-video-layer',
         required: true,
       },
       source: {

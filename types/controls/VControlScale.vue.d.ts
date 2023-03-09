@@ -1,11 +1,9 @@
+import type { ScaleOptions } from 'maplibre-gl';
 import type { PropType } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {
     options: {
-      type: PropType<{
-        maxWidth?: number | undefined;
-        unit?: string | undefined;
-      }>;
+      type: PropType<ScaleOptions>;
       default: () => {};
       required: true;
     };
@@ -29,10 +27,7 @@ declare const _default: import('vue').DefineComponent<
   Readonly<
     import('vue').ExtractPropTypes<{
       options: {
-        type: PropType<{
-          maxWidth?: number | undefined;
-          unit?: string | undefined;
-        }>;
+        type: PropType<ScaleOptions>;
         default: () => {};
         required: true;
       };
@@ -46,10 +41,7 @@ declare const _default: import('vue').DefineComponent<
     }>
   >,
   {
-    options: {
-      maxWidth?: number | undefined;
-      unit?: string | undefined;
-    };
+    options: ScaleOptions;
     position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   }
 >;

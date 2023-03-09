@@ -10,7 +10,7 @@ declare const _default: import('vue').DefineComponent<
         compact: boolean;
         customAttribution: string;
       };
-      required: true;
+      required: false;
     };
     position: {
       type: PropType<'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'>;
@@ -18,7 +18,13 @@ declare const _default: import('vue').DefineComponent<
       required: false;
     };
   },
-  void,
+  () => import('vue').VNode<
+    import('vue').RendererNode,
+    import('vue').RendererElement,
+    {
+      [key: string]: any;
+    }
+  >[],
   unknown,
   {},
   {},
@@ -40,7 +46,7 @@ declare const _default: import('vue').DefineComponent<
           compact: boolean;
           customAttribution: string;
         };
-        required: true;
+        required: false;
       };
       position: {
         type: PropType<

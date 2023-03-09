@@ -4,7 +4,10 @@
   </div>
 </template>
 <script lang="ts">
-  import type { AnyLayer, ImageSourceRaw } from 'mapbox-gl';
+  import type {
+    LayerSpecification as AnyLayer,
+    ImageSourceSpecification as ImageSourceRaw,
+  } from 'maplibre-gl';
   import type { PropType, Ref } from 'vue';
   import { defineComponent, onMounted, ref, watch } from 'vue';
   import { injectStrict, MapKey } from '../../utils';
@@ -14,12 +17,12 @@
     props: {
       sourceId: {
         type: String as PropType<string>,
-        default: 'mapbox.gl-image-source',
+        default: 'maplibre.gl-image-source',
         required: true,
       },
       layerId: {
         type: String as PropType<string>,
-        default: 'mapbox.gl-image-layer',
+        default: 'maplibre.gl-image-layer',
         required: true,
       },
       source: {

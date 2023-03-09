@@ -1,10 +1,9 @@
-/// <reference types="@types/mapbox-gl" />
-import type { FullscreenControlOptions } from 'mapbox-gl';
+import type { FullscreenOptions } from 'maplibre-gl';
 import type { PropType } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {
     options: {
-      type: PropType<FullscreenControlOptions>;
+      type: PropType<FullscreenOptions>;
       default: () => {};
       required: true;
     };
@@ -28,7 +27,7 @@ declare const _default: import('vue').DefineComponent<
   Readonly<
     import('vue').ExtractPropTypes<{
       options: {
-        type: PropType<FullscreenControlOptions>;
+        type: PropType<FullscreenOptions>;
         default: () => {};
         required: true;
       };
@@ -42,7 +41,7 @@ declare const _default: import('vue').DefineComponent<
     }>
   >,
   {
-    options: FullscreenControlOptions;
+    options: FullscreenOptions;
     position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   }
 >;

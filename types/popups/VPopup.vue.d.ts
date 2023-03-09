@@ -1,5 +1,4 @@
-/// <reference types="@types/mapbox-gl" />
-import type { LngLatLike, Marker, PopupOptions } from 'mapbox-gl';
+import type { LngLatLike, Marker, PopupOptions } from 'maplibre-gl';
 import type { PropType, Ref } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {

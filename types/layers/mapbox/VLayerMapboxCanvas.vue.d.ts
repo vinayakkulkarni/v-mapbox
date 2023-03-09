@@ -1,6 +1,5 @@
-/// <reference types="@types/mapbox-gl" />
 import type { FeatureCollection } from 'geojson';
-import type { AnyLayer } from 'mapbox-gl';
+import type { LayerSpecification as AnyLayer } from 'maplibre-gl';
 import type { PropType } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {

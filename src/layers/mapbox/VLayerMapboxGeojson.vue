@@ -4,7 +4,11 @@
   </div>
 </template>
 <script lang="ts">
-  import type { AnyLayer, GeoJSONSourceRaw } from 'mapbox-gl';
+  import type { FeatureCollection } from 'geojson';
+  import type {
+    LayerSpecification as AnyLayer,
+    SourceSpecification as AnySource,
+  } from 'maplibre-gl';
   import type { PropType, Ref } from 'vue';
   import { defineComponent, onMounted, ref, watch } from 'vue';
   import { injectStrict, MapKey } from '../../utils';
@@ -14,16 +18,16 @@
     props: {
       sourceId: {
         type: String as PropType<string>,
-        default: 'mapbox.gl-geojson-source',
+        default: 'maplibre.gl-geojson-source',
         required: true,
       },
       layerId: {
         type: String as PropType<string>,
-        default: 'mapbox.gl-geojson-layer',
+        default: 'maplibre.gl-geojson-layer',
         required: true,
       },
       source: {
-        type: Object as PropType<GeoJSONSourceRaw>,
+        type: Object as PropType<FeatureCollection>,
         required: true,
       },
       layer: {
@@ -45,6 +49,10 @@
         ...props.layer,
         id: props.layerId,
         source: props.sourceId,
+      };
+      const source: AnySource = {
+        type: 'geojson',
+        data: props.source,
       };
 
       map.value.on('style.load', () => {
@@ -79,7 +87,7 @@
        * @returns {void}
        */
       function addLayer(): void {
-        map.value.addSource(props.sourceId, props.source);
+        map.value.addSource(props.sourceId, source);
         map.value.addLayer(layer, props.before);
       }
     },

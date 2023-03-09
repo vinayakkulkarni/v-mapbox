@@ -1,6 +1,5 @@
-/// <reference types="@types/mapbox-gl" />
-import type { LngLatLike, MarkerOptions, PopupOptions } from 'mapbox-gl';
-import { Marker } from 'mapbox-gl';
+import type { LngLatLike, MarkerOptions, PopupOptions } from 'maplibre-gl';
+import { Marker } from 'maplibre-gl';
 import type { PropType } from 'vue';
 declare const _default: import('vue').DefineComponent<
   {
@@ -9,15 +8,15 @@ declare const _default: import('vue').DefineComponent<
       default: () => MarkerOptions;
       required: true;
     };
-    popupOptions: {
-      type: PropType<PopupOptions>;
-      default: () => PopupOptions;
-      required: true;
-    };
     coordinates: {
       type: PropType<LngLatLike>;
       default: () => {};
       required: true;
+    };
+    popupOptions: {
+      type: PropType<PopupOptions>;
+      default: () => PopupOptions;
+      required: false;
     };
     cursor: {
       type: PropType<string>;
@@ -45,15 +44,15 @@ declare const _default: import('vue').DefineComponent<
         default: () => MarkerOptions;
         required: true;
       };
-      popupOptions: {
-        type: PropType<PopupOptions>;
-        default: () => PopupOptions;
-        required: true;
-      };
       coordinates: {
         type: PropType<LngLatLike>;
         default: () => {};
         required: true;
+      };
+      popupOptions: {
+        type: PropType<PopupOptions>;
+        default: () => PopupOptions;
+        required: false;
       };
       cursor: {
         type: PropType<string>;

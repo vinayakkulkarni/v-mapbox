@@ -35,7 +35,7 @@
     "release:dry": "shipjs prepare --dry-run"
   },
   "peerDependencies": {
-    "mapbox-gl": "1.13.2",
+    "maplibre-gl": "^2.4.0",
     "vue": "^3.2.37"
   },
   "optionalDependencies": {
@@ -57,7 +57,6 @@
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-replace": "^4.0.0",
     "@rollup/plugin-sucrase": "^4.0.4",
-    "@types/mapbox-gl": "1.13.3",
     "@types/node": "^18.0.3",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
@@ -71,7 +70,7 @@
     "eslint-plugin-vue": "^9.2.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "mapbox-gl": "1.13.2",
+    "maplibre-gl": "^2.4.0",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.75.7",
