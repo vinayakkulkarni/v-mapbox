@@ -105,4 +105,4 @@ dist
 .DS_Store
 .temp
 
-types/build
+cache/
