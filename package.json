@@ -113,6 +113,10 @@
     }
   ],
   "license": "MIT",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:geospoc/v-mapbox.git"
