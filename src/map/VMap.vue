@@ -22,6 +22,7 @@
         }),
       },
     },
+    emits: ['loaded', ...mapEvents],
     setup(props, { emit }) {
       let map: Ref<Map> = shallowRef({} as Map);
       let loaded: Ref<boolean> = ref(false);

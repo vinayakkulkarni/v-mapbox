@@ -12,7 +12,7 @@
 <script lang="ts">
   import type { LngLatLike, MarkerOptions, PopupOptions } from 'maplibre-gl';
   import { Marker } from 'maplibre-gl';
-  import type { PropType, Ref, SetupContext } from 'vue';
+  import type { PropType, Ref } from 'vue';
   import { defineComponent, onMounted, ref } from 'vue';
   import { markerDOMEvents, markerMapEvents } from '../constants/events';
   import VPopup from '../popups/VPopup.vue';
@@ -46,7 +46,14 @@
         required: false,
       },
     },
-    setup(props, { emit }: SetupContext) {
+    emits: [
+      'added',
+      'update:coordinates',
+      'removed',
+      ...markerMapEvents,
+      ...markerDOMEvents,
+    ],
+    setup(props, { emit }) {
       let map = injectStrict(MapKey);
       let marker: Marker = new Marker(props.options);
       let loaded: Ref<boolean> = ref(true);
