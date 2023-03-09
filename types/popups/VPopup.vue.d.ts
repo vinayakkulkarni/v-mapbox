@@ -51,8 +51,8 @@ declare const _default: import('vue').DefineComponent<
     }>
   >,
   {
-    marker: Marker;
     options: PopupOptions;
+    marker: Marker;
     coordinates: LngLatLike;
   }
 >;
