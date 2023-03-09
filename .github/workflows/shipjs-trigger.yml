@@ -1,8 +1,10 @@
-name: Ship js trigger
+name: 'Ship js trigger'
+
 on:
   pull_request:
     types:
       - closed
+
 jobs:
   build:
     name: Release
@@ -15,18 +17,22 @@ jobs:
           fetch-depth: 0
           ref: main
 
-      - name: Setup node env 🏗
-        uses: actions/setup-node@v3.5.0
+      - name: Setup GitHub Actor
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Setup node environment 📦
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
-          registry-url: https://registry.npmjs.org
+          node-version-file: 'package.json'
           check-latest: true
           cache: 'npm'
 
       - name: Install dependencies 🚀
-        run: npm ci --prefer-offline --no-audit
+        run: npm ci --prefer-offline --no-audit --omit=optional
 
-      - name: Release new version to registry 🎉
+      - name: Trigger a release 🥳
         run: npx shipjs trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

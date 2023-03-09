@@ -1,5 +1,0 @@
-todo:
-  keyword: ['@todo', 'TODO']
-  autoAssign: true
-  blobLines: 10
-  label: 'todo 🖖'
