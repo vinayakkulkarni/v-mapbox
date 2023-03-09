@@ -1,3 +1,37 @@
+# [4.0.0](https://github.com/geospoc/v-mapbox/compare/v3.3.1...v4.0.0) (2023-03-09)
+
+
+### Bug Fixes
+
+* broken links for netlify 🤖 ([58a587a](https://github.com/geospoc/v-mapbox/commit/58a587a1a934d7967a61f842c8dd575af0273cbe))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.8.3 to 8.8.4 ([903ab0e](https://github.com/geospoc/v-mapbox/commit/903ab0eb47dbc3572bb4aaed7b06df9cd44c466b))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.8.4 to 8.8.6 ([f0362bf](https://github.com/geospoc/v-mapbox/commit/f0362bf53b2653c72f96448cee09b7bf49f742db))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.8.6 to 8.8.8 ([174f5a4](https://github.com/geospoc/v-mapbox/commit/174f5a4d8d7a9e57ffaf46bf36d3b29942cbc793))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.8.8 to 8.8.9 ([70301c6](https://github.com/geospoc/v-mapbox/commit/70301c6493998b78f20b47ac3e1f5124b8178839))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.8.9 to 8.8.11 ([11382c0](https://github.com/geospoc/v-mapbox/commit/11382c00c1d3b4f24c4b175ad74bbe3b6cc4ebff))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.8.3 to 8.8.4 ([a0d4ee5](https://github.com/geospoc/v-mapbox/commit/a0d4ee589d8815168ab245e5d0a01b976607c08f))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.8.4 to 8.8.6 ([97d7e82](https://github.com/geospoc/v-mapbox/commit/97d7e82ed69e93255805b1a5629086060c17aebe))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.8.6 to 8.8.8 ([dc9be2f](https://github.com/geospoc/v-mapbox/commit/dc9be2fec6fe8052b928fce0e019ee83c153d505))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.8.8 to 8.8.9 ([c699a16](https://github.com/geospoc/v-mapbox/commit/c699a1685472e31627e184c537abdbc047c4b641))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.8.9 to 8.8.11 ([b6c5aaf](https://github.com/geospoc/v-mapbox/commit/b6c5aafb567ebaba9750389c165e12eb1617b9fd))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.8.3 to 8.8.4 ([e7b3c19](https://github.com/geospoc/v-mapbox/commit/e7b3c198f05150f264b63117e9a786248ccf9b38))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.8.4 to 8.8.6 ([ebdb358](https://github.com/geospoc/v-mapbox/commit/ebdb358dc64836b8579ec2360e6acbcf409345de))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.8.6 to 8.8.8 ([ba6fa5a](https://github.com/geospoc/v-mapbox/commit/ba6fa5a1c64a87ed365f638942e0227720b12277))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.8.8 to 8.8.9 ([198ff95](https://github.com/geospoc/v-mapbox/commit/198ff95924cdad0ea6a6abe5f82b208144dce695))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.8.9 to 8.8.11 ([519c146](https://github.com/geospoc/v-mapbox/commit/519c14657eb83d4af1739709332dbcebd4d24c75))
+* **deps:** bump actions/setup-node from 3.3.0 to 3.4.1 ([ee67514](https://github.com/geospoc/v-mapbox/commit/ee675146dfdb7b8d67fbe3811c4a41b63d02fbe1))
+* **deps:** bump actions/setup-node from 3.4.1 to 3.5.0 ([fc84366](https://github.com/geospoc/v-mapbox/commit/fc8436678d5e75027faeffc15aa82de879959683))
+* **deps:** bump terser from 5.14.1 to 5.14.2 ([6eb12fe](https://github.com/geospoc/v-mapbox/commit/6eb12fe35d5530bc194128cbe03a7022a632d785))
+* update outDir to `dist` 🚨 ([4053e69](https://github.com/geospoc/v-mapbox/commit/4053e6946c59d48f1e32e0e053bc224a7320ebdf))
+
+
+### Features
+
+* add emits as per Vue 3 docs 📖 ([5c873f1](https://github.com/geospoc/v-mapbox/commit/5c873f1d14eb5c4b62ca3937d94d8036c643218b))
+* add engines to package files ([4f20b12](https://github.com/geospoc/v-mapbox/commit/4f20b12d6f7a1bb2058abed648f6cbf455151ed5))
+
+
+
 ## [3.3.1](https://github.com/geospoc/v-mapbox/compare/v3.3.0...v3.3.1) (2022-07-07)
 
 
