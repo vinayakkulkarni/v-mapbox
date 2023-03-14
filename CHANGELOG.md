@@ -1,3 +1,13 @@
+## [4.0.2](https://github.com/geospoc/v-mapbox/compare/v4.0.1...v4.0.2) (2023-03-14)
+
+
+### Bug Fixes
+
+* **dependabot:** add versioning-strategy 🕺 ([d68058d](https://github.com/geospoc/v-mapbox/commit/d68058ddc9a92f381fd3eb5c0497214a11c0f7c2))
+* deprecated npm i cmd args 🧹 ([32be451](https://github.com/geospoc/v-mapbox/commit/32be451de37d23b20aa249083db1091b0abef922))
+
+
+
 ## [4.0.1](https://github.com/geospoc/v-mapbox/compare/v4.0.0...v4.0.1) (2023-03-14)
 
 
