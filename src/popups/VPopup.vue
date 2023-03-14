@@ -5,12 +5,11 @@
 </template>
 <script lang="ts">
   import type { LngLatLike, Map, Marker, PopupOptions } from 'maplibre-gl';
-  import { Popup } from 'maplibre-gl';
   import type { PropType, Ref } from 'vue';
+  import { Popup } from 'maplibre-gl';
   import { defineComponent, onBeforeUnmount, onMounted, ref } from 'vue';
   import { popupEvents } from '../constants/events';
-  import { MapKey } from '../utils/symbols';
-  import { injectStrict } from '../utils';
+  import { injectStrict, MapKey } from '../utils';
 
   export default defineComponent({
     name: 'VPopup',
@@ -53,6 +52,7 @@
 
       onMounted(() => {
         if (loaded.value) {
+          setPopupContent();
           setPopupCoordinates();
           addToMarker();
           listenPopupEvents();
@@ -68,14 +68,19 @@
       });
 
       /**
+       * Sets the HTML content for the popup
+       *
+       * @returns {void}
+       */
+      function setPopupContent(): void {
+        popup.setDOMContent(content.value as Node);
+      }
+      /**
        * Set popup coordinates
        *
        * @returns {void}
        */
       function setPopupCoordinates(): void {
-        const { outerHTML }: { outerHTML: string } =
-          content.value!.children[0].children[0];
-        popup.setHTML(outerHTML);
         popup.setLngLat(props.coordinates);
       }
 
