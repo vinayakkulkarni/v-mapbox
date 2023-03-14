@@ -1,7 +1,7 @@
 {
   "name": "v-mapbox",
   "version": "4.0.2",
-  "description": "Mapbox with Vue 💚",
+  "description": "Maplibre (and Mapbox) with Vue 💚",
   "main": "./dist/v-mapbox.js",
   "module": "./dist/v-mapbox.js",
   "umd": "./dist/v-mapbox.umd.cjs",
@@ -25,7 +25,8 @@
   "type": "module",
   "scripts": {
     "build": "rimraf dist && vite build && vue-tsc --declaration --emitDeclarationOnly && prettier --write dist/**/*.ts",
-    "prepare": "husky install",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
@@ -38,6 +39,7 @@
     "lint:prettier:fix": "prettier --write \"{,!(node_modules|dist)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
     "lint:css": "stylelint \"{,!(node_modules|dist)/**/}*.{css,scss,vue}\" --ignore-path .gitignore",
     "lint:css:fix": "stylelint --fix \"{,!(node_modules|dist)/**/}*.{css,scss,vue}\" --ignore-path .gitignore",
+    "prepare": "husky install",
     "release": "shipjs prepare",
     "release:auto": "shipjs prepare --yes",
     "release:dry": "shipjs prepare --dry-run"
@@ -63,6 +65,7 @@
     "@typescript-eslint/parser": "^5.55.0",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
     "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/coverage-c8": "^0.29.2",
     "@vue/component-compiler-utils": "^3.3.0",
     "@vue/runtime-dom": "^3.2.47",
     "eslint": "^8.36.0",
@@ -71,6 +74,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-security": "^1.7.1",
     "eslint-plugin-vue": "^9.9.0",
+    "happy-dom": "^8.9.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "maplibre-gl": "^2.4.0",
@@ -84,6 +88,7 @@
     "typescript": "^4.9.5",
     "vite": "^4.1.4",
     "vitepress": "^1.0.0-alpha.56",
+    "vitest": "^0.29.2",
     "vue": "^3.2.47",
     "vue-tsc": "^1.2.0"
   },
