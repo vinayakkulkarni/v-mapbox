@@ -1,12 +1,7 @@
 name: 'Continuous Integration'
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_call:
 
 permissions:
   checks: write
@@ -14,14 +9,13 @@ permissions:
 
 jobs:
   ci:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
     steps:
-      - name: Check out repository ✨ (non dependabot)
-        if: ${{ github.actor != 'dependabot[bot]' }}
-        uses: actions/checkout@v3
-
-      - name: Check out repository 🎉 (dependabot)
-        if: ${{ github.actor == 'dependabot[bot]' }}
+      - name: Check out repository 🎉
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}

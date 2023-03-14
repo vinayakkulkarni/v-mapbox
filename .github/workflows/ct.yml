@@ -1,0 +1,37 @@
+name: 'Continuous Testing'
+
+on:
+  workflow_call:
+
+permissions:
+  checks: write
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+    steps:
+      - name: Check out repository 🎉
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup node env 📦
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: 'package.json'
+          check-latest: true
+          cache: 'npm'
+
+      - name: Install dependencies 🚀
+        run: npm ci --prefer-offline --no-audit --omit=optional
+
+      - name: Run tests 🧪
+        run: npm run test
+
+      - name: Run coverage 🧪
+        run: npm run test:coverage
