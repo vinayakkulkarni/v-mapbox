@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 jobs:
-  ci:
+  ct:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
