@@ -1,3 +1,23 @@
+## [4.0.1](https://github.com/geospoc/v-mapbox/compare/v4.0.0...v4.0.1) (2023-03-14)
+
+
+### Bug Fixes
+
+* add onBeforeUnmount hook logic 🕺 ([8e71b2d](https://github.com/geospoc/v-mapbox/commit/8e71b2d57677f8f6dd1bdb5ef95cea96578338cb))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.8.27 to 8.9.0 ([9261154](https://github.com/geospoc/v-mapbox/commit/9261154a5e4655128982504e65972c4b7a9f29a4))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.9.0 to 8.9.1 ([e18003d](https://github.com/geospoc/v-mapbox/commit/e18003de1197d9ec39ca6c79271d21cf1df255c4))
+* **deps:** bump [@deck](https://github.com/deck).gl/core from 8.9.1 to 8.9.2 ([c8258aa](https://github.com/geospoc/v-mapbox/commit/c8258aaf98b41246559a9d3d9f9e9026d1d5ba34))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.8.27 to 8.9.0 ([69d7947](https://github.com/geospoc/v-mapbox/commit/69d7947b32394070bb9edeb2735bc8dcc988a8ff))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.9.0 to 8.9.1 ([af2ed77](https://github.com/geospoc/v-mapbox/commit/af2ed778ab0a9eb8bb73706e032e5c5ada07ff9a))
+* **deps:** bump [@deck](https://github.com/deck).gl/layers from 8.9.1 to 8.9.2 ([5d5d499](https://github.com/geospoc/v-mapbox/commit/5d5d4996ddc53c5d85562b6b3f7f605332b434c1))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.8.27 to 8.9.0 ([d0324a2](https://github.com/geospoc/v-mapbox/commit/d0324a2785aeb3ed772e0fb1ede0c12ddc3bd935))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.9.0 to 8.9.1 ([b5f2c2c](https://github.com/geospoc/v-mapbox/commit/b5f2c2c0ed291dfde228dd6d48df2ca440c0f74b))
+* **deps:** bump [@deck](https://github.com/deck).gl/mapbox from 8.9.1 to 8.9.2 ([44c2aff](https://github.com/geospoc/v-mapbox/commit/44c2aff4ee17f79a5d0f336a8437a95d28f87686))
+* popup set DOM Content instead of html str ✨ ([26f80c4](https://github.com/geospoc/v-mapbox/commit/26f80c4241a9eeccc8bad8d956496b9d65ceaafc))
+* ref on slot not working 🚨 ([6228dde](https://github.com/geospoc/v-mapbox/commit/6228dde861470ac1d8eeb780a9acda4e50e6f55c))
+
+
+
 # [4.0.0](https://github.com/geospoc/v-mapbox/compare/v3.3.1...v4.0.0) (2023-03-09)
 
 
