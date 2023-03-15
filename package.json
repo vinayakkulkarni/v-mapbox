@@ -81,7 +81,7 @@
     "prettier": "^2.8.4",
     "rimraf": "^4.4.0",
     "sass": "^1.59.2",
-    "shipjs": "^0.25.1",
+    "shipjs": "^0.26.0",
     "stylelint": "^15.2.0",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-prettier": "^3.0.0",
