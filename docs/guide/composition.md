@@ -11,20 +11,20 @@ For example, adding map controls:
     :accessToken="accessToken"
     :mapStyle.sync="mapStyle"
   >
-    <MglNavigationControl position="top-right"/>
-    <MglGeolocateControl position="top-right" />
+    <VControlNavigation position="top-right"/>
+    <VControlGeolocate position="top-right" />
   </mgl-map>
 </div>
 </template>
 
 <script>
-import { VMap, MglNavigationControl, MglGeolocateControl } from "v-mapbox";
+import { VMap, VControlNavigation, VControlGeolocate } from "v-mapbox";
 
 export default {
   components: {
     VMap,
-    MglNavigationControl,
-    MglGeolocateControl
+    VControlNavigation,
+    VControlGeolocate
   },
   data() {
     return {
@@ -42,8 +42,8 @@ Adding a popup:
 <template>
   <div id="#app">
     <VMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
-      <MglNavigationControl position="top-right" />
-      <MglGeolocateControl position="top-right" />
+      <VControlNavigation position="top-right" />
+      <VControlGeolocate position="top-right" />
       <VPopup :coordinates="popupCoordinates">
         <span>Hello world!</span>
       </VPopup>
@@ -54,16 +54,16 @@ Adding a popup:
 <script>
 import {
   VMap,
-  MglNavigationControl,
-  MglGeolocateControl,
+  VControlNavigation,
+  VControlGeolocate,
   VPopup
 } from "v-mapbox";
 
 export default {
   components: {
     VMap,
-    MglNavigationControl,
-    MglGeolocateControl,
+    VControlNavigation,
+    VControlGeolocate,
     VPopup
   },
   data() {
