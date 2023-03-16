@@ -14,7 +14,7 @@ For example adding a layer with GeoJSON data:
 <template>
   <VMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
     <!-- Adding navigation control -->
-    <MglNavigationControl position="top-right" />
+    <VControlNavigation position="top-right" />
     <!-- Adding GeoJSON layer -->
     <VLayerMapboxGeojson
       :sourceId="geoJsonSource.id"
@@ -26,12 +26,12 @@ For example adding a layer with GeoJSON data:
 </template>
 
 <script>
-import { VMap, MglNavigationControl, VLayerMapboxGeojson } from "v-mapbox";
+import { VMap, VControlNavigation, VLayerMapboxGeojson } from "v-mapbox";
 
 export default {
   components: {
     VMap,
-    MglNavigationControl,
+    VControlNavigation,
     VLayerMapboxGeojson
   },
   data() {
