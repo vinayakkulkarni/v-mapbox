@@ -68,7 +68,7 @@
     "@vitest/coverage-c8": "^0.30.1",
     "@vue/component-compiler-utils": "^3.3.0",
     "@vue/runtime-dom": "^3.2.47",
-    "eslint": "^8.37.0",
+    "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-jsdoc": "^40.1.1",
     "eslint-plugin-prettier": "^4.2.1",
