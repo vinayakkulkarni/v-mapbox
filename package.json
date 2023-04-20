@@ -49,7 +49,7 @@
     "vue": "^3.2.37"
   },
   "optionalDependencies": {
-    "@deck.gl/core": "^8.9.7",
+    "@deck.gl/core": "^8.9.8",
     "@deck.gl/layers": "^8.9.7",
     "@deck.gl/mapbox": "^8.9.7"
   },
@@ -57,7 +57,7 @@
     "@babel/core": "^7.21.4",
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
-    "@deck.gl/core": "^8.9.7",
+    "@deck.gl/core": "^8.9.8",
     "@deck.gl/layers": "^8.9.7",
     "@deck.gl/mapbox": "^8.9.7",
     "@types/node": "^18.15.11",
