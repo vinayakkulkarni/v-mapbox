@@ -76,7 +76,7 @@
     "eslint-plugin-vue": "^9.11.0",
     "happy-dom": "^9.9.2",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.1",
+    "lint-staged": "^13.2.2",
     "maplibre-gl": "^2.4.0",
     "prettier": "^2.8.8",
     "rimraf": "^5.0.0",
