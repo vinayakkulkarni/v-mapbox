@@ -67,7 +67,7 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitest/coverage-c8": "^0.31.0",
     "@vue/component-compiler-utils": "^3.3.0",
-    "@vue/runtime-dom": "^3.2.47",
+    "@vue/runtime-dom": "^3.3.2",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-jsdoc": "^44.2.4",
