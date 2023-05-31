@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.22.1",
-    "@commitlint/cli": "^17.6.3",
+    "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@deck.gl/core": "^8.9.16",
     "@deck.gl/layers": "^8.9.16",
