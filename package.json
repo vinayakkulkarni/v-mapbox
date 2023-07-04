@@ -54,7 +54,7 @@
     "@deck.gl/mapbox": "^8.9.19"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.5",
+    "@babel/core": "^7.22.6",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@deck.gl/core": "^8.9.19",
