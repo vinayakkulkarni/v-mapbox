@@ -60,7 +60,7 @@
     "@deck.gl/core": "^8.9.19",
     "@deck.gl/layers": "^8.9.21",
     "@deck.gl/mapbox": "^8.9.20",
-    "@types/node": "^20.3.3",
+    "@types/node": "^20.4.1",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
