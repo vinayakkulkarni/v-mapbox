@@ -2,9 +2,9 @@
 
 ## Overview
 
-Controls is UI elemetns for controlling view of the map, such as scale or bearing.
+Controls are UI elements for controlling the view of the map, such as scale or bearing.
 You can check them out in Mapbox GL JS [documentation](https://docs.mapbox.com/mapbox-gl-js/api/#user%20interface)
-In v-mapbox they exposed as Vue components, so you can control they properties and behavior dynamically by changing props.
+In v-mapbox they exposed as Vue components, so you can control their properties and behavior dynamically by changing props.
 
 _All controls_:
 
