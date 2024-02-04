@@ -1,8 +1,3 @@
-<template>
-  <section :id="`popup-${Date.now()}`" ref="content">
-    <slot />
-  </section>
-</template>
 <script lang="ts">
   import type { LngLatLike, Map, Marker, PopupOptions } from 'maplibre-gl';
   import type { PropType, Ref } from 'vue';
@@ -16,12 +11,12 @@
     props: {
       marker: {
         type: Object as PropType<Marker>,
-        default: () => ({} as Marker),
+        default: () => ({}) as Marker,
         required: false,
       },
       options: {
         type: Object as PropType<PopupOptions>,
-        default: () => ({} as PopupOptions),
+        default: () => ({}) as PopupOptions,
         required: true,
       },
       coordinates: {
@@ -69,7 +64,6 @@
 
       /**
        * Sets the HTML content for the popup
-       *
        * @returns {void}
        */
       function setPopupContent(): void {
@@ -77,7 +71,6 @@
       }
       /**
        * Set popup coordinates
-       *
        * @returns {void}
        */
       function setPopupCoordinates(): void {
@@ -87,7 +80,6 @@
       /**
        * Add popup to marker if marker exists
        * else add it to the map.
-       *
        * @returns {void}
        */
       function addToMarker(): void {
@@ -100,7 +92,6 @@
       }
       /**
        * Remove popup from map
-       *
        * @returns {void}
        */
       function remove(): void {
@@ -110,7 +101,6 @@
 
       /**
        * Listen to events
-       *
        * @returns {void}
        */
       function listenPopupEvents(): void {
@@ -122,7 +112,6 @@
       }
       /**
        * Turn off listener
-       *
        * @returns {void}
        */
       function removePopupEvents(): void {
@@ -139,3 +128,9 @@
     },
   });
 </script>
+
+<template>
+  <section :id="`popup-${Date.now()}`" ref="content">
+    <slot />
+  </section>
+</template>

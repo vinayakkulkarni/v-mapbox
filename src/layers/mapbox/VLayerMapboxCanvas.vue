@@ -83,7 +83,6 @@
 
       /**
        * Re–adds the layer when style changed
-       *
        * @returns {void}
        */
       function addLayer(): void {

@@ -30,7 +30,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies 🚀
-        run: npm ci --prefer-offline --no-audit --omit=optional
+        run: npm ci --prefer-offline --no-audit
 
       - name: Trigger a release 🥳
         run: npx shipjs trigger

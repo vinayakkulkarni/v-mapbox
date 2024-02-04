@@ -26,9 +26,9 @@ jobs:
     name: 'CI'
     needs:
       - extract-branch
-    uses: geospoc/v-mapbox/.github/workflows/ci.yml@main
+    uses: ./.github/workflows/ci.yml
   ct:
     name: 'CT'
     needs:
       - extract-branch
-    uses: geospoc/v-mapbox/.github/workflows/ct.yml@main
+    uses: ./.github/workflows/ct.yml

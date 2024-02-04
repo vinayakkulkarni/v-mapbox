@@ -1,17 +1,3 @@
-<template>
-  <section :id="`marker-${Date.now()}`" class="absolute">
-    <slot :set-ref="setSlotRef" name="markers" />
-    <template v-if="isMarkerAvailable">
-      <v-popup
-        :marker="marker"
-        :options="popupOptions"
-        :coordinates="coordinates"
-      >
-        <slot />
-      </v-popup>
-    </template>
-  </section>
-</template>
 <script lang="ts">
   import type { LngLatLike, MarkerOptions, PopupOptions } from 'maplibre-gl';
   import { Marker } from 'maplibre-gl';
@@ -34,12 +20,12 @@
       },
       options: {
         type: Object as PropType<MarkerOptions>,
-        default: () => ({} as MarkerOptions),
+        default: () => ({}) as MarkerOptions,
         required: false,
       },
       popupOptions: {
         type: Object as PropType<PopupOptions>,
-        default: () => ({} as PopupOptions),
+        default: () => ({}) as PopupOptions,
         required: false,
       },
       cursor: {
@@ -117,7 +103,6 @@
 
       /**
        * Set marker coordinates
-       *
        * @param {Marker} marker - Marker
        * @returns {void}
        */
@@ -126,7 +111,6 @@
       }
       /**
        * Sets the Cursor to Pointer
-       *
        * @param {Marker} marker - Marker
        * @returns {void}
        */
@@ -136,7 +120,6 @@
 
       /**
        * Add marker to map
-       *
        * @param {Marker} marker - Marker
        * @returns {void}
        */
@@ -146,7 +129,6 @@
       }
       /**
        * Remove marker from map
-       *
        * @param {Marker} marker - Marker
        * @returns {void}
        */
@@ -159,7 +141,6 @@
 
       /**
        * Listen to events
-       *
        * @param {Marker} marker - Marker
        * @returns {void}
        */
@@ -195,6 +176,22 @@
     },
   });
 </script>
+
+<template>
+  <section :id="`marker-${Date.now()}`" class="absolute">
+    <slot :set-ref="setSlotRef" name="markers" />
+    <template v-if="isMarkerAvailable">
+      <v-popup
+        :marker="marker"
+        :options="popupOptions"
+        :coordinates="coordinates"
+      >
+        <slot />
+      </v-popup>
+    </template>
+  </section>
+</template>
+
 <style>
   .absolute {
     position: absolute !important;

@@ -1,9 +1,11 @@
 // Controls
-import VControlAttribution from './controls/VControlAttribution.vue';
-import VControlFullscreen from './controls/VControlFullscreen.vue';
-import VControlGeolocate from './controls/VControlGeolocate.vue';
-import VControlNavigation from './controls/VControlNavigation.vue';
-import VControlScale from './controls/VControlScale.vue';
+import {
+  VControlAttribution,
+  VControlFullscreen,
+  VControlGeolocate,
+  VControlNavigation,
+  VControlScale,
+} from './controls';
 // Layers – Deck.gl
 import VLayerDeckArc from './layers/deck.gl/VLayerDeckArc.vue';
 import VLayerDeckGeojson from './layers/deck.gl/VLayerDeckGeojson.vue';

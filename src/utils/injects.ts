@@ -3,7 +3,6 @@ import { inject } from 'vue';
 
 /**
  * Dependency injection 🥳
- *
  * @param {InjectionKey} key - The key to inject
  * @param {string | undefined} fallback - The fallback value
  * @returns {undefined} - The value
