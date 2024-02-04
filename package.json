@@ -45,7 +45,7 @@
     "release:dry": "shipjs prepare --dry-run"
   },
   "peerDependencies": {
-    "maplibre-gl": "^2.4.0",
+    "maplibre-gl": "^2.4.0 || ^4.0.0",
     "vue": "^3.2.37"
   },
   "optionalDependencies": {
