@@ -45,8 +45,8 @@
     "release:dry": "shipjs prepare --dry-run"
   },
   "peerDependencies": {
-    "maplibre-gl": "^2.4.0",
-    "vue": "^3.2.37"
+    "maplibre-gl": "^4.0.0",
+    "vue": "^3.4.15"
   },
   "optionalDependencies": {
     "@deck.gl/core": "^8.9.34",
@@ -54,7 +54,6 @@
     "@deck.gl/mapbox": "^8.9.34"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.9",
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",
     "@deck.gl/core": "^8.9.34",
