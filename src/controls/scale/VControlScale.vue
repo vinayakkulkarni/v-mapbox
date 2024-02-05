@@ -1,17 +1,17 @@
 <script setup lang="ts">
-  import type { ControlPosition, ScaleOptions } from './types';
+  import type { ControlPosition, ScaleControlOptions } from './types';
   import { onMounted, inject } from 'vue';
   import { ScaleControl } from 'maplibre-gl';
   import { MapKey } from '../../utils';
 
-  const defaultOptions: ScaleOptions = {
+  const defaultOptions: ScaleControlOptions = {
     maxWidth: 100,
     unit: 'metric',
   };
 
   const props = withDefaults(
     defineProps<{
-      options?: ScaleOptions;
+      options?: ScaleControlOptions;
       position?: ControlPosition;
     }>(),
     {

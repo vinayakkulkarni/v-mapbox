@@ -1,16 +1,16 @@
 <script setup lang="ts">
-  import type { ControlPosition, FullscreenOptions } from './types';
+  import type { ControlPosition, FullscreenControlOptions } from './types';
   import { FullscreenControl } from 'maplibre-gl';
   import { onMounted } from 'vue';
   import { MapKey, injectStrict } from '../../utils';
 
-  const defaultOptions: FullscreenOptions = {
+  const defaultOptions: FullscreenControlOptions = {
     container: undefined,
   };
 
   const props = withDefaults(
     defineProps<{
-      options?: FullscreenOptions;
+      options?: FullscreenControlOptions;
       position?: ControlPosition;
     }>(),
     {

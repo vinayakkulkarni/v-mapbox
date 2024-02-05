@@ -2,7 +2,7 @@
   import type { MapOptions, MapEventType } from 'maplibre-gl';
   import type { Ref } from 'vue';
   import { Map } from 'maplibre-gl';
-  import { defineComponent, onMounted, provide, ref, shallowRef } from 'vue';
+  import { onMounted, provide, ref, shallowRef } from 'vue';
   import { mapEvents } from '../constants/events';
   import { MapKey } from '../utils/symbols';
 
@@ -11,9 +11,11 @@
       options: MapOptions;
     }>(),
     {
+      // @ts-ignore
       options: { container: 'map' },
     },
   );
+
   const emit = defineEmits(['loaded', ...mapEvents]);
 
   let map: Ref<Map> = shallowRef({} as Map);

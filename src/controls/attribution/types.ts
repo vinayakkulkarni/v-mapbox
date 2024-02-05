@@ -1,1 +1,1 @@
-export type { AttributionOptions, ControlPosition } from 'maplibre-gl';
+export type { ControlPosition, AttributionControlOptions } from 'maplibre-gl';

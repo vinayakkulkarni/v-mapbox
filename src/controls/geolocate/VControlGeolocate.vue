@@ -1,11 +1,11 @@
 <script setup lang="ts">
-  import type { ControlPosition, GeolocateOptions } from './types';
+  import type { ControlPosition, GeolocateControlOptions } from './types';
   import { GeolocateControl } from 'maplibre-gl';
   import { onMounted } from 'vue';
   import { geolocateControlEvents as events } from './events';
   import { MapKey, injectStrict } from '../../utils';
 
-  const defaultOptions: GeolocateOptions = {
+  const defaultOptions: GeolocateControlOptions = {
     fitBoundsOptions: {
       linear: false,
       offset: [0, 0],
@@ -23,7 +23,7 @@
 
   const props = withDefaults(
     defineProps<{
-      options?: GeolocateOptions;
+      options?: GeolocateControlOptions;
       position?: ControlPosition;
     }>(),
     {

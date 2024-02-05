@@ -2,12 +2,9 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "moduleResolution": "node",
-    "lib": [
-      "esnext",
-      "esnext.asynciterable",
-      "dom"
-    ],
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
     "jsx": "preserve",
     "outDir": "./dist",
     "rootDir": "./src",
@@ -20,24 +17,11 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ]
+      "~/*": ["./*"],
+      "@/*": ["./*"]
     },
-    "types": [
-      "@types/node",
-      "vitest/globals"
-    ]
+    "types": ["@types/node", "vitest/globals"]
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "docs"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "docs"]
 }

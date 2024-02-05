@@ -24,7 +24,7 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "rimraf dist && vite build && vue-tsc --declaration --emitDeclarationOnly && prettier --write dist/**/*.ts",
+    "build": "rimraf dist && vite build && vue-tsc --declaration --emitDeclarationOnly && prettier --write ./dist/*{cjs,js,ts}",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "docs:dev": "vitepress dev docs",

@@ -1,1 +1,1 @@
-export type { ControlPosition, NavigationOptions } from 'maplibre-gl';
+export type { ControlPosition, NavigationControlOptions } from 'maplibre-gl';

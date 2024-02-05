@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import type { ControlPosition, NavigationOptions } from './types';
+  import type { ControlPosition, NavigationControlOptions } from './types';
   import { NavigationControl } from 'maplibre-gl';
   import { onMounted, inject } from 'vue';
   import { MapKey } from '../../utils';
 
-  const defaultOptions: NavigationOptions = {
+  const defaultOptions: NavigationControlOptions = {
     showCompass: true,
     showZoom: true,
     visualizePitch: true,
@@ -12,7 +12,7 @@
 
   const props = withDefaults(
     defineProps<{
-      options?: NavigationOptions;
+      options?: NavigationControlOptions;
       position?: ControlPosition;
     }>(),
     {

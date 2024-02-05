@@ -1,17 +1,17 @@
 <script setup lang="ts">
-  import type { AttributionOptions, ControlPosition } from './types';
+  import type { ControlPosition, AttributionControlOptions } from './types';
   import { AttributionControl } from 'maplibre-gl';
-  import { onMounted } from 'vue';
+  import { useSlots, onMounted } from 'vue';
   import { MapKey, injectStrict } from '../../utils';
 
-  const defaultOptions: AttributionOptions = {
+  const defaultOptions: AttributionControlOptions = {
     compact: false,
     customAttribution: undefined,
   };
 
   const props = withDefaults(
     defineProps<{
-      options?: AttributionOptions;
+      options?: AttributionControlOptions;
       position?: ControlPosition;
     }>(),
     {

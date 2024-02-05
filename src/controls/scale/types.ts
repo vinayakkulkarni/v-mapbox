@@ -1,1 +1,1 @@
-export type { ControlPosition, ScaleOptions } from 'maplibre-gl';
+export type { ControlPosition, ScaleControlOptions } from 'maplibre-gl';

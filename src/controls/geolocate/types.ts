@@ -1,1 +1,1 @@
-export type { ControlPosition, GeolocateOptions } from 'maplibre-gl';
+export type { ControlPosition, GeolocateControlOptions } from 'maplibre-gl';
