@@ -16,12 +16,11 @@ _All controls_:
       :mapStyle.sync="mapStyle"
       :attributionControl="false"
     >
-      <MglAttributionControl />
-      <MglNavigationControl position="top-right" />
-      <MglGeolocateControl position="top-right" />
-      <MglNavigationControl position="top-right" />
-      <MglGeolocateControl position="top-right" />
-      <MglScaleControl />
+      <VControlAttribution />
+      <VControlNavigation position="top-right" />
+      <VControlGeolocate position="top-right" />
+      <VControlFullscreen position="top-right" />
+      <VControlScale />
     </VMap>
   </div>
 </template>
@@ -29,18 +28,21 @@ _All controls_:
 <script>
 import {
   VMap,
-  MglAttributionControl,
-  MglNavigationControl,
-  MglGeolocateControl,
-  MglFullscreenControl,
-  MglScaleControl
+  VControlAttribution,
+  VControlNavigation,
+  VControlGeolocate,
+  VControlFullscreen,
+  VControlScale
 } from "v-mapbox";
 
 export default {
   components: {
     VMap,
-    MglNavigationControl,
-    MglGeolocateControl
+    VControlAttribution,
+    VControlNavigation,
+    VControlGeolocate,
+    VControlFullscreen,
+    VControlScale
   },
   data() {
     return {
