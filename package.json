@@ -85,7 +85,7 @@
     "shipjs": "^0.26.3",
     "stylelint": "15.11.0",
     "stylelint-config-recommended-vue": "1.5.0",
-    "stylelint-prettier": "4.1.0",
+    "stylelint-prettier": "5.0.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
     "vitepress": "^1.0.0-rc.41",
