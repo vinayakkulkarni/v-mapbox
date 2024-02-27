@@ -54,8 +54,8 @@
     "@deck.gl/mapbox": "^8.9.34"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.6.0",
-    "@commitlint/config-conventional": "^18.6.0",
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
     "@deck.gl/core": "^8.9.34",
     "@deck.gl/layers": "^8.9.34",
     "@deck.gl/mapbox": "^8.9.34",
