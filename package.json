@@ -49,14 +49,14 @@
     "vue": "^3.4.15"
   },
   "optionalDependencies": {
-    "@deck.gl/core": "^8.9.34",
+    "@deck.gl/core": "^8.9.36",
     "@deck.gl/layers": "^8.9.34",
     "@deck.gl/mapbox": "^8.9.34"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@deck.gl/core": "^8.9.34",
+    "@deck.gl/core": "^8.9.36",
     "@deck.gl/layers": "^8.9.34",
     "@deck.gl/mapbox": "^8.9.34",
     "@types/node": "^20.12.12",
