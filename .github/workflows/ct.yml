@@ -9,29 +9,24 @@ permissions:
 
 jobs:
   ct:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
+    name: 'CT'
+    runs-on: ubuntu-latest
     steps:
       - name: Check out repository 🎉
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Setup node env 📦
-        uses: actions/setup-node@v4
+      - name: Setup bun env 🐰
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version-file: 'package.json'
-          check-latest: true
-          cache: 'npm'
+          bun-version: latest
 
       - name: Install dependencies 🚀
-        run: npm ci --prefer-offline --no-audit
+        run: bun install
 
       - name: Run tests 🧪
-        run: npm run test
+        run: bun run test
 
       - name: Run coverage 🧪
-        run: npm run test:coverage
+        run: bun run test:coverage

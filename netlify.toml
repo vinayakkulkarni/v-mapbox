@@ -1,6 +1,6 @@
 [dev]
-  command = "npm run docs:dev"
+command = "bun run docs:dev"
 
 [build]
-  command = "npm run docs:build"
-  publish = "docs/.vitepress/dist"
+command = "./scripts/build.sh"
+publish = "docs/.vitepress/dist"
