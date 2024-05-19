@@ -1,3 +1,7 @@
+# [5.1.0](https://github.com/geospoc/v-mapbox/compare/v5.0.0...v5.1.0) (2024-05-19)
+
+
+
 ## 5.0.0 (2024-02-05)
 
 * chore: update job name in CT workflow ([e97fedf](https://github.com/geospoc/v-mapbox/commit/e97fedf))
