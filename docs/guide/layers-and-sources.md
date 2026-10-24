@@ -26,27 +26,27 @@ For example adding a layer with GeoJSON data:
 </template>
 
 <script>
-import { VMap, MglNavigationControl, VLayerMapboxGeojson } from "v-mapbox";
+  import { VMap, MglNavigationControl, VLayerMapboxGeojson } from 'v-mapbox';
 
-export default {
-  components: {
-    VMap,
-    MglNavigationControl,
-    VLayerMapboxGeojson
-  },
-  data() {
-    return {
-      accessToken: "some_token",
-      mapStyle: "style_object",
-      geoJsonSource: {
-        //...some GeoJSON object
-      },
-      geoJsonLayer: {
-        //...some GeoJSON layer configuration object
-      }
-    };
-  }
-};
+  export default {
+    components: {
+      VMap,
+      MglNavigationControl,
+      VLayerMapboxGeojson,
+    },
+    data() {
+      return {
+        accessToken: 'some_token',
+        mapStyle: 'style_object',
+        geoJsonSource: {
+          //...some GeoJSON object
+        },
+        geoJsonLayer: {
+          //...some GeoJSON layer configuration object
+        },
+      };
+    },
+  };
 </script>
 ```
 

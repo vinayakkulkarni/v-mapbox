@@ -4,19 +4,27 @@
 
 ### Installation
 
-You can install v-mapbox via npm. Take note that you need to install mapbox-gl as peer dependency:
+Install v-mapbox with `maplibre-gl` as its peer dependency:
 
 ```bash
-npm install --save v-mapbox mapbox-gl
+pnpm add v-mapbox maplibre-gl
 ```
 
 Add Mapbox JS and CSS files to the files where you need them:
 
 ```js
-import 'mapbox-gl/dist/mapbox-gl.css'
+import 'maplibre-gl/dist/maplibre-gl.css';
 import 'v-mapbox/dist/v-mapbox.css';
-import Mapbox from "mapbox-gl"
-import { VMap } from "v-mapbox"
+import { VMap } from 'v-mapbox';
+```
+
+MapLibre GL 6 is ESM-only. Under a bundler, set its worker URL once before the first map renders (Vite shown, see the [MapLibre install guide](https://maplibre.org/maplibre-gl-js/docs/#installation) for other bundlers):
+
+```js
+import { setWorkerUrl } from 'maplibre-gl';
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
+
+setWorkerUrl(workerUrl);
 ```
 
 ## Using in browser
@@ -55,5 +63,3 @@ Add Vue, MapboxGL and v-mapbox scripts on your page:
 ```
 
 All components will be placed in global VueMapbox object (`VueMapbox.VMap` etc.)
-
-

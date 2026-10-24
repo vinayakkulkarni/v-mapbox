@@ -1,42 +1,36 @@
 ---
 layout: home
 hero:
-  name: V-Mapbox 🌏
-  image:
-    src: /logo.svg
-    alt: V-Mapbox Logo
-  tagline: Combine powers of Mapbox GL JS and Vue.js
+  name: V-Mapbox
+  text: MapLibre maps, written as Vue components
+  tagline: Maps, markers, popups, layers and controls that follow the Vue lifecycle. Works with MapLibre GL 6 and deck.gl 9.
   actions:
     - theme: brand
-      text: Get Started →
+      text: Open the live demo
+      link: /demo
+    - theme: alt
+      text: Get started
       link: /guide/
     - theme: alt
-      text: View on GitHub
+      text: GitHub
       link: https://github.com/vinayakkulkarni/v-mapbox
 features:
-  - title: Declarative style
-    details: You can use map elements like layers, markers, popups as Vue components and control them via synchronized props
-  - title: Vuefied
-    details: Map elements declared as components respect Vue lifecycle, emit map events like Vue events and can be used in OOP-style
-footer: MIT Licensed | Copyright © 2020-present Vinayak Kulkarni
+  - title: Declarative
+    details: Layers, markers and popups are Vue components. Change a prop and the map follows.
+  - title: Vue lifecycle
+    details: Components add themselves to the map on mount, clean up on unmount and re-emit map events as Vue events.
+  - title: deck.gl ready
+    details: Arc and GeoJSON deck.gl 9 layers draw through MapboxOverlay and stay in sync with the map camera.
 ---
-<!-- 
-<iframe src="https://codesandbox.io/embed/v-mapbox-uq9ri2?fontsize=14&hidenavigation=1&theme=dark"
-   style="width:50%; height:200px; border:0; border-radius: 4px; overflow:hidden;"
-   title="v-mapbox-vue-3"
-   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
- ></iframe>
 
-<br />
+<div class="home-install">
+  <InstallSnippet />
+</div>
 
-::: tip Dependencies
-[Vue.js 3.x+](https://github.com/vuejs/vue)  
-[maplibre-gl](https://github.com/maplibre/maplibre-gl-js)
-:::
-
-<br />
-
-::: tip Size
-~ 15 kB minified and gzipped
-::: -->
+<style>
+  .home-install {
+    display: flex;
+    justify-content: center;
+    padding: 40px 24px 64px;
+  }
+</style>

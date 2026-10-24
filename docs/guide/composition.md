@@ -52,28 +52,28 @@ Adding a popup:
 </template>
 
 <script>
-import {
-  VMap,
-  MglNavigationControl,
-  MglGeolocateControl,
-  VPopup
-} from "v-mapbox";
-
-export default {
-  components: {
+  import {
     VMap,
     MglNavigationControl,
     MglGeolocateControl,
-    VPopup
-  },
-  data() {
-    return {
-      accessToken: "some_token",
-      mapStyle: "style_object",
-      popupCoordinates: [10, 10]
-    };
-  }
-};
+    VPopup,
+  } from 'v-mapbox';
+
+  export default {
+    components: {
+      VMap,
+      MglNavigationControl,
+      MglGeolocateControl,
+      VPopup,
+    },
+    data() {
+      return {
+        accessToken: 'some_token',
+        mapStyle: 'style_object',
+        popupCoordinates: [10, 10],
+      };
+    },
+  };
 </script>
 ```
 
@@ -93,21 +93,21 @@ For example:
 </template>
 
 <script>
-import { VPopup } from 'v-mapbox';
+  import { VPopup } from 'v-mapbox';
 
-export default {
-  name: 'PopupWrapper'
-  components: {
-    VPopup
-  },
-  computed() {
-    popupCoordinates() {
-      // Here we can do some work for calculate proper coordinates
-      //...
-      return [10, 10]
+  export default {
+    name: 'PopupWrapper'
+    components: {
+      VPopup
+    },
+    computed() {
+      popupCoordinates() {
+        // Here we can do some work for calculate proper coordinates
+        //...
+        return [10, 10]
+      }
     }
   }
-}
 </script>
 ```
 
@@ -124,21 +124,21 @@ export default {
 </template>
 
 <script>
-import { VMap } from "v-mapbox";
-import PopupWrapper from "PopupWrapper"; // wrapper for popup
+  import { VMap } from 'v-mapbox';
+  import PopupWrapper from 'PopupWrapper'; // wrapper for popup
 
-export default {
-  components: {
-    VMap,
-    PopupWrapper // wrapper for popup
-  },
-  data() {
-    return {
-      accessToken: "some_token",
-      mapStyle: "style_object"
-    };
-  }
-};
+  export default {
+    components: {
+      VMap,
+      PopupWrapper, // wrapper for popup
+    },
+    data() {
+      return {
+        accessToken: 'some_token',
+        mapStyle: 'style_object',
+      };
+    },
+  };
 </script>
 ```
 

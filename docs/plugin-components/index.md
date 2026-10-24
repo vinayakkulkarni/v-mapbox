@@ -21,29 +21,29 @@ Below is example for using [VueMapbox Geocoder](https://github.com/soal/vue-mapb
 </template>
 
 <script>
-import { VMap } from "v-mapbox";
-import MglGeocoderControl from "v-mapbox-geocoder";
+  import { VMap } from 'v-mapbox';
+  import MglGeocoderControl from 'v-mapbox-geocoder';
 
-export default {
-  name: "App",
+  export default {
+    name: 'App',
 
-  components: {
-    VMap,
-    MglGeocoderControl
-  },
-  data() {
-    return {
-      accessToken: "some_token",
-      mapStyle: "some_style",
-      defaultInput: "Bodhgaya"
-    };
-  },
-  methods: {
-    handleSearch(event) {
-      console.log(event);
-    }
-  }
-};
+    components: {
+      VMap,
+      MglGeocoderControl,
+    },
+    data() {
+      return {
+        accessToken: 'some_token',
+        mapStyle: 'some_style',
+        defaultInput: 'Bodhgaya',
+      };
+    },
+    methods: {
+      handleSearch(event) {
+        console.log(event);
+      },
+    },
+  };
 </script>
 ```
 

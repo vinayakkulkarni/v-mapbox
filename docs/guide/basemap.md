@@ -12,26 +12,26 @@ If you using self-hosting maps on your own server you can omit this parameter.
 </template>
 
 <script>
-import 'mapbox-gl/dist/mapbox-gl.css'
-import mapbox from "mapbox-gl";
-import { VMap } from "v-mapbox";
+  import 'mapbox-gl/dist/mapbox-gl.css';
+  import mapbox from 'mapbox-gl';
+  import { VMap } from 'v-mapbox';
 
-export default {
-  components: {
-    VMap
-  },
-  data() {
-    return {
-      accessToken: ACCESS_TOKEN, // your access token. Needed if you using Mapbox maps
-      mapStyle: MAP_STYLE // your map style
-    };
-  },
+  export default {
+    components: {
+      VMap,
+    },
+    data() {
+      return {
+        accessToken: ACCESS_TOKEN, // your access token. Needed if you using Mapbox maps
+        mapStyle: MAP_STYLE, // your map style
+      };
+    },
 
-  created() {
-    // We need to set mapbox-gl library here in order to use it in template
-    this.mapbox = mapbox;
-  }
-};
+    created() {
+      // We need to set mapbox-gl library here in order to use it in template
+      this.mapbox = mapbox;
+    },
+  };
 </script>
 ```
 
@@ -42,7 +42,7 @@ Example:
 ```vue
 <template>
   <VMap
-    :mapbox-gl="mapbox-gl"
+    :mapbox-gl="mapbox - gl"
     :access-token="accessToken"
     :map-style.sync="mapStyle"
     @load="onMapLoaded"
@@ -80,20 +80,20 @@ If you want to store map object, store it as non-reactive property like in examp
 </template>
 
 <script>
-export default {
-  // …component code…
-  created() {
-    this.map = null;
-  },
-  methods: {
-    onMapLoaded(event) {
-      // in component
-      this.map = event.map;
-      // or just to store if you want have access from other components
-      this.$store.map = event.map;
-    }
-  }
-};
+  export default {
+    // …component code…
+    created() {
+      this.map = null;
+    },
+    methods: {
+      onMapLoaded(event) {
+        // in component
+        this.map = event.map;
+        // or just to store if you want have access from other components
+        this.$store.map = event.map;
+      },
+    },
+  };
 </script>
 ```
 
@@ -105,30 +105,30 @@ For example:
 
 ```vue
 <script>
-export default {
-  name: 'App',
+  export default {
+    name: 'App',
 
-  methods: {
-    async onMapLoad(event) {
-      // Here we cathing 'load' map event
-      const asyncActions = event.component.actions
+    methods: {
+      async onMapLoad(event) {
+        // Here we cathing 'load' map event
+        const asyncActions = event.component.actions;
 
-      const newParams = await asyncActions.flyTo({
-        center: [30, 30],
-        zoom: 9,
-        speed: 1
-      })
-      console.log(newParams)
-      /* => {
+        const newParams = await asyncActions.flyTo({
+          center: [30, 30],
+          zoom: 9,
+          speed: 1,
+        });
+        console.log(newParams);
+        /* => {
               center: [30, 30],
               zoom: 9,
               bearing: 9,
               pitch: 7
             }
       */
-    }
-  }
-}
+      },
+    },
+  };
 </script>
 ```
 

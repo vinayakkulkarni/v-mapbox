@@ -16,20 +16,20 @@ The Marker component is a wrapper around the [Mapbox GL Marker API](https://docs
 </template>
 
 <script>
-import { VMap, VMarker } from "v-mapbox";
+  import { VMap, VMarker } from 'v-mapbox';
 
-export default {
-  components: {
-    VMap,
-    VMarker
-  },
-  data() {
-    return {
-      mapStyle: "mapbox://styles/mapbox/basic-v10",
-      coordinates: [-111.549668, 39.014]
-    };
-  }
-};
+  export default {
+    components: {
+      VMap,
+      VMarker,
+    },
+    data() {
+      return {
+        mapStyle: 'mapbox://styles/mapbox/basic-v10',
+        coordinates: [-111.549668, 39.014],
+      };
+    },
+  };
 </script>
 ```
 
@@ -63,21 +63,21 @@ The `marker` slot allows you to customize the look of the marker. Here is an exa
 </template>
 
 <script>
-import { VMap, VMarker } from "v-mapbox";
+  import { VMap, VMarker } from 'v-mapbox';
 
-export default {
-  components: {
-    VMap,
-    VMarker
-  },
+  export default {
+    components: {
+      VMap,
+      VMarker,
+    },
 
-  data() {
-    return {
-      mapStyle: "mapbox://styles/mapbox/basic-v10",
-      coordinates: [-111.549668, 39.014]
-    };
-  }
-};
+    data() {
+      return {
+        mapStyle: 'mapbox://styles/mapbox/basic-v10',
+        coordinates: [-111.549668, 39.014],
+      };
+    },
+  };
 </script>
 ```
 
@@ -106,20 +106,20 @@ In this example [Vuetify card component](https://vuetifyjs.com/en/components/car
 </template>
 
 <script>
-import { VMap, VPopup } from "v-mapbox";
+  import { VMap, VPopup } from 'v-mapbox';
 
-export default {
-  components: {
-    VMap,
-    VPopup
-  },
-  data() {
-    return {
-      mapStyle: "mapbox://styles/mapbox/basic-v10",
-      coordinates: [-111.549668, 39.014]
-    };
-  }
-};
+  export default {
+    components: {
+      VMap,
+      VPopup,
+    },
+    data() {
+      return {
+        mapStyle: 'mapbox://styles/mapbox/basic-v10',
+        coordinates: [-111.549668, 39.014],
+      };
+    },
+  };
 </script>
 ```
 
@@ -167,22 +167,22 @@ Popup often used inside of map markers. You can achive this by passing Popup ins
 </template>
 
 <script>
-import { VMap, VPopup, VMarker } from "v-mapbox";
+  import { VMap, VPopup, VMarker } from 'v-mapbox';
 
-export default {
-  components: {
-    VMap,
-    VMarker,
-    VPopup
-  },
+  export default {
+    components: {
+      VMap,
+      VMarker,
+      VPopup,
+    },
 
-  data() {
-    return {
-      mapStyle: "mapbox://styles/mapbox/basic-v10",
-      coordinates: [-111.549668, 39.014]
-    };
-  }
-};
+    data() {
+      return {
+        mapStyle: 'mapbox://styles/mapbox/basic-v10',
+        coordinates: [-111.549668, 39.014],
+      };
+    },
+  };
 </script>
 ```
 
