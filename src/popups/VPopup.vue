@@ -17,11 +17,9 @@
       options: {
         type: Object as PropType<PopupOptions>,
         default: () => ({}) as PopupOptions,
-        required: true,
       },
       coordinates: {
-        type: Object as PropType<LngLatLike>,
-        default: () => ({}),
+        type: [Object, Array] as PropType<LngLatLike>,
         required: true,
       },
     },
@@ -64,14 +62,12 @@
 
       /**
        * Sets the HTML content for the popup
-       * @returns {void}
        */
       function setPopupContent(): void {
         popup.setDOMContent(content.value as Node);
       }
       /**
        * Set popup coordinates
-       * @returns {void}
        */
       function setPopupCoordinates(): void {
         popup.setLngLat(props.coordinates);
@@ -80,7 +76,6 @@
       /**
        * Add popup to marker if marker exists
        * else add it to the map.
-       * @returns {void}
        */
       function addToMarker(): void {
         if (props.marker) {
@@ -92,7 +87,6 @@
       }
       /**
        * Remove popup from map
-       * @returns {void}
        */
       function remove(): void {
         popup.remove();
@@ -101,10 +95,9 @@
 
       /**
        * Listen to events
-       * @returns {void}
        */
       function listenPopupEvents(): void {
-        popupEvents.forEach((event: string) => {
+        popupEvents.forEach((event) => {
           popup.on(event, () => {
             emit(event);
           });
@@ -112,10 +105,9 @@
       }
       /**
        * Turn off listener
-       * @returns {void}
        */
       function removePopupEvents(): void {
-        popupEvents.forEach((event: string) => {
+        popupEvents.forEach((event) => {
           popup.off(event, () => {
             emit(event);
           });

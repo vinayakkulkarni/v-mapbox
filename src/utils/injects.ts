@@ -3,9 +3,9 @@ import { inject } from 'vue';
 
 /**
  * Dependency injection 🥳
- * @param {InjectionKey} key - The key to inject
- * @param {string | undefined} fallback - The fallback value
- * @returns {undefined} - The value
+ * @param key - The key to inject
+ * @param fallback - The fallback value
+ * @returns - The value
  */
 export function injectStrict<T>(key: InjectionKey<T>, fallback?: T): T {
   const resolved = inject(key, fallback);

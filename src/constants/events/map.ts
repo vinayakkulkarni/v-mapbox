@@ -11,7 +11,6 @@ export const mapEvents: Array<keyof MapEventType> = [
   'webglcontextrestored',
   'dataloading',
   'data',
-  'tiledataloading',
   'sourcedataloading',
   'styledataloading',
   'sourcedata',

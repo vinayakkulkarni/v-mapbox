@@ -43,7 +43,7 @@
   const addControl = (): void => {
     const control = new GeolocateControl(props.options || defaultOptions);
     map.value.addControl(control, props.position);
-    events.forEach((event: string) => {
+    events.forEach((event) => {
       control.on(event, () => {
         emit(event);
       });

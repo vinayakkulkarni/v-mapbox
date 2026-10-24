@@ -15,7 +15,6 @@
     props: {
       coordinates: {
         type: [Object, Array] as PropType<LngLatLike>,
-        default: () => ({}),
         required: true,
       },
       options: {
@@ -103,16 +102,14 @@
 
       /**
        * Set marker coordinates
-       * @param {Marker} marker - Marker
-       * @returns {void}
+       * @param marker - Marker
        */
       function setMarkerCoordinates(marker: Marker): void {
         marker.setLngLat(props.coordinates);
       }
       /**
        * Sets the Cursor to Pointer
-       * @param {Marker} marker - Marker
-       * @returns {void}
+       * @param marker - Marker
        */
       function setCursorPointer(marker: Marker): void {
         marker.getElement().style.cursor = props.cursor || 'default';
@@ -120,8 +117,7 @@
 
       /**
        * Add marker to map
-       * @param {Marker} marker - Marker
-       * @returns {void}
+       * @param marker - Marker
        */
       function addToMap(marker: Marker): void {
         marker.addTo(map.value);
@@ -129,8 +125,7 @@
       }
       /**
        * Remove marker from map
-       * @param {Marker} marker - Marker
-       * @returns {void}
+       * @param marker - Marker
        */
       function removeFromMap(marker: Marker): void {
         if (isMarkerAvailable.value) {
@@ -141,13 +136,12 @@
 
       /**
        * Listen to events
-       * @param {Marker} marker - Marker
-       * @returns {void}
+       * @param marker - Marker
        */
       function listenMarkerEvents(marker: Marker): void {
         let coordinates: LngLatLike;
         // Listen to Marker Mapbox events
-        markerMapEvents.forEach((event: string) => {
+        markerMapEvents.forEach((event) => {
           marker.on(event, (e: { target: Marker }) => {
             if (event === 'dragend') {
               if (props.coordinates instanceof Array) {
@@ -161,7 +155,7 @@
           });
         });
         // Listen to Marker DOM events
-        markerDOMEvents.forEach((event: string) => {
+        markerDOMEvents.forEach((event) => {
           marker.getElement().addEventListener(event, (e) => {
             emit(event, e);
           });

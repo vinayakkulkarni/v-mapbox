@@ -5,6 +5,7 @@
 </template>
 <script lang="ts">
   import type {
+    DistributiveOmit,
     LayerSpecification as AnyLayer,
     VectorSourceSpecification as VectorSource,
   } from 'maplibre-gl';
@@ -18,21 +19,18 @@
       sourceId: {
         type: String as PropType<string>,
         default: 'maplibre.gl-video-source',
-        required: true,
       },
       layerId: {
         type: String as PropType<string>,
         default: 'maplibre.gl-video-layer',
-        required: true,
       },
       source: {
         type: Object as PropType<VectorSource>,
         required: true,
       },
       layer: {
-        type: Object as PropType<AnyLayer>,
+        type: Object as PropType<DistributiveOmit<AnyLayer, 'id' | 'source'>>,
         default: () => ({}),
-        required: true,
       },
       before: {
         type: String as PropType<string>,
@@ -78,7 +76,6 @@
 
       /**
        * Re–adds the layer when style changed
-       * @returns {void}
        */
       function addLayer(): void {
         map.value.addSource(props.sourceId, props.source);
