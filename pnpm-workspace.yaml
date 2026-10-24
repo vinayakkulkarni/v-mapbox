@@ -1,0 +1,7 @@
+# pnpm 11+ reads only auth/registry keys from .npmrc; every other setting
+# lives here in camelCase.
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: true
+  unrs-resolver: true
+  workerd: true

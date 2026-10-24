@@ -1,6 +1,0 @@
-[dev]
-command = "bun run docs:dev"
-
-[build]
-command = "./scripts/build.sh"
-publish = "docs/.vitepress/dist"

@@ -3,8 +3,6 @@
   "version": "5.1.0",
   "exports": "./dist/v-mapbox.js",
   "publish": {
-    "exclude": [
-      "!dist"
-    ]
+    "exclude": ["!dist"]
   }
 }
