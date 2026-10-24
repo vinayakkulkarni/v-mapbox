@@ -1,1 +1,1 @@
-bun lint-staged --no-stash
+pnpm exec lint-staged --no-stash

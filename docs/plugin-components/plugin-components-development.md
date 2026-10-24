@@ -24,20 +24,20 @@ The basic idea is to keep the declarative style of Vue, so it's good to add for 
 </template>
 
 <script>
-import Mapbox from "mapbox-gl";
-import { VMap } from "v-mapbox";
+  import Mapbox from 'mapbox-gl';
+  import { VMap } from 'v-mapbox';
 
-export default {
-  components: {
-    VMap
-  },
-  data() {
-    return {
-      accessToken: ACCESS_TOKEN,
-      mapStyle: MAP_STYLE
-    };
-  }
-};
+  export default {
+    components: {
+      VMap,
+    },
+    data() {
+      return {
+        accessToken: ACCESS_TOKEN,
+        mapStyle: MAP_STYLE,
+      };
+    },
+  };
 </script>
 ```
 
@@ -50,30 +50,30 @@ export default {
 </template>
 
 <script>
-import Mapbox from "mapbox-gl";
-import { VMap } from "v-mapbox";
+  import Mapbox from "mapbox-gl";
+  import { VMap } from "v-mapbox";
 
-export default {
-  name: "MyPluginComponent"
-  inject: ["mapbox", "map", "actions"],
+  export default {
+    name: "MyPluginComponent"
+    inject: ["mapbox", "map", "actions"],
 
-  data() {
-    return {
-      center: null
-    };
-  },
+    data() {
+      return {
+        center: null
+      };
+    },
 
-  created() {
-    this.center = this.map.getCenter();
-  },
+    created() {
+      this.center = this.map.getCenter();
+    },
 
-  methods: {
-    async fly() {
-      const flyResult = await this.actions.flyTo({ center: [10, 10] });
-      this.center = flyResult.center;
+    methods: {
+      async fly() {
+        const flyResult = await this.actions.flyTo({ center: [10, 10] });
+        this.center = flyResult.center;
+      }
     }
-  }
-};
+  };
 </script>
 ```
 
@@ -88,7 +88,7 @@ Beside providing base objects, VueMapbox give some useful helper mixins, that ca
 You can access to them via `$helpers` named export:
 
 ```js
-import { $helpers } from "v-mapbox";
+import { $helpers } from 'v-mapbox';
 
 const { withEvents, withSelfEvents, asControl, asLayer } = $helpers;
 ```
@@ -124,44 +124,44 @@ Example below can give you an idea how to create component for Mapbox GL JS plug
 ```js
 // First, there is no separate HTML to render, so we don't need template and SFC, so it's just JS file
 
-import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
-import { $helpers } from "v-mapbox"; // Get $helpers from VueMapbox
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import { $helpers } from 'v-mapbox'; // Get $helpers from VueMapbox
 
 // Define list of mapbox-gl-geocoder events
 const geocoderEvents = {
-  clear: "clear",
-  loading: "loading",
-  results: "results",
-  result: "result",
-  error: "error"
+  clear: 'clear',
+  loading: 'loading',
+  results: 'results',
+  result: 'result',
+  error: 'error',
 };
 
 export default {
-  name: "GeocoderControl",
+  name: 'GeocoderControl',
   mixins: [$helpers.asControl], // MapboxGeocoder is a control, so we use mixin
 
-  inject: ["mapbox", "map"], // Here we inject objects provided by VMap
+  inject: ['mapbox', 'map'], // Here we inject objects provided by VMap
 
   props: {
     // MapboxGeocoder requires access token
     accessToken: {
       type: String,
-      required: true
+      required: true,
     },
     input: {
       type: String,
-      default: null
+      default: null,
     },
     proximity: {
       type: Object,
-      default: null
-    }
+      default: null,
+    },
     // ...here goes other props...
   },
 
   data() {
     return {
-      initial: true
+      initial: true,
     };
   },
 
@@ -173,13 +173,13 @@ export default {
           this.control.setInput(next);
         }
       },
-      immediate: true
+      immediate: true,
     },
     proximity(next, prev) {
       if (this.control && next !== prev) {
         this.control.setProximity(next);
       }
-    }
+    },
   },
 
   created() {
@@ -188,14 +188,14 @@ export default {
       this.mapbox.accessToken = this.accessToken;
     }
     this.control = new MapboxGeocoder(this.$props); // Creating MapboxGeocoder instance and pass props as options to it
-    this.control.on("results", this.$_updateInput); // We need to update synchronized prop "input" when user enters some query to search field
+    this.control.on('results', this.$_updateInput); // We need to update synchronized prop "input" when user enters some query to search field
 
     // Now we can add control to the map
     this.$_deferredMount();
   },
 
   beforeDestroy() {
-    this.control.off("results", this.$_updateInput);
+    this.control.off('results', this.$_updateInput);
     // Also, control will be removed from map in beforeDestroy() lifecycle hook in `asControl` mixin
   },
 
@@ -208,7 +208,7 @@ export default {
         this.control.setInput(this.input);
       }
       // Emit added event. `$_emitEvent` method is came from `asControl` mixin
-      this.$_emitEvent("added", { geocoder: this.control });
+      this.$_emitEvent('added', { geocoder: this.control });
       this.$_bindSelfEvents(Object.keys(geocoderEvents)); // Bin events to emit them as Vue events
       this.initial = false; // Initialization done
     },
@@ -217,7 +217,7 @@ export default {
       // $_bindSelfEvents is provided by `asControl` mixin. but we need to replace it because MapboxGeocoder do not follow Mapbox Gl JS events schema and we need custom processing for them
       const vm = this;
       // Here we use this.$listeners to subscribe only on events that user listens on component
-      Object.keys(this.$listeners).forEach(eventName => {
+      Object.keys(this.$listeners).forEach((eventName) => {
         if (events.includes(eventName)) {
           this.control.on(eventName, vm.$_emitControlEvent.bind(vm, eventName));
         }
@@ -231,13 +231,13 @@ export default {
 
     $_updateInput(results) {
       if (!this.initial) {
-        const input = results.query ? results.query.join("") : "";
-        this.$emit("update:input", input); // update synchormized prop "input"
+        const input = results.query ? results.query.join('') : '';
+        this.$emit('update:input', input); // update synchormized prop "input"
       }
-    }
+    },
 
     //...here goes other public methods
-  }
+  },
 };
 ```
 

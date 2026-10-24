@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "lib": ["esnext", "dom"],
+    "types": ["node", "vite/client"],
+    "paths": {
+      "v-mapbox": ["../../src/index.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.vue", "../../vite-env.d.ts"]
+}

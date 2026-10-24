@@ -352,6 +352,7 @@
 - **See:** `options.locale` in [Map](https://docs.mapbox.com/mapbox-gl-js/api/map/#map-parameters)
 
 <!-- Specific for v-mapbox -->
+
 ### `r-t-l-text-plugin-url`
 
 - **Type:** `String`

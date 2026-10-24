@@ -1,0 +1,70 @@
+/*
+ * v-mapbox demo tokens. Cartographic teal accent, survey-orange highlight.
+ * IBM Plex Sans + IBM Plex Mono replace the VitePress Inter default.
+ */
+:root {
+  --vp-font-family-base:
+    'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+    sans-serif;
+  --vp-font-family-mono:
+    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --vp-c-brand-1: oklch(0.5 0.09 185);
+  --vp-c-brand-2: oklch(0.44 0.09 185);
+  --vp-c-brand-3: oklch(0.38 0.08 185);
+  --vp-c-brand-soft: oklch(0.5 0.09 185 / 0.12);
+
+  --vp-c-bg: oklch(0.985 0.004 180);
+  --vp-c-bg-alt: oklch(0.965 0.006 180);
+  --vp-c-bg-soft: oklch(0.955 0.007 180);
+  --vp-c-text-1: oklch(0.22 0.015 200);
+
+  --vp-home-hero-name-color: var(--vp-c-text-1);
+  --vp-home-hero-image-background-image: none;
+  --vp-home-hero-image-filter: none;
+}
+
+.dark {
+  --vp-c-brand-1: oklch(0.78 0.09 180);
+  --vp-c-brand-2: oklch(0.72 0.09 180);
+  --vp-c-brand-3: oklch(0.64 0.08 180);
+  --vp-c-brand-soft: oklch(0.78 0.09 180 / 0.14);
+
+  --vp-c-bg: oklch(0.18 0.01 220);
+  --vp-c-bg-alt: oklch(0.155 0.01 220);
+  --vp-c-bg-soft: oklch(0.22 0.012 220);
+  --vp-c-text-1: oklch(0.94 0.006 200);
+}
+
+.dark .vp-doc .button.brand,
+.dark .VPButton.brand {
+  color: oklch(0.18 0.01 220);
+}
+
+.VPHero .name {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.VPHero .tagline {
+  font-weight: 300;
+}
+
+.VPHero.has-image .image-container {
+  width: 100%;
+  height: auto;
+  transform: none;
+}
+
+/* The hero image slot holds a live map, not a floating logo: keep it in
+   normal flow above the heading on small screens. */
+@media (max-width: 959px) {
+  .VPHero.has-image .image {
+    margin: 0 0 32px;
+  }
+}
+
+.maplibregl-popup-content {
+  border-radius: 8px;
+  padding: 10px 12px;
+}

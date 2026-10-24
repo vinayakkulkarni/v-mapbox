@@ -29,9 +29,10 @@ none
 ### Slots
 
 ### `default`
+
 Your content as text, HTML or Template, will be wrapped in div with `mapboxgl-ctrl mapboxgl-ctrl-group` classes
 
-***See:*** [IControl](https://docs.mapbox.com/mapbox-gl-js/api/markers/#icontrol)
+_**See:**_ [IControl](https://docs.mapbox.com/mapbox-gl-js/api/markers/#icontrol)
 
 ## AttributionControl
 
@@ -103,7 +104,7 @@ Provides a button that uses the browser's geolocation API to locate the user on 
 - **Type:** `Boolean`
 - **Default:** `true`
 - **Non-Synced**
-- **Description:** By default, if showUserLocation is true , a transparent circle will be drawn around the user location indicating the accuracy (95% confidence level) of the user's location. Set to false to disable. Always disabled when showUserLocation is false . 
+- **Description:** By default, if showUserLocation is true , a transparent circle will be drawn around the user location indicating the accuracy (95% confidence level) of the user's location. Set to false to disable. Always disabled when showUserLocation is false .
 - **See:** `options.showUserLocation` in [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
 
 ### `showUserLocation`

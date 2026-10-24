@@ -2,19 +2,13 @@
   import type { MapOptions, MapEventType } from 'maplibre-gl';
   import type { Ref } from 'vue';
   import { Map } from 'maplibre-gl';
-  import { onMounted, provide, ref, shallowRef } from 'vue';
+  import { onMounted, onUnmounted, provide, ref, shallowRef } from 'vue';
   import { mapEvents } from '../constants/events';
   import { MapKey } from '../utils/symbols';
 
-  const props = withDefaults(
-    defineProps<{
-      options: MapOptions;
-    }>(),
-    {
-      // @ts-ignore
-      options: { container: 'map' },
-    },
-  );
+  const props = defineProps<{
+    options: MapOptions;
+  }>();
 
   const emit = defineEmits(['loaded', ...mapEvents]);
 
@@ -27,6 +21,11 @@
     loaded.value = true;
     provide(MapKey, map);
     listenMapEvents();
+  });
+
+  // Children release their layers first, then the map frees its WebGL context.
+  onUnmounted(() => {
+    if (loaded.value) map.value.remove();
   });
 
   const listenMapEvents = () => {

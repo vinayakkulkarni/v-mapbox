@@ -27,28 +27,28 @@ _All controls_:
 </template>
 
 <script>
-import {
-  VMap,
-  MglAttributionControl,
-  MglNavigationControl,
-  MglGeolocateControl,
-  MglFullscreenControl,
-  MglScaleControl
-} from "v-mapbox";
-
-export default {
-  components: {
+  import {
     VMap,
+    MglAttributionControl,
     MglNavigationControl,
-    MglGeolocateControl
-  },
-  data() {
-    return {
-      accessToken: "some_token",
-      mapStyle: "style_object"
-    };
-  }
-};
+    MglGeolocateControl,
+    MglFullscreenControl,
+    MglScaleControl,
+  } from 'v-mapbox';
+
+  export default {
+    components: {
+      VMap,
+      MglNavigationControl,
+      MglGeolocateControl,
+    },
+    data() {
+      return {
+        accessToken: 'some_token',
+        mapStyle: 'style_object',
+      };
+    },
+  };
 </script>
 ```
 

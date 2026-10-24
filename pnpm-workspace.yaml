@@ -1,0 +1,12 @@
+# pnpm 11+ reads only auth/registry keys from .npmrc; every other setting
+# lives here in camelCase.
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: true
+  unrs-resolver: true
+  workerd: true
+
+# pnpm's default supply-chain gate, written out so local installs and CI
+# apply the same rule: a version must be on npm for 24 h before it can land
+# in the lockfile.
+minimumReleaseAge: 1440

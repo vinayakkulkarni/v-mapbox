@@ -1,4 +1,4 @@
 module.exports = {
-  '*.{js,ts,vue}': 'bun run lint:js',
-  '*.{css,vue}': 'bun run lint:css',
+  '*.{js,cjs,mjs,ts,vue}': ['eslint', 'prettier --check'],
+  '*.{css,scss,vue}': 'stylelint',
 };

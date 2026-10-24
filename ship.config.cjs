@@ -1,5 +1,5 @@
 module.exports = {
-  installCommand: () => 'bun i',
+  installCommand: () => 'pnpm install',
   beforeCommitChanges: ({ exec }) => {
     exec('./scripts/bump-jsr-version.cjs');
   },

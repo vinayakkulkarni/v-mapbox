@@ -13,33 +13,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository 🎉
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Setup bun env 🐰
-        uses: oven-sh/setup-bun@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
         with:
-          bun-version: latest
+          node-version: 26
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6.1.0
 
       - name: Install dependencies 🚀
-        run: bun install
+        run: pnpm install --frozen-lockfile
 
       - name: Run linter(s) 👀
-        uses: wearerequired/lint-action@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          continue_on_error: false
-          git_name: github-actions[bot]
-          git_email: github-actions[bot]@users.noreply.github.com
-          auto_fix: false
-          neutral_check_on_warning: true
-          stylelint: false
-          stylelint_extensions: css,scss,vue
-          eslint: true
-          eslint_extensions: js,ts,vue
-          prettier: true
-          prettier_extensions: js,ts,vue
+        run: pnpm run lint
+
+      - name: Check formatting
+        run: pnpm run format:check
+
+      - name: Typecheck
+        run: pnpm run typecheck
 
       - name: Build the package 🎉
-        run: bun run build
+        run: pnpm run build
+
+      - name: Build the docs & demo
+        run: pnpm run docs:build

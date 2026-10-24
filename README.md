@@ -25,53 +25,49 @@
   <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/vinayakkulkarni/v-mapbox">
 </a>
 <a title="maintenance" href="https://github.com/vinayakkulkarni/v-mapbox/commits/main" rel="nofollow">
-  <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2024">
+  <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2026">
 </a>
 <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-mapbox?ref=badge_shield" alt="FOSSA Status">
   <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-mapbox.svg?type=shield"/>
 </a>
 
-> Combine powers of [Vue](https://vuejs.org/) and [Mapbox GL JS](https://mapbox.com/mapbox-gl-js) (v3.x) & [MaplibreGL](https://maplibre.org/maplibre-gl-js/docs/) (v4.x) 🗺
+> Combine powers of [Vue](https://vuejs.org/) and [MapLibre GL JS](https://maplibre.org/maplibre-gl-js/docs/) (v6.x) 🗺
 
-V-Mapbox is wrapper around Mapbox GL JS for >v1.x to <=v3.x & Maplibre GL JS for > v4.x library that provides vueish-way to interact with the map.
+V-Mapbox wraps MapLibre GL JS (v6.x) and deck.gl (v9.x) in Vue 3 components, so you work with the map the Vue way.
 
-[Description and documentation](https://v-mapbox.netlify.app/)
+**Live demo and docs:** [v-mapbox.vinayakkulkarni.dev](https://v-mapbox.vinayakkulkarni.dev) · [demo](https://v-mapbox.vinayakkulkarni.dev/demo)
 
 ## Installation
 
 ```sh
 # For Vue 2
-$ npm i v-mapbox@legacy
+$ pnpm add v-mapbox@legacy
 # For Vue 3
-$ npm i v-mapbox
+$ pnpm add v-mapbox maplibre-gl
 ```
 
 ## Demo
 
-[![Edit v-mapbox-vue-3](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/v-mapbox-uq9ri2?fontsize=14&hidenavigation=1&theme=dark)
-
-## Deck.gl 🆕
-
-[![Edit v-mapbox-with-deck-gl-geojson](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/v-mapbox-with-deck-gl-geojson-f8nn5q?fontsize=14&hidenavigation=1&theme=dark)
+[v-mapbox.vinayakkulkarni.dev/demo](https://v-mapbox.vinayakkulkarni.dev/demo) runs `VMap`, `VMarker` + popups, `VLayerMapboxGeojson`, `VLayerDeckArc` (deck.gl) and the map controls.
 
 ## Development
 
 ```sh
 git clone git@github.com:vinayakkulkarni/v-mapbox.git
 cd v-mapbox
-npm install
+pnpm install
 ```
 
-Running in dev mode:
+Build the library:
 
 ```sh
-npm run serve
+pnpm run build
 ```
 
-Build for production:
+Run the gates:
 
 ```sh
-npm run build
+pnpm run lint && pnpm run format:check && pnpm run typecheck && pnpm run test
 ```
 
 ### Documentation
@@ -79,13 +75,19 @@ npm run build
 Start documentation site in development mode:
 
 ```sh
-npm run docs:dev
+pnpm run docs:dev
 ```
 
 Build documentation:
 
 ```sh
-npm run docs:build
+pnpm run docs:build
+```
+
+Deploy the docs + demo to the `v-mapbox-demo` Cloudflare Worker:
+
+```sh
+pnpm run deploy
 ```
 
 Inspired by KoRiGaN's [Vue2Leaflet](https://github.com/KoRiGaN/Vue2Leaflet).
