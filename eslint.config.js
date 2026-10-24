@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import { importX } from 'eslint-plugin-import-x';
 import { configs as jsdocConfigs } from 'eslint-plugin-jsdoc';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
@@ -24,6 +25,18 @@ export default defineConfig(
   tsConfigs.recommended,
   importX.flatConfigs.recommended,
   importX.flatConfigs.typescript,
+  {
+    // Resolve imports through the tsconfig `paths`. The docs theme imports
+    // `v-mapbox` from source (docs/.vitepress/tsconfig.json), so lint must not
+    // depend on a built `dist/` that CI has not produced yet.
+    settings: {
+      'import-x/resolver-next': [
+        createTypeScriptImportResolver({
+          project: ['tsconfig.json', 'docs/.vitepress/tsconfig.json'],
+        }),
+      ],
+    },
+  },
   jsdocConfigs['flat/recommended-typescript'],
   regexpConfigs['flat/recommended'],
   security.configs.recommended,
