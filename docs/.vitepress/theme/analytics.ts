@@ -9,7 +9,7 @@ export const PLAUSIBLE_SCRIPT_ID = 'pa-m5vabwBc94QLDFIMWJr1l';
 export const OPENPANEL_CLIENT_ID = '723c5458-f045-44ee-a792-267353e29c72';
 export const OPENPANEL_API_URL = 'https://events.geoql.in/api';
 /** GA4 measurement ID. Empty until the property exists; GA4 is skipped. */
-export const GA4_MEASUREMENT_ID = '';
+export const GA4_MEASUREMENT_ID = 'G-1KGMBQJ5YB';
 
 type Props = Record<string, string | number | boolean>;
 
