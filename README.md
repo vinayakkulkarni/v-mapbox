@@ -6,8 +6,8 @@
 <a title="GitHub Release" href="https://github.com/vinayakkulkarni/v-mapbox/releases" rel="nofollow">
   <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/vinayakkulkarni/v-mapbox?include_prereleases&logo=github">
 </a>
-<a title="CI Status" href="https://github.com/vinayakkulkarni/v-mapbox/actions?query=workflow%3Aci" rel="nofollow">
-  <img alt="Total alerts" src="https://github.com/vinayakkulkarni/v-mapbox/workflows/ci/badge.svg">
+<a title="CI Status" href="https://github.com/vinayakkulkarni/v-mapbox/actions/workflows/ci.yml" rel="nofollow">
+  <img alt="Total alerts" src="https://github.com/vinayakkulkarni/v-mapbox/actions/workflows/ci.yml/badge.svg">
 </a>
 <a title="DeepScan Grade" href="https://deepscan.io/dashboard#view=project&tid=9381&pid=14423&bid=267899">
   <img src="https://deepscan.io/api/teams/9381/projects/14423/branches/267899/badge/grade.svg" alt="DeepScan grade">
@@ -35,7 +35,7 @@
 
 V-Mapbox wraps MapLibre GL JS (v6.x) and deck.gl (v9.x) in Vue 3 components, so you work with the map the Vue way.
 
-**Live demo and docs:** [v-mapbox.vinayakkulkarni.dev](https://v-mapbox.vinayakkulkarni.dev) · [demo](https://v-mapbox.vinayakkulkarni.dev/demo)
+**[Live demo](https://v-mapbox.vinayakkulkarni.dev/demo?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox)** · [Docs](https://v-mapbox.vinayakkulkarni.dev/?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox) · [npm](https://www.npmjs.com/package/v-mapbox) · [JSR](https://jsr.io/@vinayakkulkarni/v-mapbox)
 
 ## Installation
 
@@ -48,7 +48,7 @@ $ pnpm add v-mapbox maplibre-gl
 
 ## Demo
 
-[v-mapbox.vinayakkulkarni.dev/demo](https://v-mapbox.vinayakkulkarni.dev/demo) runs `VMap`, `VMarker` + popups, `VLayerMapboxGeojson`, `VLayerDeckArc` (deck.gl) and the map controls.
+[v-mapbox.vinayakkulkarni.dev/demo](https://v-mapbox.vinayakkulkarni.dev/demo?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox) runs `VMap`, `VMarker` + popups, `VLayerMapboxGeojson`, `VLayerDeckArc` (deck.gl) and the map controls.
 
 ## Development
 
@@ -111,10 +111,20 @@ _Note_:
 **v-mapbox** © [Vinayak](https://github.com/vinayakkulkarni), Released under the [MIT](./LICENSE) License.<br>
 Authored and maintained by Vinayak Kulkarni with help from contributors ([list](https://github.com/vinayakkulkarni/v-mapbox/contributors)).
 
-> [vinayakkulkarni.dev](https://vinayakkulkarni.dev) · GitHub [@vinayakkulkarni](https://github.com/vinayakkulkarni) · Twitter [@\_vinayak_k](https://twitter.com/_vinayak_k)
+> [vinayakkulkarni.dev](https://vinayakkulkarni.dev/?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox) · GitHub [@vinayakkulkarni](https://github.com/vinayakkulkarni) · Twitter [@\_vinayak_k](https://twitter.com/_vinayak_k)
 
 ## License
 
 MIT
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-mapbox.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-mapbox?ref=badge_large)
+
+## More from the author
+
+- [v-maplibre](https://v-maplibre.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox) — 50+ Vue 3 components for MapLibre GL
+- [mapcn-vue](https://mapcn-vue.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox) — beautiful copy-paste maps for Vue
+- [v-mapkit](https://v-mapkit.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox) — Vue 3 components for Apple MapKit JS
+- [tileserver-rs](https://tileserver.app/?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox) — one Rust binary that serves vector, raster and PMTiles maps
+- [nxui](https://nxui.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox) — animated copy-paste UI components and Paper Shaders for Vue 3 and Nuxt
+
+See every project at [vinayakkulkarni.dev/projects](https://vinayakkulkarni.dev/projects?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox) and [geoql.in](https://geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapbox).
